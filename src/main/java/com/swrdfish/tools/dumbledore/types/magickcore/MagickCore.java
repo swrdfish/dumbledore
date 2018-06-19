@@ -3,6 +3,7 @@ package com.swrdfish.tools.dumbledore.types.magickcore;
 import com.ochafik.lang.jnaerator.runtime.NativeSize;
 import com.ochafik.lang.jnaerator.runtime.NativeSizeByReference;
 import com.sun.jna.Callback;
+import com.sun.jna.IntegerType;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.NativeLibrary;
@@ -31,13 +32,13 @@ import java.util.List;
  * a few opensource projects.</a>. <br> For help, please visit <a href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a>
  * , <a href="http://rococoa.dev.java.net/">Rococoa</a>, or <a href="http://jna.dev.java.net/">JNA</a>.
  */
-public interface SaMagickCore extends Library {
+public interface MagickCore extends Library {
 
   public static final String JNA_LIBRARY_NAME = "MagickCore-7.Q16HDRI";
   public static final NativeLibrary JNA_NATIVE_LIB = NativeLibrary
-      .getInstance(SaMagickCore.JNA_LIBRARY_NAME);
-  public static final SaMagickCore INSTANCE = (SaMagickCore) Native
-      .loadLibrary(SaMagickCore.JNA_LIBRARY_NAME, SaMagickCore.class);
+      .getInstance(MagickCore.JNA_LIBRARY_NAME);
+  public static final MagickCore INSTANCE = (MagickCore) Native
+      .loadLibrary(MagickCore.JNA_LIBRARY_NAME, MagickCore.class);
 
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:5</i> <br> enum
@@ -62,8 +63,6 @@ public interface SaMagickCore extends Library {
      */
     public static final int PersistMode = 3;
   }
-
-  ;
 
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:7</i> <br> enum
@@ -865,67 +864,67 @@ public interface SaMagickCore extends Library {
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:16</i>
      */
-    public static final int BilinearDistortion = (int) SaMagickCore.DistortMethod.BilinearForwardDistortion;
+    public static final int BilinearDistortion = (int) MagickCore.DistortMethod.BilinearForwardDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:17</i>
      */
     public static final int BilinearReverseDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 1);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 1);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:18</i>
      */
     public static final int PolynomialDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 2);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 2);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:19</i>
      */
     public static final int ArcDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 3);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 3);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:20</i>
      */
     public static final int PolarDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 4);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 4);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:21</i>
      */
     public static final int DePolarDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 5);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 5);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:22</i>
      */
     public static final int Cylinder2PlaneDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 6);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 6);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:23</i>
      */
     public static final int Plane2CylinderDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 7);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 7);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:24</i>
      */
     public static final int BarrelDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 8);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 8);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:25</i>
      */
     public static final int BarrelInverseDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 9);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 9);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:26</i>
      */
     public static final int ShepardsDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 10);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 10);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:27</i>
      */
     public static final int ResizeDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 11);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 11);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:28</i>
      */
     public static final int SentinelDistortion = (
-        (int) SaMagickCore.DistortMethod.BilinearForwardDistortion + 12);
+        (int) MagickCore.DistortMethod.BilinearForwardDistortion + 12);
   }
 
   ;
@@ -939,37 +938,37 @@ public interface SaMagickCore extends Library {
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:31</i>
      */
-    public static final int UndefinedColorInterpolate = (int) SaMagickCore.DistortMethod.UndefinedDistortion;
+    public static final int UndefinedColorInterpolate = (int) MagickCore.DistortMethod.UndefinedDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:32</i>
      */
-    public static final int BarycentricColorInterpolate = (int) SaMagickCore.DistortMethod.AffineDistortion;
+    public static final int BarycentricColorInterpolate = (int) MagickCore.DistortMethod.AffineDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:33</i>
      */
-    public static final int BilinearColorInterpolate = (int) SaMagickCore.DistortMethod.BilinearReverseDistortion;
+    public static final int BilinearColorInterpolate = (int) MagickCore.DistortMethod.BilinearReverseDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:34</i>
      */
-    public static final int PolynomialColorInterpolate = (int) SaMagickCore.DistortMethod.PolynomialDistortion;
+    public static final int PolynomialColorInterpolate = (int) MagickCore.DistortMethod.PolynomialDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:35</i>
      */
-    public static final int ShepardsColorInterpolate = (int) SaMagickCore.DistortMethod.ShepardsDistortion;
+    public static final int ShepardsColorInterpolate = (int) MagickCore.DistortMethod.ShepardsDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:36</i>
      */
-    public static final int VoronoiColorInterpolate = (int) SaMagickCore.DistortMethod.SentinelDistortion;
+    public static final int VoronoiColorInterpolate = (int) MagickCore.DistortMethod.SentinelDistortion;
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:37</i>
      */
     public static final int InverseColorInterpolate = (
-        (int) SaMagickCore.DistortMethod.SentinelDistortion + 1);
+        (int) MagickCore.DistortMethod.SentinelDistortion + 1);
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:38</i>
      */
     public static final int ManhattanColorInterpolate = (
-        (int) SaMagickCore.DistortMethod.SentinelDistortion + 2);
+        (int) MagickCore.DistortMethod.SentinelDistortion + 2);
   }
 
   ;
@@ -3538,7 +3537,7 @@ public interface SaMagickCore extends Library {
     /**
      * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:25</i>
      */
-    public static final int DefaultChannels = (int) SaMagickCore.ChannelType.AllChannels;
+    public static final int DefaultChannels = (int) MagickCore.ChannelType.AllChannels;
   }
 
   ;
@@ -6055,6 +6054,7 @@ public interface SaMagickCore extends Library {
 
     public CoderInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6071,6 +6071,7 @@ public interface SaMagickCore extends Library {
     public CoderInfo(Pointer path, Pointer magick, Pointer name, int exempt, int stealth,
         NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.magick = magick;
       this.name = name;
@@ -6080,7 +6081,9 @@ public interface SaMagickCore extends Library {
     }
 
     public CoderInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends CoderInfo implements Structure.ByReference {
@@ -6118,7 +6121,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo color;
+    public MagickCore.PixelInfo color;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -6131,6 +6134,7 @@ public interface SaMagickCore extends Library {
 
     public ColorInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6145,9 +6149,10 @@ public interface SaMagickCore extends Library {
      * @param exempt @see MagickBooleanType <br> C type : MagickBooleanType <br>
      * @param stealth @see MagickBooleanType <br> C type : MagickBooleanType
      */
-    public ColorInfo(Pointer path, Pointer name, int compliance, SaMagickCore.PixelInfo color,
+    public ColorInfo(Pointer path, Pointer name, int compliance, MagickCore.PixelInfo color,
         int exempt, int stealth, NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.name = name;
       this.compliance = compliance;
@@ -6158,7 +6163,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ColorInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ColorInfo implements Structure.ByReference {
@@ -6187,6 +6194,7 @@ public interface SaMagickCore extends Library {
 
     public ErrorInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6197,13 +6205,16 @@ public interface SaMagickCore extends Library {
     public ErrorInfo(double mean_error_per_pixel, double normalized_mean_error,
         double normalized_maximum_error) {
       super();
+      ensureAllocated();
       this.mean_error_per_pixel = mean_error_per_pixel;
       this.normalized_mean_error = normalized_mean_error;
       this.normalized_maximum_error = normalized_maximum_error;
     }
 
     public ErrorInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ErrorInfo implements Structure.ByReference {
@@ -6250,6 +6261,7 @@ public interface SaMagickCore extends Library {
 
     public ConfigureInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6266,6 +6278,7 @@ public interface SaMagickCore extends Library {
     public ConfigureInfo(Pointer path, Pointer name, Pointer value, int exempt, int stealth,
         NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.name = name;
       this.value = value;
@@ -6275,7 +6288,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ConfigureInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ConfigureInfo implements Structure.ByReference {
@@ -6303,22 +6318,23 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t x;
+    public MagickCore.ssize_t x;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t y;
+    public MagickCore.ssize_t y;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t inner_bevel;
+    public MagickCore.ssize_t inner_bevel;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t outer_bevel;
+    public MagickCore.ssize_t outer_bevel;
 
     public FrameInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6331,10 +6347,11 @@ public interface SaMagickCore extends Library {
      * @param inner_bevel C type : ssize_t <br>
      * @param outer_bevel C type : ssize_t
      */
-    public FrameInfo(NativeSize width, NativeSize height, SaMagickCore.ssize_t x,
-        SaMagickCore.ssize_t y, SaMagickCore.ssize_t inner_bevel,
-        SaMagickCore.ssize_t outer_bevel) {
+    public FrameInfo(NativeSize width, NativeSize height, MagickCore.ssize_t x,
+        MagickCore.ssize_t y, MagickCore.ssize_t inner_bevel,
+        MagickCore.ssize_t outer_bevel) {
       super();
+      ensureAllocated();
       this.width = width;
       this.height = height;
       this.x = x;
@@ -6344,7 +6361,9 @@ public interface SaMagickCore extends Library {
     }
 
     public FrameInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends FrameInfo implements Structure.ByReference {
@@ -6386,7 +6405,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t mode;
+    public MagickCore.ssize_t mode;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -6407,6 +6426,7 @@ public interface SaMagickCore extends Library {
 
     public DelegateInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6416,7 +6436,9 @@ public interface SaMagickCore extends Library {
     }
 
     public DelegateInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends DelegateInfo implements Structure.ByReference {
@@ -6442,11 +6464,12 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo color;
+    public MagickCore.PixelInfo color;
     public double offset;
 
     public StopInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6456,14 +6479,17 @@ public interface SaMagickCore extends Library {
     /**
      * @param color C type : PixelInfo
      */
-    public StopInfo(SaMagickCore.PixelInfo color, double offset) {
+    public StopInfo(MagickCore.PixelInfo color, double offset) {
       super();
+      ensureAllocated();
       this.color = color;
       this.offset = offset;
     }
 
     public StopInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends StopInfo implements Structure.ByReference {
@@ -6493,15 +6519,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo bounding_box;
+    public MagickCore.RectangleInfo bounding_box;
     /**
      * C type : SegmentInfo
      */
-    public SaMagickCore.SegmentInfo gradient_vector;
+    public MagickCore.SegmentInfo gradient_vector;
     /**
      * C type : StopInfo*
      */
-    public SaMagickCore.StopInfo.ByReference stops;
+    public MagickCore.StopInfo.ByReference stops;
     public NativeSize number_stops;
     /**
      * @see SpreadMethod <br> C type : SpreadMethod
@@ -6514,17 +6540,18 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo center;
+    public MagickCore.PointInfo center;
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo radii;
+    public MagickCore.PointInfo radii;
     public double radius;
     public double angle;
     public NativeSize signature;
 
     public GradientInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6534,7 +6561,9 @@ public interface SaMagickCore extends Library {
     }
 
     public GradientInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends GradientInfo implements Structure.ByReference {
@@ -6568,19 +6597,20 @@ public interface SaMagickCore extends Library {
     /**
      * C type : GradientInfo
      */
-    public SaMagickCore.GradientInfo gradient;
+    public MagickCore.GradientInfo gradient;
     /**
      * C type : _ElementReference*
      */
-    public SaMagickCore.ElementReference.ByReference previous;
+    public MagickCore.ElementReference.ByReference previous;
     /**
      * C type : _ElementReference*
      */
-    public SaMagickCore.ElementReference.ByReference next;
+    public MagickCore.ElementReference.ByReference next;
     public NativeSize signature;
 
     public ElementReference() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6594,10 +6624,11 @@ public interface SaMagickCore extends Library {
      * @param previous C type : _ElementReference* <br>
      * @param next C type : _ElementReference*
      */
-    public ElementReference(Pointer id, int type, SaMagickCore.GradientInfo gradient,
-        SaMagickCore.ElementReference.ByReference previous,
-        SaMagickCore.ElementReference.ByReference next, NativeSize signature) {
+    public ElementReference(Pointer id, int type, MagickCore.GradientInfo gradient,
+        MagickCore.ElementReference.ByReference previous,
+        MagickCore.ElementReference.ByReference next, NativeSize signature) {
       super();
+      ensureAllocated();
       this.id = id;
       this.type = type;
       this.gradient = gradient;
@@ -6607,7 +6638,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ElementReference(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ElementReference implements Structure.ByReference {
@@ -6641,40 +6674,40 @@ public interface SaMagickCore extends Library {
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo viewbox;
+    public MagickCore.RectangleInfo viewbox;
     /**
      * C type : AffineMatrix
      */
-    public SaMagickCore.AffineMatrix affine;
+    public MagickCore.AffineMatrix affine;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo fill;
+    public MagickCore.PixelInfo fill;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo stroke;
+    public MagickCore.PixelInfo stroke;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo undercolor;
+    public MagickCore.PixelInfo undercolor;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo border_color;
+    public MagickCore.PixelInfo border_color;
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference fill_pattern;
+    public MagickCore.Image.ByReference fill_pattern;
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference stroke_pattern;
+    public MagickCore.Image.ByReference stroke_pattern;
     public double stroke_width;
     /**
      * C type : GradientInfo
      */
-    public SaMagickCore.GradientInfo gradient;
+    public MagickCore.GradientInfo gradient;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -6763,7 +6796,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : SegmentInfo
      */
-    public SaMagickCore.SegmentInfo bounds;
+    public MagickCore.SegmentInfo bounds;
     /**
      * @see ClipPathUnits <br> C type : ClipPathUnits
      */
@@ -6779,7 +6812,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ElementReference
      */
-    public SaMagickCore.ElementReference element_reference;
+    public MagickCore.ElementReference element_reference;
     public double kerning;
     public double interword_spacing;
     public double interline_spacing;
@@ -6801,7 +6834,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference clipping_mask;
+    public MagickCore.Image.ByReference clipping_mask;
     /**
      * @see ComplianceType <br> C type : ComplianceType
      */
@@ -6809,10 +6842,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference composite_mask;
+    public MagickCore.Image.ByReference composite_mask;
 
     public DrawInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6829,7 +6863,9 @@ public interface SaMagickCore extends Library {
     }
 
     public DrawInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends DrawInfo implements Structure.ByReference {
@@ -6855,7 +6891,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo point;
+    public MagickCore.PointInfo point;
     public NativeSize coordinates;
     /**
      * @see PrimitiveType <br> C type : PrimitiveType
@@ -6876,6 +6912,7 @@ public interface SaMagickCore extends Library {
 
     public PrimitiveInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6889,9 +6926,10 @@ public interface SaMagickCore extends Library {
      * @param text C type : char* <br>
      * @param closed_subpath @see MagickBooleanType <br> C type : MagickBooleanType
      */
-    public PrimitiveInfo(SaMagickCore.PointInfo point, NativeSize coordinates, int primitive,
+    public PrimitiveInfo(MagickCore.PointInfo point, NativeSize coordinates, int primitive,
         int method, Pointer text, int closed_subpath) {
       super();
+      ensureAllocated();
       this.point = point;
       this.coordinates = coordinates;
       this.primitive = primitive;
@@ -6901,7 +6939,9 @@ public interface SaMagickCore extends Library {
     }
 
     public PrimitiveInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PrimitiveInfo implements Structure.ByReference {
@@ -6927,7 +6967,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo pixels_per_em;
+    public MagickCore.PointInfo pixels_per_em;
     public double ascent;
     public double descent;
     public double width;
@@ -6938,14 +6978,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : SegmentInfo
      */
-    public SaMagickCore.SegmentInfo bounds;
+    public MagickCore.SegmentInfo bounds;
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo origin;
+    public MagickCore.PointInfo origin;
 
     public TypeMetric() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -6954,7 +6995,9 @@ public interface SaMagickCore extends Library {
     }
 
     public TypeMetric(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends TypeMetric implements Structure.ByReference {
@@ -7006,6 +7049,7 @@ public interface SaMagickCore extends Library {
 
     public ExceptionInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7025,6 +7069,7 @@ public interface SaMagickCore extends Library {
     public ExceptionInfo(int severity, int error_number, Pointer reason, Pointer description,
         Pointer exceptions, int relinquish, PointerByReference semaphore, NativeSize signature) {
       super();
+      ensureAllocated();
       this.severity = severity;
       this.error_number = error_number;
       this.reason = reason;
@@ -7036,7 +7081,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ExceptionInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ExceptionInfo implements Structure.ByReference {
@@ -7118,6 +7165,7 @@ public interface SaMagickCore extends Library {
 
     public ChannelFeatures() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7129,7 +7177,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ChannelFeatures(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ChannelFeatures implements Structure.ByReference {
@@ -7161,6 +7211,7 @@ public interface SaMagickCore extends Library {
 
     public AffineMatrix() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7169,6 +7220,7 @@ public interface SaMagickCore extends Library {
 
     public AffineMatrix(double sx, double rx, double ry, double sy, double tx, double ty) {
       super();
+      ensureAllocated();
       this.sx = sx;
       this.rx = rx;
       this.ry = ry;
@@ -7178,7 +7230,9 @@ public interface SaMagickCore extends Library {
     }
 
     public AffineMatrix(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends AffineMatrix implements Structure.ByReference {
@@ -7209,6 +7263,7 @@ public interface SaMagickCore extends Library {
 
     public GeometryInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7217,6 +7272,7 @@ public interface SaMagickCore extends Library {
 
     public GeometryInfo(double rho, double sigma, double xi, double psi, double chi) {
       super();
+      ensureAllocated();
       this.rho = rho;
       this.sigma = sigma;
       this.xi = xi;
@@ -7225,7 +7281,9 @@ public interface SaMagickCore extends Library {
     }
 
     public GeometryInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends GeometryInfo implements Structure.ByReference {
@@ -7251,14 +7309,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t x;
+    public MagickCore.ssize_t x;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t y;
+    public MagickCore.ssize_t y;
 
     public OffsetInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7269,14 +7328,17 @@ public interface SaMagickCore extends Library {
      * @param x C type : ssize_t <br>
      * @param y C type : ssize_t
      */
-    public OffsetInfo(SaMagickCore.ssize_t x, SaMagickCore.ssize_t y) {
+    public OffsetInfo(MagickCore.ssize_t x, MagickCore.ssize_t y) {
       super();
+      ensureAllocated();
       this.x = x;
       this.y = y;
     }
 
     public OffsetInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends OffsetInfo implements Structure.ByReference {
@@ -7304,6 +7366,7 @@ public interface SaMagickCore extends Library {
 
     public PointInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7312,12 +7375,15 @@ public interface SaMagickCore extends Library {
 
     public PointInfo(double x, double y) {
       super();
+      ensureAllocated();
       this.x = x;
       this.y = y;
     }
 
     public PointInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PointInfo implements Structure.ByReference {
@@ -7345,14 +7411,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t x;
+    public MagickCore.ssize_t x;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t y;
+    public MagickCore.ssize_t y;
 
     public RectangleInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7363,9 +7430,10 @@ public interface SaMagickCore extends Library {
      * @param x C type : ssize_t <br>
      * @param y C type : ssize_t
      */
-    public RectangleInfo(NativeSize width, NativeSize height, SaMagickCore.ssize_t x,
-        SaMagickCore.ssize_t y) {
+    public RectangleInfo(NativeSize width, NativeSize height, MagickCore.ssize_t x,
+        MagickCore.ssize_t y) {
       super();
+      ensureAllocated();
       this.width = width;
       this.height = height;
       this.x = x;
@@ -7373,7 +7441,9 @@ public interface SaMagickCore extends Library {
     }
 
     public RectangleInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends RectangleInfo implements Structure.ByReference {
@@ -7402,6 +7472,7 @@ public interface SaMagickCore extends Library {
 
     public PrimaryInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7410,13 +7481,16 @@ public interface SaMagickCore extends Library {
 
     public PrimaryInfo(double x, double y, double z) {
       super();
+      ensureAllocated();
       this.x = x;
       this.y = y;
       this.z = z;
     }
 
     public PrimaryInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PrimaryInfo implements Structure.ByReference {
@@ -7446,6 +7520,7 @@ public interface SaMagickCore extends Library {
 
     public SegmentInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7454,6 +7529,7 @@ public interface SaMagickCore extends Library {
 
     public SegmentInfo(double x1, double y1, double x2, double y2) {
       super();
+      ensureAllocated();
       this.x1 = x1;
       this.y1 = y1;
       this.x2 = x2;
@@ -7461,7 +7537,9 @@ public interface SaMagickCore extends Library {
     }
 
     public SegmentInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends SegmentInfo implements Structure.ByReference {
@@ -7482,27 +7560,28 @@ public interface SaMagickCore extends Library {
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:81</i>
    */
-  public static class ChromaticityInfo extends Structure {
+  class ChromaticityInfo extends Structure {
 
     /**
      * C type : PrimaryInfo
      */
-    public SaMagickCore.PrimaryInfo red_primary;
+    public MagickCore.PrimaryInfo red_primary;
     /**
      * C type : PrimaryInfo
      */
-    public SaMagickCore.PrimaryInfo green_primary;
+    public MagickCore.PrimaryInfo green_primary;
     /**
      * C type : PrimaryInfo
      */
-    public SaMagickCore.PrimaryInfo blue_primary;
+    public MagickCore.PrimaryInfo blue_primary;
     /**
      * C type : PrimaryInfo
      */
-    public SaMagickCore.PrimaryInfo white_point;
+    public MagickCore.PrimaryInfo white_point;
 
     public ChromaticityInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7515,10 +7594,11 @@ public interface SaMagickCore extends Library {
      * @param blue_primary C type : PrimaryInfo <br>
      * @param white_point C type : PrimaryInfo
      */
-    public ChromaticityInfo(SaMagickCore.PrimaryInfo red_primary,
-        SaMagickCore.PrimaryInfo green_primary, SaMagickCore.PrimaryInfo blue_primary,
-        SaMagickCore.PrimaryInfo white_point) {
+    public ChromaticityInfo(MagickCore.PrimaryInfo red_primary,
+        MagickCore.PrimaryInfo green_primary, MagickCore.PrimaryInfo blue_primary,
+        MagickCore.PrimaryInfo white_point) {
       super();
+      ensureAllocated();
       this.red_primary = red_primary;
       this.green_primary = green_primary;
       this.blue_primary = blue_primary;
@@ -7526,23 +7606,20 @@ public interface SaMagickCore extends Library {
     }
 
     public ChromaticityInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ChromaticityInfo implements Structure.ByReference {
 
     }
 
-    ;
-
     public static class ByValue extends ChromaticityInfo implements Structure.ByValue {
 
     }
-
-    ;
   }
 
-  ;
 
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:86</i>
@@ -7577,28 +7654,28 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo*
      */
-    public SaMagickCore.PixelInfo.ByReference colormap;
+    public MagickCore.PixelInfo.ByReference colormap;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo alpha_color;
+    public MagickCore.PixelInfo alpha_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo background_color;
+    public MagickCore.PixelInfo background_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo border_color;
+    public MagickCore.PixelInfo border_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo transparent_color;
+    public MagickCore.PixelInfo transparent_color;
     public double gamma;
     /**
      * C type : ChromaticityInfo
      */
-    public SaMagickCore.ChromaticityInfo chromaticity;
+    public MagickCore.ChromaticityInfo chromaticity;
     /**
      * @see RenderingIntent <br> C type : RenderingIntent
      */
@@ -7626,19 +7703,19 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t offset;
+    public MagickCore.ssize_t offset;
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo resolution;
+    public MagickCore.PointInfo resolution;
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo page;
+    public MagickCore.RectangleInfo page;
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo extract_info;
+    public MagickCore.RectangleInfo extract_info;
     public double fuzz;
     /**
      * @see FilterType <br> C type : FilterType
@@ -7674,13 +7751,13 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t ticks_per_second;
+    public MagickCore.ssize_t ticks_per_second;
     public NativeSize iterations;
     public NativeSize total_colors;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t start_loop;
+    public MagickCore.ssize_t start_loop;
     /**
      * @see PixelInterpolateMethod <br> C type : PixelInterpolateMethod
      */
@@ -7692,7 +7769,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo tile_offset;
+    public MagickCore.RectangleInfo tile_offset;
     /**
      * @see ImageType <br> C type : ImageType
      */
@@ -7731,7 +7808,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelChannelMap*
      */
-    public SaMagickCore.PixelChannelMap.ByReference channel_map;
+    public MagickCore.PixelChannelMap.ByReference channel_map;
     /**
      * C type : void*
      */
@@ -7739,15 +7816,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ErrorInfo
      */
-    public SaMagickCore.ErrorInfo error;
+    public MagickCore.ErrorInfo error;
     /**
      * C type : TimerInfo
      */
-    public SaMagickCore.TimerInfo timer;
+    public MagickCore.TimerInfo timer;
     /**
      * C type : MagickProgressMonitor
      */
-    public SaMagickCore.MagickProgressMonitor progress_monitor;
+    public MagickCore.MagickProgressMonitor progress_monitor;
     /**
      * C type : void*
      */
@@ -7771,21 +7848,25 @@ public interface SaMagickCore extends Library {
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] filename = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] filename = new byte[MagickCore.MagickPathExtent];
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] magick_filename = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] magick_filename = new byte[MagickCore.MagickPathExtent];
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] magick = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] magick = new byte[MagickCore.MagickPathExtent];
     public NativeSize magick_columns;
     public NativeSize magick_rows;
     /**
      * C type : BlobInfo*
      */
     public PointerByReference blob;
+
+
+    public NativeTime timestamp;
+
     /** Conversion Error : time_t (Primitive without known type for this runtime: NativeTime) */
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
@@ -7794,7 +7875,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : volatile ssize_t
      */
-    public SaMagickCore.ssize_t reference_count;
+    public MagickCore.ssize_t reference_count;
     /**
      * C type : SemaphoreInfo*
      */
@@ -7802,24 +7883,24 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ImageInfo*
      */
-    public SaMagickCore.ImageInfo.ByReference image_info;
+    public MagickCore.ImageInfo.ByReference image_info;
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference list;
+    public MagickCore.Image.ByReference list;
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference previous;
+    public MagickCore.Image.ByReference previous;
     /**
      * C type : Image*
      */
-    public SaMagickCore.Image.ByReference next;
+    public MagickCore.Image.ByReference next;
     public NativeSize signature;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo matte_color;
+    public MagickCore.PixelInfo matte_color;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -7835,6 +7916,7 @@ public interface SaMagickCore extends Library {
 
     public Image() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -7850,21 +7932,39 @@ public interface SaMagickCore extends Library {
               "alpha_trait", "number_channels", "number_meta_channels", "metacontent_extent",
               "channel_mask", "channel_map", "cache", "error", "timer", "progress_monitor",
               "client_data", "ascii85", "generic_profile", "properties", "artifacts", "filename",
-              "magick_filename", "magick", "magick_columns", "magick_rows", "blob", "debug",
+              "magick_filename", "magick", "magick_columns", "magick_rows", "blob", "timestamp", "debug",
               "reference_count", "semaphore", "image_info", "list", "previous", "next", "signature",
               "matte_color", "composite_mask", "mask_trait", "channels");
     }
 
     public Image(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
+    }
+
+    @Override
+    public boolean getAutoRead() {
+      return false;
     }
 
     public static class ByReference extends Image implements Structure.ByReference {
-
+      public ByReference() {
+        super();
+      }
+      public ByReference(Pointer peer) {
+        super(peer);
+      }
     }
 
     public static class ByValue extends Image implements Structure.ByValue {
+      public ByValue() {
+        super();
+      }
 
+      public ByValue(Pointer peer) {
+        super(peer);
+      }
     }
   }
 
@@ -7874,7 +7974,7 @@ public interface SaMagickCore extends Library {
    * which maps any global setting that always overrides specific image settings. <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:147</i>
    */
-  public static class ImageInfo extends Structure {
+  class ImageInfo extends Structure {
 
     /**
      * @see CompressionType <br> C type : CompressionType
@@ -7957,19 +8057,19 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo alpha_color;
+    public MagickCore.PixelInfo alpha_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo background_color;
+    public MagickCore.PixelInfo background_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo border_color;
+    public MagickCore.PixelInfo border_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo transparent_color;
+    public MagickCore.PixelInfo transparent_color;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -8017,7 +8117,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : MagickProgressMonitor
      */
-    public SaMagickCore.MagickProgressMonitor progress_monitor;
+    public MagickCore.MagickProgressMonitor progress_monitor;
     /**
      * C type : void*
      */
@@ -8029,7 +8129,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : StreamHandler
      */
-    public SaMagickCore.StreamHandler stream;
+    public MagickCore.StreamHandler stream;
     /**
      * C type : FILE*
      */
@@ -8042,15 +8142,15 @@ public interface SaMagickCore extends Library {
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] magick = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] magick = new byte[MagickCore.MagickPathExtent];
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] unique = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] unique = new byte[MagickCore.MagickPathExtent];
     /**
      * C type : char[MagickPathExtent]
      */
-    public byte[] filename = new byte[SaMagickCore.MagickPathExtent];
+    public byte[] filename = new byte[MagickCore.MagickPathExtent];
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -8063,7 +8163,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo matte_color;
+    public MagickCore.PixelInfo matte_color;
 
     public ImageInfo() {
       super();
@@ -8083,21 +8183,19 @@ public interface SaMagickCore extends Library {
     }
 
     public ImageInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer); // set pointer
+      read();
     }
 
     public static class ByReference extends ImageInfo implements Structure.ByReference {
 
     }
 
-
     public static class ByValue extends ImageInfo implements Structure.ByValue {
 
     }
-
   }
-
-  ;
 
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:6</i>
@@ -8124,6 +8222,7 @@ public interface SaMagickCore extends Library {
 
     public LocaleInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8139,6 +8238,7 @@ public interface SaMagickCore extends Library {
     public LocaleInfo(Pointer path, Pointer tag, Pointer message, int stealth,
         NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.tag = tag;
       this.message = message;
@@ -8147,7 +8247,9 @@ public interface SaMagickCore extends Library {
     }
 
     public LocaleInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends LocaleInfo implements Structure.ByReference {
@@ -8190,7 +8292,7 @@ public interface SaMagickCore extends Library {
     /**
      * C type : MagickOffsetType
      */
-    public SaMagickCore.MagickOffsetType offset;
+    public MagickCore.MagickOffsetType offset;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -8203,6 +8305,7 @@ public interface SaMagickCore extends Library {
 
     public MagicInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8221,8 +8324,9 @@ public interface SaMagickCore extends Library {
      * @param stealth @see MagickBooleanType <br> C type : MagickBooleanType
      */
     public MagicInfo(Pointer path, Pointer name, Pointer target, Pointer magic, NativeSize length,
-        SaMagickCore.MagickOffsetType offset, int exempt, int stealth, NativeSize signature) {
+        MagickCore.MagickOffsetType offset, int exempt, int stealth, NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.name = name;
       this.target = target;
@@ -8235,7 +8339,9 @@ public interface SaMagickCore extends Library {
     }
 
     public MagicInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends MagicInfo implements Structure.ByReference {
@@ -8285,19 +8391,19 @@ public interface SaMagickCore extends Library {
     /**
      * C type : DecodeImageHandler*
      */
-    public SaMagickCore.DecodeImageHandler decoder;
+    public MagickCore.DecodeImageHandler decoder;
     /**
      * C type : EncodeImageHandler*
      */
-    public SaMagickCore.EncodeImageHandler encoder;
+    public MagickCore.EncodeImageHandler encoder;
     /**
      * C type : ImageInfo*
      */
-    public SaMagickCore.ImageInfo.ByReference image_info;
+    public MagickCore.ImageInfo.ByReference image_info;
     /**
      * C type : IsImageFormatHandler*
      */
-    public SaMagickCore.IsImageFormatHandler magick;
+    public MagickCore.IsImageFormatHandler magick;
     /**
      * @see MagickFormatType <br> C type : MagickFormatType
      */
@@ -8318,6 +8424,7 @@ public interface SaMagickCore extends Library {
 
     public MagickInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8328,7 +8435,9 @@ public interface SaMagickCore extends Library {
     }
 
     public MagickInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends MagickInfo implements Structure.ByReference {
@@ -8366,11 +8475,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : unregister_module_callback*
      */
-    public SaMagickCore.ModuleInfo.unregister_module_callback unregister_module;
+    public MagickCore.ModuleInfo.unregister_module_callback unregister_module;
     /**
      * C type : register_module_callback*
      */
-    public SaMagickCore.ModuleInfo.register_module_callback register_module;
+    public MagickCore.ModuleInfo.register_module_callback register_module;
     /** Conversion Error : time_t (Primitive without known type for this runtime: NativeTime) */
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
@@ -8400,6 +8509,7 @@ public interface SaMagickCore extends Library {
 
     public ModuleInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8417,10 +8527,11 @@ public interface SaMagickCore extends Library {
      * @param stealth @see MagickBooleanType <br> C type : MagickBooleanType
      */
     public ModuleInfo(Pointer path, Pointer tag, Pointer handle,
-        SaMagickCore.ModuleInfo.unregister_module_callback unregister_module,
-        SaMagickCore.ModuleInfo.register_module_callback register_module, int stealth,
+        MagickCore.ModuleInfo.unregister_module_callback unregister_module,
+        MagickCore.ModuleInfo.register_module_callback register_module, int stealth,
         NativeSize signature) {
       super();
+      ensureAllocated();
       this.path = path;
       this.tag = tag;
       this.handle = handle;
@@ -8431,7 +8542,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ModuleInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static abstract class ByReference extends ModuleInfo implements Structure.ByReference {
@@ -8487,23 +8600,23 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo alpha_color;
+    public MagickCore.PixelInfo alpha_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo background_color;
+    public MagickCore.PixelInfo background_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo border_color;
+    public MagickCore.PixelInfo border_color;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo fill;
+    public MagickCore.PixelInfo fill;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo stroke;
+    public MagickCore.PixelInfo stroke;
     /**
      * @see GravityType <br> C type : GravityType
      */
@@ -8520,10 +8633,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo matte_color;
+    public MagickCore.PixelInfo matte_color;
 
     public MontageInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8533,7 +8647,9 @@ public interface SaMagickCore extends Library {
     }
 
     public MontageInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends MontageInfo implements Structure.ByReference {
@@ -8565,11 +8681,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t x;
+    public MagickCore.ssize_t x;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t y;
+    public MagickCore.ssize_t y;
     /**
      * C type : MagickRealType*
      */
@@ -8582,11 +8698,12 @@ public interface SaMagickCore extends Library {
     /**
      * C type : _KernelInfo*
      */
-    public SaMagickCore.KernelInfo.ByReference next;
+    public MagickCore.KernelInfo.ByReference next;
     public NativeSize signature;
 
     public KernelInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8595,7 +8712,9 @@ public interface SaMagickCore extends Library {
     }
 
     public KernelInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends KernelInfo implements Structure.ByReference {
@@ -8629,6 +8748,7 @@ public interface SaMagickCore extends Library {
 
     public _KernelProfileRecord() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8641,6 +8761,7 @@ public interface SaMagickCore extends Library {
     public _KernelProfileRecord(Pointer kernel_name, NativeLong count, NativeLong max,
         NativeLong min, NativeLong total) {
       super();
+      ensureAllocated();
       this.kernel_name = kernel_name;
       this.count = count;
       this.max = max;
@@ -8649,7 +8770,9 @@ public interface SaMagickCore extends Library {
     }
 
     public _KernelProfileRecord(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends _KernelProfileRecord implements Structure.ByReference {
@@ -8679,11 +8802,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t type;
+    public MagickCore.ssize_t type;
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t flags;
+    public MagickCore.ssize_t flags;
     /**
      * @see MagickBooleanType <br> C type : MagickBooleanType
      */
@@ -8691,6 +8814,7 @@ public interface SaMagickCore extends Library {
 
     public OptionInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8703,9 +8827,10 @@ public interface SaMagickCore extends Library {
      * @param flags C type : ssize_t <br>
      * @param stealth @see MagickBooleanType <br> C type : MagickBooleanType
      */
-    public OptionInfo(Pointer mnemonic, SaMagickCore.ssize_t type, SaMagickCore.ssize_t flags,
+    public OptionInfo(Pointer mnemonic, MagickCore.ssize_t type, MagickCore.ssize_t flags,
         int stealth) {
       super();
+      ensureAllocated();
       this.mnemonic = mnemonic;
       this.type = type;
       this.flags = flags;
@@ -8713,7 +8838,9 @@ public interface SaMagickCore extends Library {
     }
 
     public OptionInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends OptionInfo implements Structure.ByReference {
@@ -8747,10 +8874,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t offset;
+    public MagickCore.ssize_t offset;
 
     public PixelChannelMap() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8762,15 +8890,18 @@ public interface SaMagickCore extends Library {
      * @param traits @see PixelTrait <br> C type : PixelTrait <br>
      * @param offset C type : ssize_t
      */
-    public PixelChannelMap(int channel, int traits, SaMagickCore.ssize_t offset) {
+    public PixelChannelMap(int channel, int traits, MagickCore.ssize_t offset) {
       super();
+      ensureAllocated();
       this.channel = channel;
       this.traits = traits;
       this.offset = offset;
     }
 
     public PixelChannelMap(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PixelChannelMap implements Structure.ByReference {
@@ -8838,6 +8969,7 @@ public interface SaMagickCore extends Library {
 
     public PixelInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8847,7 +8979,9 @@ public interface SaMagickCore extends Library {
     }
 
     public PixelInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PixelInfo implements Structure.ByReference {
@@ -8878,6 +9012,7 @@ public interface SaMagickCore extends Library {
 
     public PixelPacket() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8886,6 +9021,7 @@ public interface SaMagickCore extends Library {
 
     public PixelPacket(int red, int green, int blue, int alpha, int black) {
       super();
+      ensureAllocated();
       this.red = red;
       this.green = green;
       this.blue = blue;
@@ -8894,7 +9030,9 @@ public interface SaMagickCore extends Library {
     }
 
     public PixelPacket(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends PixelPacket implements Structure.ByReference {
@@ -8935,6 +9073,7 @@ public interface SaMagickCore extends Library {
 
     public QuantizeInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -8951,6 +9090,7 @@ public interface SaMagickCore extends Library {
     public QuantizeInfo(NativeSize number_colors, NativeSize tree_depth, int colorspace,
         int dither_method, int measure_error, NativeSize signature) {
       super();
+      ensureAllocated();
       this.number_colors = number_colors;
       this.tree_depth = tree_depth;
       this.colorspace = colorspace;
@@ -8960,7 +9100,9 @@ public interface SaMagickCore extends Library {
     }
 
     public QuantizeInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends QuantizeInfo implements Structure.ByReference {
@@ -9000,6 +9142,7 @@ public interface SaMagickCore extends Library {
 
     public ChannelStatistics() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9009,7 +9152,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ChannelStatistics(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ChannelStatistics implements Structure.ByReference {
@@ -9039,17 +9184,18 @@ public interface SaMagickCore extends Library {
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo centroid;
+    public MagickCore.PointInfo centroid;
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo ellipse_axis;
+    public MagickCore.PointInfo ellipse_axis;
     public double ellipse_angle;
     public double ellipse_eccentricity;
     public double ellipse_intensity;
 
     public ChannelMoments() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9063,10 +9209,11 @@ public interface SaMagickCore extends Library {
      * @param centroid C type : PointInfo <br>
      * @param ellipse_axis C type : PointInfo
      */
-    public ChannelMoments(double invariant[], SaMagickCore.PointInfo centroid,
-        SaMagickCore.PointInfo ellipse_axis, double ellipse_angle, double ellipse_eccentricity,
+    public ChannelMoments(double invariant[], MagickCore.PointInfo centroid,
+        MagickCore.PointInfo ellipse_axis, double ellipse_angle, double ellipse_eccentricity,
         double ellipse_intensity) {
       super();
+      ensureAllocated();
       if ((invariant.length != this.invariant.length)) {
         throw new IllegalArgumentException("Wrong array size !");
       }
@@ -9079,7 +9226,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ChannelMoments(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ChannelMoments implements Structure.ByReference {
@@ -9123,6 +9272,7 @@ public interface SaMagickCore extends Library {
 
     public ChannelPerceptualHash() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9141,6 +9291,7 @@ public interface SaMagickCore extends Library {
         NativeSize number_colorspaces, int colorspace[], double phash[],
         NativeSize number_channels) {
       super();
+      ensureAllocated();
       if ((srgb_hu_phash.length != this.srgb_hu_phash.length)) {
         throw new IllegalArgumentException("Wrong array size !");
       }
@@ -9162,7 +9313,9 @@ public interface SaMagickCore extends Library {
     }
 
     public ChannelPerceptualHash(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends ChannelPerceptualHash implements Structure.ByReference {
@@ -9202,6 +9355,7 @@ public interface SaMagickCore extends Library {
 
     public StringInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9216,6 +9370,7 @@ public interface SaMagickCore extends Library {
     public StringInfo(Pointer path, Pointer datum, NativeSize length, NativeSize signature,
         Pointer name) {
       super();
+      ensureAllocated();
       this.path = path;
       this.datum = datum;
       this.length = length;
@@ -9224,7 +9379,9 @@ public interface SaMagickCore extends Library {
     }
 
     public StringInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends StringInfo implements Structure.ByReference {
@@ -9253,6 +9410,7 @@ public interface SaMagickCore extends Library {
 
     public Timer() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9261,13 +9419,16 @@ public interface SaMagickCore extends Library {
 
     public Timer(double start, double stop, double total) {
       super();
+      ensureAllocated();
       this.start = start;
       this.stop = stop;
       this.total = total;
     }
 
     public Timer(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends Timer implements Structure.ByReference {
@@ -9293,11 +9454,11 @@ public interface SaMagickCore extends Library {
     /**
      * C type : Timer
      */
-    public SaMagickCore.Timer user;
+    public MagickCore.Timer user;
     /**
      * C type : Timer
      */
-    public SaMagickCore.Timer elapsed;
+    public MagickCore.Timer elapsed;
     /**
      * @see TimerState <br> C type : TimerState
      */
@@ -9306,6 +9467,7 @@ public interface SaMagickCore extends Library {
 
     public TimerInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9317,9 +9479,10 @@ public interface SaMagickCore extends Library {
      * @param elapsed C type : Timer <br>
      * @param state @see TimerState <br> C type : TimerState
      */
-    public TimerInfo(SaMagickCore.Timer user, SaMagickCore.Timer elapsed, int state,
+    public TimerInfo(MagickCore.Timer user, MagickCore.Timer elapsed, int state,
         NativeSize signature) {
       super();
+      ensureAllocated();
       this.user = user;
       this.elapsed = elapsed;
       this.state = state;
@@ -9327,7 +9490,9 @@ public interface SaMagickCore extends Library {
     }
 
     public TimerInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends TimerInfo implements Structure.ByReference {
@@ -9404,6 +9569,7 @@ public interface SaMagickCore extends Library {
 
     public TypeInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9413,7 +9579,9 @@ public interface SaMagickCore extends Library {
     }
 
     public TypeInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends TypeInfo implements Structure.ByReference {
@@ -9439,24 +9607,25 @@ public interface SaMagickCore extends Library {
     /**
      * C type : ssize_t
      */
-    public SaMagickCore.ssize_t id;
+    public MagickCore.ssize_t id;
     /**
      * C type : RectangleInfo
      */
-    public SaMagickCore.RectangleInfo bounding_box;
+    public MagickCore.RectangleInfo bounding_box;
     /**
      * C type : PixelInfo
      */
-    public SaMagickCore.PixelInfo color;
+    public MagickCore.PixelInfo color;
     /**
      * C type : PointInfo
      */
-    public SaMagickCore.PointInfo centroid;
+    public MagickCore.PointInfo centroid;
     public double area;
     public double census;
 
     public CCObjectInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9469,9 +9638,10 @@ public interface SaMagickCore extends Library {
      * @param color C type : PixelInfo <br>
      * @param centroid C type : PointInfo
      */
-    public CCObjectInfo(SaMagickCore.ssize_t id, SaMagickCore.RectangleInfo bounding_box,
-        SaMagickCore.PixelInfo color, SaMagickCore.PointInfo centroid, double area, double census) {
+    public CCObjectInfo(MagickCore.ssize_t id, MagickCore.RectangleInfo bounding_box,
+        MagickCore.PixelInfo color, MagickCore.PointInfo centroid, double area, double census) {
       super();
+      ensureAllocated();
       this.id = id;
       this.bounding_box = bounding_box;
       this.color = color;
@@ -9481,7 +9651,9 @@ public interface SaMagickCore extends Library {
     }
 
     public CCObjectInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends CCObjectInfo implements Structure.ByReference {
@@ -9527,6 +9699,7 @@ public interface SaMagickCore extends Library {
 
     public XImportInfo() {
       super();
+      ensureAllocated();
     }
 
     protected List<String> getFieldOrder() {
@@ -9542,6 +9715,7 @@ public interface SaMagickCore extends Library {
      */
     public XImportInfo(int frame, int borders, int screen, int descend, int silent) {
       super();
+      ensureAllocated();
       this.frame = frame;
       this.borders = borders;
       this.screen = screen;
@@ -9550,7 +9724,9 @@ public interface SaMagickCore extends Library {
     }
 
     public XImportInfo(Pointer peer) {
-      super(peer);
+      super();
+      useMemory(peer);
+      read();
     }
 
     public static class ByReference extends XImportInfo implements Structure.ByReference {
@@ -9573,17 +9749,21 @@ public interface SaMagickCore extends Library {
    */
   public interface ssize_t extends Callback {
 
-    SaMagickCore.ssize_t_callback apply(Pointer CustomStreamHandler);
+    MagickCore.ssize_t_callback apply(Pointer CustomStreamHandler);
   }
 
-  ;
+  class NativeTime extends IntegerType {
+    public NativeTime() {
+      super(Native.LONG_SIZE);
+    }
+  }
 
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:7</i>
    */
   public interface MagickOffsetType extends Callback {
 
-    SaMagickCore.MagickOffsetType_callback apply(Pointer CustomStreamSeeker);
+    MagickCore.MagickOffsetType_callback apply(Pointer CustomStreamSeeker);
   }
 
   ;
@@ -9593,7 +9773,7 @@ public interface SaMagickCore extends Library {
    */
   public interface CustomStreamTeller extends Callback {
 
-    SaMagickCore.MagickOffsetType apply(Pointer voidPtr1);
+    MagickCore.MagickOffsetType apply(Pointer voidPtr1);
   }
 
   ;
@@ -9623,7 +9803,7 @@ public interface SaMagickCore extends Library {
    */
   public interface BlobFifo extends Callback {
 
-    IntByReference apply(SaMagickCore.Image ImagePtr1, Pointer voidPtr1, NativeSize size_t1);
+    IntByReference apply(MagickCore.Image ImagePtr1, Pointer voidPtr1, NativeSize size_t1);
   }
 
   ;
@@ -9744,8 +9924,8 @@ public interface SaMagickCore extends Library {
    */
   public interface EncodeImageHandler extends Callback {
 
-    int apply(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-        SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+    int apply(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+        MagickCore.ExceptionInfo ExceptionInfoPtr1);
   }
 
   ;
@@ -9776,7 +9956,7 @@ public interface SaMagickCore extends Library {
   public interface ImageFilterHandler extends Callback {
 
     NativeSize apply(PointerByReference ImagePtrPtr1, int int1, PointerByReference charPtrPtr1,
-        SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+        MagickCore.ExceptionInfo ExceptionInfoPtr1);
   }
 
   ;
@@ -9786,7 +9966,7 @@ public interface SaMagickCore extends Library {
    */
   public interface MagickBooleanType2 extends Callback {
 
-    SaMagickCore.MagickBooleanType_callback apply(Pointer MagickProgressMonitor);
+    MagickCore.MagickBooleanType_callback apply(Pointer MagickProgressMonitor);
   }
 
   ;
@@ -9856,7 +10036,7 @@ public interface SaMagickCore extends Library {
    */
   public interface StreamHandler extends Callback {
 
-    NativeSize apply(SaMagickCore.Image ImagePtr1, Pointer voidPtr1, NativeSize size_t1);
+    NativeSize apply(MagickCore.Image ImagePtr1, Pointer voidPtr1, NativeSize size_t1);
   }
 
   ;
@@ -9865,235 +10045,235 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>MagickBooleanType AnimateImages(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/animate.h:1</i>
    */
-  int AnimateImages(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AnimateImages(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType AnnotateImage(Image*, const DrawInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/annotate.h:1</i>
    */
-  int AnnotateImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AnnotateImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMultilineTypeMetrics(Image*, const DrawInfo*,
    * TypeMetric*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/annotate.h:3</i>
    */
-  int GetMultilineTypeMetrics(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.TypeMetric TypeMetricPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetMultilineTypeMetrics(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.TypeMetric TypeMetricPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetTypeMetrics(Image*, const DrawInfo*,
    * TypeMetric*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/annotate.h:5</i>
    */
-  int GetTypeMetrics(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.TypeMetric TypeMetricPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetTypeMetrics(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.TypeMetric TypeMetricPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ssize_t FormatMagickCaption(Image*, DrawInfo*, const
    * MagickBooleanType, TypeMetric*, char**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/annotate.h:7</i>
    */
-  SaMagickCore.ssize_t FormatMagickCaption(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.DrawInfo DrawInfoPtr1, int MagickBooleanType1,
-      SaMagickCore.TypeMetric TypeMetricPtr1, PointerByReference charPtrPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ssize_t FormatMagickCaption(MagickCore.Image ImagePtr1,
+      MagickCore.DrawInfo DrawInfoPtr1, int MagickBooleanType1,
+      MagickCore.TypeMetric TypeMetricPtr1, PointerByReference charPtrPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* RemoveImageArtifact(Image*, const char*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:1</i> <br>
    *
-   * @deprecated use the safer methods {@link #RemoveImageArtifact(SaMagickCore.Image,
-   * java.lang.String)} and {@link #RemoveImageArtifact(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #RemoveImageArtifact(MagickCore.Image,
+   * java.lang.String)} and {@link #RemoveImageArtifact(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  Pointer RemoveImageArtifact(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  Pointer RemoveImageArtifact(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>char* RemoveImageArtifact(Image*, const char*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:1</i>
    */
-  Pointer RemoveImageArtifact(SaMagickCore.Image ImagePtr1, String charPtr1);
+  Pointer RemoveImageArtifact(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>const char* GetNextImageArtifact(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:3</i>
    */
-  String GetNextImageArtifact(SaMagickCore.Image ImagePtr1);
+  String GetNextImageArtifact(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>const char* GetImageArtifact(const Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:5</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetImageArtifact(SaMagickCore.Image,
-   * java.lang.String)} and {@link #GetImageArtifact(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #GetImageArtifact(MagickCore.Image,
+   * java.lang.String)} and {@link #GetImageArtifact(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  String GetImageArtifact(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  String GetImageArtifact(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>const char* GetImageArtifact(const Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:5</i>
    */
-  String GetImageArtifact(SaMagickCore.Image ImagePtr1, String charPtr1);
+  String GetImageArtifact(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType CloneImageArtifacts(Image*, const Image*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:7</i>
    */
-  int CloneImageArtifacts(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2);
+  int CloneImageArtifacts(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2);
 
   /**
    * Original signature : <code>MagickBooleanType DefineImageArtifact(Image*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:9</i> <br>
    *
-   * @deprecated use the safer methods {@link #DefineImageArtifact(SaMagickCore.Image,
-   * java.lang.String)} and {@link #DefineImageArtifact(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DefineImageArtifact(MagickCore.Image,
+   * java.lang.String)} and {@link #DefineImageArtifact(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DefineImageArtifact(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  int DefineImageArtifact(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DefineImageArtifact(Image*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:9</i>
    */
-  int DefineImageArtifact(SaMagickCore.Image ImagePtr1, String charPtr1);
+  int DefineImageArtifact(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DeleteImageArtifact(Image*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:11</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DeleteImageArtifact(SaMagickCore.Image,
-   * java.lang.String)} and {@link #DeleteImageArtifact(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DeleteImageArtifact(MagickCore.Image,
+   * java.lang.String)} and {@link #DeleteImageArtifact(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DeleteImageArtifact(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  int DeleteImageArtifact(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DeleteImageArtifact(Image*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:11</i>
    */
-  int DeleteImageArtifact(SaMagickCore.Image ImagePtr1, String charPtr1);
+  int DeleteImageArtifact(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageArtifact(Image*, const char*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:13</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetImageArtifact(SaMagickCore.Image,
-   * java.lang.String, java.lang.String)} and {@link #SetImageArtifact(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #SetImageArtifact(MagickCore.Image,
+   * java.lang.String, java.lang.String)} and {@link #SetImageArtifact(MagickCore.Image,
    * com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  int SetImageArtifact(SaMagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2);
+  int SetImageArtifact(MagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageArtifact(Image*, const char*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:13</i>
    */
-  int SetImageArtifact(SaMagickCore.Image ImagePtr1, String charPtr1, String charPtr2);
+  int SetImageArtifact(MagickCore.Image ImagePtr1, String charPtr1, String charPtr2);
 
   /**
    * Original signature : <code>void DestroyImageArtifacts(Image*)</code> <br> <i>native declaration
    * : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:15</i>
    */
-  void DestroyImageArtifacts(SaMagickCore.Image ImagePtr1);
+  void DestroyImageArtifacts(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ResetImageArtifactIterator(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/artifact.h:17</i>
    */
-  void ResetImageArtifactIterator(SaMagickCore.Image ImagePtr1);
+  void ResetImageArtifactIterator(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>ImageType GetImageType(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:1</i>
    */
-  int GetImageType(SaMagickCore.Image ImagePtr1);
+  int GetImageType(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>ImageType IdentifyImageGray(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:3</i>
    */
-  int IdentifyImageGray(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyImageGray(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ImageType IdentifyImageType(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:5</i>
    */
-  int IdentifyImageType(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyImageType(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IdentifyImageMonochrome(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:7</i>
    */
-  int IdentifyImageMonochrome(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyImageMonochrome(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImageGray(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:9</i>
    */
-  int IsImageGray(SaMagickCore.Image ImagePtr1);
+  int IsImageGray(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImageMonochrome(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:11</i>
    */
-  int IsImageMonochrome(SaMagickCore.Image ImagePtr1);
+  int IsImageMonochrome(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImageOpaque(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:13</i>
    */
-  int IsImageOpaque(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IsImageOpaque(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageDepth(Image*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:15</i>
    */
-  int SetImageDepth(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageDepth(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageType(Image*, const ImageType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:17</i>
    */
-  int SetImageType(SaMagickCore.Image ImagePtr1, int ImageType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageType(MagickCore.Image ImagePtr1, int ImageType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>RectangleInfo GetImageBoundingBox(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:19</i>
    */
-  SaMagickCore.RectangleInfo.ByValue GetImageBoundingBox(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo exception);
+  MagickCore.RectangleInfo.ByValue GetImageBoundingBox(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>size_t GetImageDepth(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:21</i>
    */
-  NativeSize GetImageDepth(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize GetImageDepth(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t GetImageQuantumDepth(const Image*, const
    * MagickBooleanType)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/attribute.h:23</i>
    */
-  NativeSize GetImageQuantumDepth(SaMagickCore.Image ImagePtr1, int MagickBooleanType1);
+  NativeSize GetImageQuantumDepth(MagickCore.Image ImagePtr1, int MagickBooleanType1);
 
   /**
    * Original signature : <code>CustomStreamInfo* AcquireCustomStreamInfo(ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:1</i>
    */
-  PointerByReference AcquireCustomStreamInfo(SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference AcquireCustomStreamInfo(MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>CustomStreamInfo* DestroyCustomStreamInfo(CustomStreamInfo*)</code>
@@ -10115,28 +10295,28 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>FILE* GetBlobFileHandle(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:5</i>
    */
-  PointerByReference GetBlobFileHandle(SaMagickCore.Image ImagePtr1);
+  PointerByReference GetBlobFileHandle(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* BlobToImage(const ImageInfo*, const void*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:7</i>
    */
-  SaMagickCore.Image BlobToImage(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image BlobToImage(MagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PingBlob(const ImageInfo*, const void*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:9</i>
    */
-  SaMagickCore.Image PingBlob(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PingBlob(MagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CustomStreamToImage(const ImageInfo*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:11</i>
    */
-  SaMagickCore.Image CustomStreamToImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CustomStreamToImage(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType BlobToFile(char*, const void*, const size_t,
@@ -10144,135 +10324,135 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #BlobToFile(java.nio.ByteBuffer, com.sun.jna.Pointer,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} and {@link
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} and {@link
    * #BlobToFile(com.sun.jna.Pointer, com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int BlobToFile(Pointer charPtr1, Pointer voidPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType BlobToFile(char*, const void*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:13</i>
    */
   int BlobToFile(ByteBuffer charPtr1, Pointer voidPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType FileToImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:15</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #FileToImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #FileToImage(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #FileToImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #FileToImage(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int FileToImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int FileToImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType FileToImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:15</i>
    */
-  int FileToImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int FileToImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetBlobError(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:17</i>
    */
-  int GetBlobError(SaMagickCore.Image ImagePtr1);
+  int GetBlobError(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ImageToFile(Image*, char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:19</i> <br>
    *
-   * @deprecated use the safer methods {@link #ImageToFile(SaMagickCore.Image, java.nio.ByteBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #ImageToFile(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ImageToFile(MagickCore.Image, java.nio.ByteBuffer,
+   * MagickCore.ExceptionInfo)} and {@link #ImageToFile(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ImageToFile(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ImageToFile(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ImageToFile(Image*, char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:19</i>
    */
-  int ImageToFile(SaMagickCore.Image ImagePtr1, ByteBuffer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ImageToFile(MagickCore.Image ImagePtr1, ByteBuffer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType InjectImageBlob(const ImageInfo*, Image*, Image*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/blob.h:21</i> <br>
    *
-   * @deprecated use the safer methods {@link #InjectImageBlob(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, SaMagickCore.Image, java.lang.String, SaMagickCore.ExceptionInfo)} and
-   * {@link #InjectImageBlob(SaMagickCore.ImageInfo, SaMagickCore.Image, SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #InjectImageBlob(MagickCore.ImageInfo,
+   * MagickCore.Image, MagickCore.Image, java.lang.String, MagickCore.ExceptionInfo)} and
+   * {@link #InjectImageBlob(MagickCore.ImageInfo, MagickCore.Image, MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int InjectImageBlob(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InjectImageBlob(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType InjectImageBlob(const ImageInfo*, Image*, Image*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/blob.h:21</i>
    */
-  int InjectImageBlob(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InjectImageBlob(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsBlobExempt(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:23</i>
    */
-  int IsBlobExempt(SaMagickCore.Image ImagePtr1);
+  int IsBlobExempt(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsBlobSeekable(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:25</i>
    */
-  int IsBlobSeekable(SaMagickCore.Image ImagePtr1);
+  int IsBlobSeekable(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsBlobTemporary(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:27</i>
    */
-  int IsBlobTemporary(SaMagickCore.Image ImagePtr1);
+  int IsBlobTemporary(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickSizeType GetBlobSize(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:29</i>
    */
-  long GetBlobSize(SaMagickCore.Image ImagePtr1);
+  long GetBlobSize(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>StreamHandler GetBlobStreamHandler(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:31</i>
    */
-  SaMagickCore.StreamHandler GetBlobStreamHandler(SaMagickCore.Image ImagePtr1);
+  MagickCore.StreamHandler GetBlobStreamHandler(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void* GetBlobStreamData(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:33</i>
    */
-  Pointer GetBlobStreamData(SaMagickCore.Image ImagePtr1);
+  Pointer GetBlobStreamData(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void DestroyBlob(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/blob.h:35</i>
    */
-  void DestroyBlob(SaMagickCore.Image ImagePtr1);
+  void DestroyBlob(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void DuplicateBlob(Image*, const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:37</i>
    */
-  void DuplicateBlob(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2);
+  void DuplicateBlob(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2);
 
   /**
    * Original signature : <code>void* FileToBlob(const char*, const size_t, size_t*,
@@ -10281,54 +10461,54 @@ public interface SaMagickCore extends Library {
    *
    * @deprecated use the safer methods {@link #FileToBlob(java.lang.String,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} and {@link #FileToBlob(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} and {@link #FileToBlob(com.sun.jna.Pointer,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   Pointer FileToBlob(Pointer charPtr1, NativeSize size_t1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* FileToBlob(const char*, const size_t, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:39</i>
    */
   Pointer FileToBlob(String charPtr1, NativeSize size_t1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* ImageToBlob(const ImageInfo*, Image*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:41</i>
    */
-  Pointer ImageToBlob(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer ImageToBlob(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void ImageToCustomStream(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:43</i>
    */
-  void ImageToCustomStream(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void ImageToCustomStream(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* ImagesToBlob(const ImageInfo*, Image*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:45</i>
    */
-  Pointer ImagesToBlob(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer ImagesToBlob(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void ImagesToCustomStream(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:47</i>
    */
-  void ImagesToCustomStream(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void ImagesToCustomStream(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void SetBlobExempt(Image*, const MagickBooleanType)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/blob.h:49</i>
    */
-  void SetBlobExempt(SaMagickCore.Image ImagePtr1, int MagickBooleanType1);
+  void SetBlobExempt(MagickCore.Image ImagePtr1, int MagickBooleanType1);
 
   /**
    * Original signature : <code>void SetCustomStreamData(CustomStreamInfo*, void*)</code> <br>
@@ -10414,72 +10594,72 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>CacheType GetImagePixelCacheType(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:9</i>
    */
-  int GetImagePixelCacheType(SaMagickCore.Image ImagePtr1);
+  int GetImagePixelCacheType(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>char* GetPixelCacheFilename(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:11</i>
    */
-  String GetPixelCacheFilename(SaMagickCore.Image ImagePtr1);
+  String GetPixelCacheFilename(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void* GetVirtualMetacontent(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:14</i>
    */
-  Pointer GetVirtualMetacontent(SaMagickCore.Image ImagePtr1);
+  Pointer GetVirtualMetacontent(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickSizeType GetImageExtent(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:17</i>
    */
-  long GetImageExtent(SaMagickCore.Image ImagePtr1);
+  long GetImageExtent(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void* AcquirePixelCachePixels(const Image*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:20</i>
    */
-  Pointer AcquirePixelCachePixels(SaMagickCore.Image ImagePtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer AcquirePixelCachePixels(MagickCore.Image ImagePtr1, NativeSizeByReference size_tPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* GetAuthenticMetacontent(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:22</i>
    */
-  Pointer GetAuthenticMetacontent(SaMagickCore.Image ImagePtr1);
+  Pointer GetAuthenticMetacontent(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void* GetPixelCachePixels(Image*, MagickSizeType*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:24</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetPixelCachePixels(SaMagickCore.Image,
-   * java.nio.LongBuffer, SaMagickCore.ExceptionInfo)} and {@link #GetPixelCachePixels(SaMagickCore.Image,
-   * com.sun.jna.ptr.LongByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetPixelCachePixels(MagickCore.Image,
+   * java.nio.LongBuffer, MagickCore.ExceptionInfo)} and {@link #GetPixelCachePixels(MagickCore.Image,
+   * com.sun.jna.ptr.LongByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  Pointer GetPixelCachePixels(SaMagickCore.Image ImagePtr1, LongByReference MagickSizeTypePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetPixelCachePixels(MagickCore.Image ImagePtr1, LongByReference MagickSizeTypePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* GetPixelCachePixels(Image*, MagickSizeType*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache.h:24</i>
    */
-  Pointer GetPixelCachePixels(SaMagickCore.Image ImagePtr1, LongBuffer MagickSizeTypePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetPixelCachePixels(MagickCore.Image ImagePtr1, LongBuffer MagickSizeTypePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>CacheView* AcquireAuthenticCacheView(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache-view.h:21</i>
    */
-  PointerByReference AcquireAuthenticCacheView(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference AcquireAuthenticCacheView(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>CacheView* AcquireVirtualCacheView(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cache-view.h:23</i>
    */
-  PointerByReference AcquireVirtualCacheView(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference AcquireVirtualCacheView(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>CacheView* CloneCacheView(const CacheView*)</code> <br> <i>native
@@ -10553,13 +10733,13 @@ public interface SaMagickCore extends Library {
    * instead
    */
   @Deprecated
-  SaMagickCore.Image GetCacheViewImage(Pointer CacheViewPtr1);
+  MagickCore.Image GetCacheViewImage(Pointer CacheViewPtr1);
 
   /**
    * Original signature : <code>Image* GetCacheViewImage(const CacheView*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/cache-view.h:33</i>
    */
-  SaMagickCore.Image GetCacheViewImage(PointerByReference CacheViewPtr1);
+  MagickCore.Image GetCacheViewImage(PointerByReference CacheViewPtr1);
 
   /**
    * Original signature : <code>void* GetCacheViewVirtualMetacontent(const CacheView*)</code> <br>
@@ -10582,108 +10762,108 @@ public interface SaMagickCore extends Library {
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:1</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ChannelFxImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #ChannelFxImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ChannelFxImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #ChannelFxImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image ChannelFxImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ChannelFxImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ChannelFxImage(const Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:1</i>
    */
-  SaMagickCore.Image ChannelFxImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ChannelFxImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CombineImages(const Image*, const, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:3</i>
    */
-  SaMagickCore.Image CombineImages(SaMagickCore.Image ImagePtr1, int ColorspaceType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CombineImages(MagickCore.Image ImagePtr1, int ColorspaceType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SeparateImage(const Image*, const, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:5</i>
    */
-  SaMagickCore.Image SeparateImage(SaMagickCore.Image ImagePtr1, int ChannelType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SeparateImage(MagickCore.Image ImagePtr1, int ChannelType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SeparateImages(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:7</i>
    */
-  SaMagickCore.Image SeparateImages(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SeparateImages(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetImageAlphaChannel(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:9</i>
    */
-  int GetImageAlphaChannel(SaMagickCore.Image ImagePtr1);
+  int GetImageAlphaChannel(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageAlphaChannel(Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/channel.h:11</i>
    */
-  int SetImageAlphaChannel(SaMagickCore.Image ImagePtr1, int AlphaChannelOption,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageAlphaChannel(MagickCore.Image ImagePtr1, int AlphaChannelOption,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DecipherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:1</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DecipherImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #DecipherImage(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DecipherImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #DecipherImage(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int DecipherImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DecipherImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DecipherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:1</i>
    */
-  int DecipherImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DecipherImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType EncipherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:3</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #EncipherImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #EncipherImage(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #EncipherImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #EncipherImage(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int EncipherImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int EncipherImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType EncipherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:3</i>
    */
-  int EncipherImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int EncipherImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType PasskeyDecipherImage(Image*, const StringInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:5</i>
    */
-  int PasskeyDecipherImage(SaMagickCore.Image ImagePtr1, SaMagickCore.StringInfo StringInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PasskeyDecipherImage(MagickCore.Image ImagePtr1, MagickCore.StringInfo StringInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType PasskeyEncipherImage(Image*, const StringInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/cipher.h:7</i>
    */
-  int PasskeyEncipherImage(SaMagickCore.Image ImagePtr1, SaMagickCore.StringInfo StringInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PasskeyEncipherImage(MagickCore.Image ImagePtr1, MagickCore.StringInfo StringInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const char* GetClientPath()</code> <br> <i>native declaration :
@@ -10734,39 +10914,39 @@ public interface SaMagickCore extends Library {
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:9</i> <br>
    *
    * @deprecated use the safer methods {@link #GetCoderList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetCoderList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetCoderList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetCoderList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:9</i>
    */
   PointerByReference GetCoderList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const CoderInfo* GetCoderInfo(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:11</i> <br>
    *
    * @deprecated use the safer methods {@link #GetCoderInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetCoderInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetCoderInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.CoderInfo GetCoderInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.CoderInfo GetCoderInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const CoderInfo* GetCoderInfo(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:11</i>
    */
-  SaMagickCore.CoderInfo GetCoderInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.CoderInfo GetCoderInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const CoderInfo** GetCoderInfoList(const char*, size_t*,
@@ -10774,75 +10954,75 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetCoderInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetCoderInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.CoderInfo.ByReference[] GetCoderInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.CoderInfo.ByReference[] GetCoderInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const CoderInfo** GetCoderInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:13</i>
    */
-  SaMagickCore.CoderInfo.ByReference[] GetCoderInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.CoderInfo.ByReference[] GetCoderInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListCoderInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:15</i> <br>
    *
    * @deprecated use the safer method {@link #ListCoderInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListCoderInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListCoderInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListCoderInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/coder.h:15</i>
    */
-  int ListCoderInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListCoderInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetColorList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:25</i> <br>
    *
    * @deprecated use the safer methods {@link #GetColorList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetColorList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetColorList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetColorList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:25</i>
    */
   PointerByReference GetColorList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ColorInfo* GetColorInfo(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:27</i> <br>
    *
    * @deprecated use the safer methods {@link #GetColorInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetColorInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetColorInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ColorInfo GetColorInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ColorInfo GetColorInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ColorInfo* GetColorInfo(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:27</i>
    */
-  SaMagickCore.ColorInfo GetColorInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ColorInfo GetColorInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ColorInfo** GetColorInfoList(const char*, size_t*,
@@ -10850,44 +11030,44 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetColorInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetColorInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ColorInfo.ByReference[] GetColorInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ColorInfo.ByReference[] GetColorInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ColorInfo** GetColorInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:29</i>
    */
-  SaMagickCore.ColorInfo.ByReference[] GetColorInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ColorInfo.ByReference[] GetColorInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsEquivalentImage(const Image*, const Image*,
    * ssize_t*, ssize_t*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/color.h:31</i>
    */
-  int IsEquivalentImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ssize_t x, SaMagickCore.ssize_t y, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IsEquivalentImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ssize_t x, MagickCore.ssize_t y, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListColorInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:33</i> <br>
    *
    * @deprecated use the safer method {@link #ListColorInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListColorInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListColorInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListColorInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:33</i>
    */
-  int ListColorInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListColorInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType QueryColorCompliance(const char*, const
@@ -10895,12 +11075,12 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/color.h:35</i> <br>
    *
    * @deprecated use the safer methods {@link #QueryColorCompliance(java.lang.String, int,
-   * SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} and {@link #QueryColorCompliance(com.sun.jna.Pointer,
-   * int, SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.PixelInfo, MagickCore.ExceptionInfo)} and {@link #QueryColorCompliance(com.sun.jna.Pointer,
+   * int, MagickCore.PixelInfo, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int QueryColorCompliance(Pointer charPtr1, int ComplianceType1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType QueryColorCompliance(const char*, const
@@ -10908,48 +11088,48 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/color.h:35</i>
    */
   int QueryColorCompliance(String charPtr1, int ComplianceType1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType QueryColorname(const Image*, const PixelInfo*,
    * const ComplianceType, char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/color.h:37</i> <br>
    *
-   * @deprecated use the safer methods {@link #QueryColorname(SaMagickCore.Image,
-   * SaMagickCore.PixelInfo, int, java.nio.ByteBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #QueryColorname(SaMagickCore.Image, SaMagickCore.PixelInfo, int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #QueryColorname(MagickCore.Image,
+   * MagickCore.PixelInfo, int, java.nio.ByteBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #QueryColorname(MagickCore.Image, MagickCore.PixelInfo, int, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int QueryColorname(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      int ComplianceType1, Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int QueryColorname(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      int ComplianceType1, Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType QueryColorname(const Image*, const PixelInfo*,
    * const ComplianceType, char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/color.h:37</i>
    */
-  int QueryColorname(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      int ComplianceType1, ByteBuffer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int QueryColorname(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      int ComplianceType1, ByteBuffer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void ConcatenateColorComponent(const PixelInfo*, const, const
    * ComplianceType, char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:39</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ConcatenateColorComponent(SaMagickCore.PixelInfo,
-   * int, int, java.nio.ByteBuffer)} and {@link #ConcatenateColorComponent(SaMagickCore.PixelInfo,
+   * @deprecated use the safer methods {@link #ConcatenateColorComponent(MagickCore.PixelInfo,
+   * int, int, java.nio.ByteBuffer)} and {@link #ConcatenateColorComponent(MagickCore.PixelInfo,
    * int, int, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  void ConcatenateColorComponent(SaMagickCore.PixelInfo PixelInfoPtr1, int PixelChannel,
+  void ConcatenateColorComponent(MagickCore.PixelInfo PixelInfoPtr1, int PixelChannel,
       int ComplianceType1, Pointer charPtr1);
 
   /**
    * Original signature : <code>void ConcatenateColorComponent(const PixelInfo*, const, const
    * ComplianceType, char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:39</i>
    */
-  void ConcatenateColorComponent(SaMagickCore.PixelInfo PixelInfoPtr1, int PixelChannel,
+  void ConcatenateColorComponent(MagickCore.PixelInfo PixelInfoPtr1, int PixelChannel,
       int ComplianceType1, ByteBuffer charPtr1);
 
   /**
@@ -10957,279 +11137,279 @@ public interface SaMagickCore extends Library {
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:41</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetColorTuple(SaMagickCore.PixelInfo, int,
-   * java.nio.ByteBuffer)} and {@link #GetColorTuple(SaMagickCore.PixelInfo, int,
+   * @deprecated use the safer methods {@link #GetColorTuple(MagickCore.PixelInfo, int,
+   * java.nio.ByteBuffer)} and {@link #GetColorTuple(MagickCore.PixelInfo, int,
    * com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  void GetColorTuple(SaMagickCore.PixelInfo PixelInfoPtr1, int MagickBooleanType1,
+  void GetColorTuple(MagickCore.PixelInfo PixelInfoPtr1, int MagickBooleanType1,
       Pointer charPtr1);
 
   /**
    * Original signature : <code>void GetColorTuple(const PixelInfo*, const MagickBooleanType,
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/color.h:41</i>
    */
-  void GetColorTuple(SaMagickCore.PixelInfo PixelInfoPtr1, int MagickBooleanType1,
+  void GetColorTuple(MagickCore.PixelInfo PixelInfoPtr1, int MagickBooleanType1,
       ByteBuffer charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType AcquireImageColormap(Image*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colormap.h:1</i>
    */
-  int AcquireImageColormap(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AcquireImageColormap(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType CycleColormapImage(Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colormap.h:3</i>
    */
-  int CycleColormapImage(SaMagickCore.Image ImagePtr1, int ssize_t,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int CycleColormapImage(MagickCore.Image ImagePtr1, int ssize_t,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SortColormapByIntensity(Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colormap.h:5</i>
    */
-  int SortColormapByIntensity(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SortColormapByIntensity(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ColorspaceType GetImageColorspaceType(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colorspace.h:37</i>
    */
-  int GetImageColorspaceType(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageColorspaceType(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageColorspace(Image*, const ColorspaceType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colorspace.h:39</i>
    */
-  int SetImageColorspace(SaMagickCore.Image ImagePtr1, int ColorspaceType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageColorspace(MagickCore.Image ImagePtr1, int ColorspaceType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageGray(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colorspace.h:41</i>
    */
-  int SetImageGray(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageGray(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageMonochrome(Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/colorspace.h:43</i>
    */
-  int SetImageMonochrome(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageMonochrome(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType TransformImageColorspace(Image*, const
    * ColorspaceType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/colorspace.h:45</i>
    */
-  int TransformImageColorspace(SaMagickCore.Image ImagePtr1, int ColorspaceType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int TransformImageColorspace(MagickCore.Image ImagePtr1, int ColorspaceType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>double* GetImageDistortions(Image*, const Image*, const MetricType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compare.h:16</i>
    */
-  DoubleByReference GetImageDistortions(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  DoubleByReference GetImageDistortions(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CompareImages(Image*, const Image*, const MetricType,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compare.h:18</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #CompareImages(SaMagickCore.Image, SaMagickCore.Image,
-   * int, java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #CompareImages(SaMagickCore.Image, SaMagickCore.Image, int, com.sun.jna.ptr.DoubleByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #CompareImages(MagickCore.Image, MagickCore.Image,
+   * int, java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #CompareImages(MagickCore.Image, MagickCore.Image, int, com.sun.jna.ptr.DoubleByReference,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image CompareImages(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CompareImages(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CompareImages(Image*, const Image*, const MetricType,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compare.h:18</i>
    */
-  SaMagickCore.Image CompareImages(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, DoubleBuffer doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CompareImages(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, DoubleBuffer doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SimilarityImage(const Image*, const Image*, const MetricType,
    * const double, RectangleInfo*, double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compare.h:20</i> <br>
    *
-   * @deprecated use the safer methods {@link #SimilarityImage(SaMagickCore.Image,
-   * SaMagickCore.Image, int, double, SaMagickCore.RectangleInfo, java.nio.DoubleBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #SimilarityImage(SaMagickCore.Image,
-   * SaMagickCore.Image, int, double, SaMagickCore.RectangleInfo, com.sun.jna.ptr.DoubleByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #SimilarityImage(MagickCore.Image,
+   * MagickCore.Image, int, double, MagickCore.RectangleInfo, java.nio.DoubleBuffer,
+   * MagickCore.ExceptionInfo)} and {@link #SimilarityImage(MagickCore.Image,
+   * MagickCore.Image, int, double, MagickCore.RectangleInfo, com.sun.jna.ptr.DoubleByReference,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image SimilarityImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, double double1, SaMagickCore.RectangleInfo RectangleInfoPtr1,
-      DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SimilarityImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, double double1, MagickCore.RectangleInfo RectangleInfoPtr1,
+      DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SimilarityImage(const Image*, const Image*, const MetricType,
    * const double, RectangleInfo*, double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compare.h:20</i>
    */
-  SaMagickCore.Image SimilarityImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, double double1, SaMagickCore.RectangleInfo RectangleInfoPtr1,
-      DoubleBuffer doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SimilarityImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, double double1, MagickCore.RectangleInfo RectangleInfoPtr1,
+      DoubleBuffer doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetImageDistortion(Image*, const Image*, const
    * MetricType, double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compare.h:22</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetImageDistortion(SaMagickCore.Image,
-   * SaMagickCore.Image, int, java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetImageDistortion(SaMagickCore.Image, SaMagickCore.Image, int,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageDistortion(MagickCore.Image,
+   * MagickCore.Image, int, java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #GetImageDistortion(MagickCore.Image, MagickCore.Image, int,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int GetImageDistortion(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageDistortion(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetImageDistortion(Image*, const Image*, const
    * MetricType, double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compare.h:22</i>
    */
-  int GetImageDistortion(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int MetricType1, DoubleBuffer doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageDistortion(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int MetricType1, DoubleBuffer doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImagesEqual(const Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compare.h:24</i>
    */
-  int IsImagesEqual(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IsImagesEqual(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageColorMetric(Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compare.h:26</i>
    */
-  int SetImageColorMetric(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageColorMetric(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType CompositeImage(Image*, const Image*, const
    * CompositeOperator, const MagickBooleanType, const, const, ExceptionInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/composite.h:75</i>
    */
-  int CompositeImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
+  int CompositeImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
       int CompositeOperator1, int MagickBooleanType1, int ssize_t, int ssize_t2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType TextureImage(Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/composite.h:77</i>
    */
-  int TextureImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int TextureImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType HuffmanDecodeImage(Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:26</i>
    */
-  int HuffmanDecodeImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int HuffmanDecodeImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType HuffmanEncodeImage(const ImageInfo*, Image*,
    * Image*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:28</i>
    */
-  int HuffmanEncodeImage(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int HuffmanEncodeImage(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LZWEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:30</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #LZWEncodeImage(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #LZWEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, java.nio.ByteBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #LZWEncodeImage(SaMagickCore.Image,
+   * MagickCore.ExceptionInfo)} and {@link #LZWEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int LZWEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LZWEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LZWEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:30</i>
    */
-  int LZWEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, ByteBuffer magick_restrict,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LZWEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, ByteBuffer magick_restrict,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType PackbitsEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:32</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #PackbitsEncodeImage(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #PackbitsEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, java.nio.ByteBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #PackbitsEncodeImage(SaMagickCore.Image,
+   * MagickCore.ExceptionInfo)} and {@link #PackbitsEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int PackbitsEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PackbitsEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType PackbitsEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:32</i>
    */
-  int PackbitsEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      ByteBuffer magick_restrict, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PackbitsEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      ByteBuffer magick_restrict, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ZLIBEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:34</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ZLIBEncodeImage(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #ZLIBEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, java.nio.ByteBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #ZLIBEncodeImage(SaMagickCore.Image,
+   * MagickCore.ExceptionInfo)} and {@link #ZLIBEncodeImage(MagickCore.Image,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ZLIBEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ZLIBEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, Pointer magick_restrict,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ZLIBEncodeImage(Image*, const size_t, unsigned
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:34</i>
    */
-  int ZLIBEncodeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, ByteBuffer magick_restrict,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ZLIBEncodeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, ByteBuffer magick_restrict,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void Ascii85Encode(Image*, const unsigned char)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/compress.h:36</i>
    */
-  void Ascii85Encode(SaMagickCore.Image ImagePtr1, byte char1);
+  void Ascii85Encode(MagickCore.Image ImagePtr1, byte char1);
 
   /**
    * Original signature : <code>void Ascii85Flush(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compress.h:38</i>
    */
-  void Ascii85Flush(SaMagickCore.Image ImagePtr1);
+  void Ascii85Flush(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void Ascii85Initialize(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/compress.h:40</i>
    */
-  void Ascii85Initialize(SaMagickCore.Image ImagePtr1);
+  void Ascii85Initialize(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>char** GetConfigureList(const char*, size_t*, ExceptionInfo*)</code>
@@ -11237,20 +11417,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetConfigureList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetConfigureList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetConfigureList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetConfigureList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:9</i>
    */
   PointerByReference GetConfigureList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetConfigureOption(const char*)</code> <br> <i>native
@@ -11272,7 +11452,7 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>char* GetConfigureValue(const ConfigureInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:13</i>
    */
-  String GetConfigureValue(SaMagickCore.ConfigureInfo ConfigureInfoPtr1);
+  String GetConfigureValue(MagickCore.ConfigureInfo ConfigureInfoPtr1);
 
   /**
    * Original signature : <code>const ConfigureInfo* GetConfigureInfo(const char*,
@@ -11280,19 +11460,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetConfigureInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetConfigureInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetConfigureInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ConfigureInfo GetConfigureInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ConfigureInfo GetConfigureInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ConfigureInfo* GetConfigureInfo(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:15</i>
    */
-  SaMagickCore.ConfigureInfo GetConfigureInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ConfigureInfo GetConfigureInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ConfigureInfo** GetConfigureInfoList(const char*, size_t*,
@@ -11300,20 +11480,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetConfigureInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetConfigureInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ConfigureInfo.ByReference[] GetConfigureInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ConfigureInfo.ByReference[] GetConfigureInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const ConfigureInfo** GetConfigureInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:17</i>
    */
-  SaMagickCore.ConfigureInfo.ByReference[] GetConfigureInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ConfigureInfo.ByReference[] GetConfigureInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* DestroyConfigureOptions(LinkedListInfo*)</code> <br>
@@ -11337,19 +11517,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetConfigurePaths(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetConfigurePaths(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetConfigurePaths(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetConfigurePaths(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* GetConfigurePaths(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:21</i>
    */
   PointerByReference GetConfigurePaths(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* GetConfigureOptions(const char*,
@@ -11357,19 +11537,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetConfigureOptions(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetConfigureOptions(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetConfigureOptions(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetConfigureOptions(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* GetConfigureOptions(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:23</i>
    */
   PointerByReference GetConfigureOptions(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListConfigureInfo(FILE*, ExceptionInfo*)</code>
@@ -11377,16 +11557,16 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListConfigureInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListConfigureInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListConfigureInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListConfigureInfo(FILE*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/configure.h:25</i>
    */
-  int ListConfigureInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListConfigureInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ConstituteImage(const size_t, const size_t, const char*,
@@ -11395,168 +11575,169 @@ public interface SaMagickCore extends Library {
    *
    * @deprecated use the safer methods {@link #ConstituteImage(com.ochafik.lang.jnaerator.runtime.NativeSize,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, java.lang.String, int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} and {@link #ConstituteImage(com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * MagickCore.ExceptionInfo)} and {@link #ConstituteImage(com.ochafik.lang.jnaerator.runtime.NativeSize,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer, int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image ConstituteImage(NativeSize size_t1, NativeSize size_t2, Pointer charPtr1,
-      int StorageType, Pointer voidPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConstituteImage(NativeSize size_t1, NativeSize size_t2, Pointer charPtr1,
+      int StorageType, Pointer voidPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ConstituteImage(const size_t, const size_t, const char*,
    * const, const void*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/constitute.h:1</i>
    */
-  SaMagickCore.Image ConstituteImage(NativeSize size_t1, NativeSize size_t2, String charPtr1,
-      int StorageType, Pointer voidPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConstituteImage(NativeSize size_t1, NativeSize size_t2, String charPtr1,
+      int StorageType, Pointer voidPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PingImage(const ImageInfo*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:3</i>
    */
-  SaMagickCore.Image PingImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PingImage(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PingImages(ImageInfo*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:5</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #PingImages(SaMagickCore.ImageInfo, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #PingImages(SaMagickCore.ImageInfo,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #PingImages(MagickCore.ImageInfo, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #PingImages(MagickCore.ImageInfo,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image PingImages(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PingImages(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PingImages(ImageInfo*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:5</i>
    */
-  SaMagickCore.Image PingImages(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PingImages(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReadImage(const ImageInfo*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:7</i>
    */
-  SaMagickCore.Image ReadImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image.ByReference ReadImage(MagickCore.ImageInfo.ByReference ImageInfoPtr1,
+      MagickCore.ExceptionInfo.ByReference ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReadImages(ImageInfo*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:9</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ReadImages(SaMagickCore.ImageInfo, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #ReadImages(SaMagickCore.ImageInfo,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ReadImages(MagickCore.ImageInfo, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #ReadImages(MagickCore.ImageInfo.ByReference,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo.ByReference)} instead
    */
   @Deprecated
-  SaMagickCore.Image ReadImages(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image.ByReference ReadImages(MagickCore.ImageInfo.ByReference ImageInfoPtr1,
+      Pointer charPtr1,
+      MagickCore.ExceptionInfo.ByReference ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReadImages(ImageInfo*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:9</i>
    */
-  SaMagickCore.Image ReadImages(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ReadImages(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReadInlineImage(const ImageInfo*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:11</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ReadInlineImage(SaMagickCore.ImageInfo,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #ReadInlineImage(SaMagickCore.ImageInfo,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ReadInlineImage(MagickCore.ImageInfo,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #ReadInlineImage(MagickCore.ImageInfo,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image ReadInlineImage(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ReadInlineImage(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReadInlineImage(const ImageInfo*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:11</i>
    */
-  SaMagickCore.Image ReadInlineImage(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ReadInlineImage(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType WriteImage(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:13</i>
    */
-  int WriteImage(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WriteImage(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType WriteImages(const ImageInfo*, Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:15</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #WriteImages(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #WriteImages(SaMagickCore.ImageInfo, SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #WriteImages(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #WriteImages(MagickCore.ImageInfo, MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int WriteImages(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WriteImages(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType WriteImages(const ImageInfo*, Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/constitute.h:15</i>
    */
-  int WriteImages(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WriteImages(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* BorderImage(const Image*, const RectangleInfo*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/decorate.h:9</i>
    */
-  SaMagickCore.Image BorderImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, int CompositeOperator,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image BorderImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, int CompositeOperator,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* FrameImage(const Image*, const FrameInfo*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/decorate.h:11</i>
    */
-  SaMagickCore.Image FrameImage(SaMagickCore.Image ImagePtr1, SaMagickCore.FrameInfo FrameInfoPtr1,
-      int CompositeOperator, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image FrameImage(MagickCore.Image ImagePtr1, MagickCore.FrameInfo FrameInfoPtr1,
+      int CompositeOperator, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType RaiseImage(Image*, const RectangleInfo*, const
    * MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/decorate.h:13</i>
    */
-  int RaiseImage(SaMagickCore.Image ImagePtr1, SaMagickCore.RectangleInfo RectangleInfoPtr1,
-      int MagickBooleanType1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RaiseImage(MagickCore.Image ImagePtr1, MagickCore.RectangleInfo RectangleInfoPtr1,
+      int MagickBooleanType1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetDelegateCommand(const ImageInfo*, Image*, const char*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/delegate.h:13</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetDelegateCommand(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetDelegateCommand(SaMagickCore.ImageInfo, SaMagickCore.Image, com.sun.jna.Pointer,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetDelegateCommand(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #GetDelegateCommand(MagickCore.ImageInfo, MagickCore.Image, com.sun.jna.Pointer,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  Pointer GetDelegateCommand(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      Pointer charPtr1, Pointer charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetDelegateCommand(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      Pointer charPtr1, Pointer charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetDelegateCommand(const ImageInfo*, Image*, const char*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/delegate.h:13</i>
    */
-  Pointer GetDelegateCommand(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      String charPtr1, String charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetDelegateCommand(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      String charPtr1, String charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetDelegateList(const char*, size_t*, ExceptionInfo*)</code>
@@ -11564,26 +11745,26 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetDelegateList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetDelegateList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetDelegateList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetDelegateList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:15</i>
    */
   PointerByReference GetDelegateList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetDelegateCommands(const DelegateInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:17</i>
    */
-  String GetDelegateCommands(SaMagickCore.DelegateInfo DelegateInfoPtr1);
+  String GetDelegateCommands(MagickCore.DelegateInfo DelegateInfoPtr1);
 
   /**
    * Original signature : <code>const DelegateInfo* GetDelegateInfo(const char*, const char*,
@@ -11591,19 +11772,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetDelegateInfo(java.lang.String, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetDelegateInfo(com.sun.jna.Pointer,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetDelegateInfo(com.sun.jna.Pointer,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.DelegateInfo GetDelegateInfo(Pointer charPtr1, Pointer charPtr2,
-      SaMagickCore.ExceptionInfo exception);
+  MagickCore.DelegateInfo GetDelegateInfo(Pointer charPtr1, Pointer charPtr2,
+      MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>const DelegateInfo* GetDelegateInfo(const char*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:19</i>
    */
-  SaMagickCore.DelegateInfo GetDelegateInfo(String charPtr1, String charPtr2,
-      SaMagickCore.ExceptionInfo exception);
+  MagickCore.DelegateInfo GetDelegateInfo(String charPtr1, String charPtr2,
+      MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>const DelegateInfo** GetDelegateInfoList(const char*, size_t*,
@@ -11611,20 +11792,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetDelegateInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetDelegateInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.DelegateInfo.ByReference[] GetDelegateInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.DelegateInfo.ByReference[] GetDelegateInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const DelegateInfo** GetDelegateInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:21</i>
    */
-  SaMagickCore.DelegateInfo.ByReference[] GetDelegateInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.DelegateInfo.ByReference[] GetDelegateInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>int ExternalDelegateCommand(const, const, const char*, char*,
@@ -11632,53 +11813,53 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #ExternalDelegateCommand(int, int, java.lang.String,
-   * java.nio.ByteBuffer, SaMagickCore.ExceptionInfo)} and {@link #ExternalDelegateCommand(int, int,
-   * com.sun.jna.Pointer, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * java.nio.ByteBuffer, MagickCore.ExceptionInfo)} and {@link #ExternalDelegateCommand(int, int,
+   * com.sun.jna.Pointer, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int ExternalDelegateCommand(int MagickBooleanType, int MagickBooleanType2, Pointer charPtr1,
-      Pointer charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      Pointer charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>int ExternalDelegateCommand(const, const, const char*, char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:23</i>
    */
   int ExternalDelegateCommand(int MagickBooleanType, int MagickBooleanType2, String charPtr1,
-      ByteBuffer charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      ByteBuffer charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ssize_t GetDelegateMode(const DelegateInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:25</i>
    */
-  SaMagickCore.ssize_t GetDelegateMode(SaMagickCore.DelegateInfo DelegateInfoPtr1);
+  MagickCore.ssize_t GetDelegateMode(MagickCore.DelegateInfo DelegateInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetDelegateThreadSupport(const
    * DelegateInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:27</i>
    */
-  int GetDelegateThreadSupport(SaMagickCore.DelegateInfo DelegateInfoPtr1);
+  int GetDelegateThreadSupport(MagickCore.DelegateInfo DelegateInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType InvokeDelegate(ImageInfo*, Image*, const char*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/delegate.h:29</i> <br>
    *
-   * @deprecated use the safer methods {@link #InvokeDelegate(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #InvokeDelegate(SaMagickCore.ImageInfo, SaMagickCore.Image, com.sun.jna.Pointer,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #InvokeDelegate(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #InvokeDelegate(MagickCore.ImageInfo, MagickCore.Image, com.sun.jna.Pointer,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int InvokeDelegate(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      Pointer charPtr1, Pointer charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeDelegate(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      Pointer charPtr1, Pointer charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType InvokeDelegate(ImageInfo*, Image*, const char*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/delegate.h:29</i>
    */
-  int InvokeDelegate(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      String charPtr1, String charPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeDelegate(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      String charPtr1, String charPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListDelegateInfo(FILE*, ExceptionInfo*)</code>
@@ -11686,550 +11867,550 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListDelegateInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListDelegateInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListDelegateInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListDelegateInfo(FILE*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/delegate.h:31</i>
    */
-  int ListDelegateInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListDelegateInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickSeekableStream(const MagickInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/deprecate.h:2</i>
    */
-  int GetMagickSeekableStream(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickSeekableStream(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>void* CropImageToHBITMAP(Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/deprecate.h:4</i>
    */
-  Pointer CropImageToHBITMAP(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer CropImageToHBITMAP(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void* ImageToHBITMAP(Image*, ExceptionInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/deprecate.h:6</i>
    */
-  Pointer ImageToHBITMAP(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer ImageToHBITMAP(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DisplayImages(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/display.h:1</i>
    */
-  int DisplayImages(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DisplayImages(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType RemoteDisplayCommand(const ImageInfo*, const
    * char*, const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/display.h:3</i> <br>
    *
-   * @deprecated use the safer methods {@link #RemoteDisplayCommand(SaMagickCore.ImageInfo,
-   * java.lang.String, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #RemoteDisplayCommand(SaMagickCore.ImageInfo, com.sun.jna.Pointer, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #RemoteDisplayCommand(MagickCore.ImageInfo,
+   * java.lang.String, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #RemoteDisplayCommand(MagickCore.ImageInfo, com.sun.jna.Pointer, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int RemoteDisplayCommand(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1, Pointer charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RemoteDisplayCommand(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1, Pointer charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType RemoteDisplayCommand(const ImageInfo*, const
    * char*, const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/display.h:3</i>
    */
-  int RemoteDisplayCommand(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1, String charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RemoteDisplayCommand(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1, String charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* AffineTransformImage(const Image*, const AffineMatrix*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:41</i>
    */
-  SaMagickCore.Image AffineTransformImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.AffineMatrix AffineMatrixPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AffineTransformImage(MagickCore.Image ImagePtr1,
+      MagickCore.AffineMatrix AffineMatrixPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DistortImage(const Image*, const DistortMethod, const size_t,
    * const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/distort.h:43</i> <br>
    *
-   * @deprecated use the safer methods {@link #DistortImage(SaMagickCore.Image, int,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], SaMagickCore.ExceptionInfo)} and
-   * {@link #DistortImage(SaMagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DistortImage(MagickCore.Image, int,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], MagickCore.ExceptionInfo)} and
+   * {@link #DistortImage(MagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image DistortImage(SaMagickCore.Image ImagePtr1, int DistortMethod1,
-      NativeSize size_t1, DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo exception);
+  MagickCore.Image DistortImage(MagickCore.Image ImagePtr1, int DistortMethod1,
+      NativeSize size_t1, DoubleByReference doublePtr1, MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>Image* DistortImage(const Image*, const DistortMethod, const size_t,
    * const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/distort.h:43</i>
    */
-  SaMagickCore.Image DistortImage(SaMagickCore.Image ImagePtr1, int DistortMethod1,
-      NativeSize size_t1, double doublePtr1[], SaMagickCore.ExceptionInfo exception);
+  MagickCore.Image DistortImage(MagickCore.Image ImagePtr1, int DistortMethod1,
+      NativeSize size_t1, double doublePtr1[], MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>Image* DistortResizeImage(const Image*, const size_t, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:45</i>
    */
-  SaMagickCore.Image DistortResizeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DistortResizeImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* RotateImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distort.h:47</i>
    */
-  SaMagickCore.Image RotateImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image RotateImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SparseColorImage(const Image*, const SparseColorMethod, const
    * size_t, const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/distort.h:49</i> <br>
    *
-   * @deprecated use the safer methods {@link #SparseColorImage(SaMagickCore.Image, int,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], SaMagickCore.ExceptionInfo)} and
-   * {@link #SparseColorImage(SaMagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #SparseColorImage(MagickCore.Image, int,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], MagickCore.ExceptionInfo)} and
+   * {@link #SparseColorImage(MagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image SparseColorImage(SaMagickCore.Image ImagePtr1, int SparseColorMethod1,
+  MagickCore.Image SparseColorImage(MagickCore.Image ImagePtr1, int SparseColorMethod1,
       NativeSize size_t1, DoubleByReference doublePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SparseColorImage(const Image*, const SparseColorMethod, const
    * size_t, const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/distort.h:49</i>
    */
-  SaMagickCore.Image SparseColorImage(SaMagickCore.Image ImagePtr1, int SparseColorMethod1,
-      NativeSize size_t1, double doublePtr1[], SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SparseColorImage(MagickCore.Image ImagePtr1, int SparseColorMethod1,
+      NativeSize size_t1, double doublePtr1[], MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void DistributePixelCacheServer(const int, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/distribute-cache.h:1</i>
    */
-  void DistributePixelCacheServer(int int1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void DistributePixelCacheServer(int int1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>DrawInfo* AcquireDrawInfo()</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:185</i>
    */
-  SaMagickCore.DrawInfo AcquireDrawInfo();
+  MagickCore.DrawInfo AcquireDrawInfo();
 
   /**
    * Original signature : <code>DrawInfo* CloneDrawInfo(const ImageInfo*, const DrawInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:187</i>
    */
-  SaMagickCore.DrawInfo CloneDrawInfo(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.DrawInfo DrawInfoPtr1);
+  MagickCore.DrawInfo CloneDrawInfo(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.DrawInfo DrawInfoPtr1);
 
   /**
    * Original signature : <code>DrawInfo* DestroyDrawInfo(DrawInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:189</i>
    */
-  SaMagickCore.DrawInfo DestroyDrawInfo(SaMagickCore.DrawInfo DrawInfoPtr1);
+  MagickCore.DrawInfo DestroyDrawInfo(MagickCore.DrawInfo DrawInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawAffineImage(Image*, const Image*, const
    * AffineMatrix*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:191</i>
    */
-  int DrawAffineImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.AffineMatrix AffineMatrixPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawAffineImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.AffineMatrix AffineMatrixPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawClipPath(Image*, const DrawInfo*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:193</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DrawClipPath(SaMagickCore.Image,
-   * SaMagickCore.DrawInfo, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #DrawClipPath(SaMagickCore.Image, SaMagickCore.DrawInfo, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DrawClipPath(MagickCore.Image,
+   * MagickCore.DrawInfo, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #DrawClipPath(MagickCore.Image, MagickCore.DrawInfo, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int DrawClipPath(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawClipPath(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawClipPath(Image*, const DrawInfo*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:193</i>
    */
-  int DrawClipPath(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawClipPath(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawGradientImage(Image*, const DrawInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:195</i>
    */
-  int DrawGradientImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawGradientImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawImage(Image*, const DrawInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:197</i>
    */
-  int DrawImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawPatternPath(Image*, const DrawInfo*, const
    * char*, Image**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:199</i> <br>
    *
-   * @deprecated use the safer methods {@link #DrawPatternPath(SaMagickCore.Image,
-   * SaMagickCore.DrawInfo, java.lang.String, SaMagickCore.Image.ByReference[],
-   * SaMagickCore.ExceptionInfo)} and {@link #DrawPatternPath(SaMagickCore.Image,
-   * SaMagickCore.DrawInfo, com.sun.jna.Pointer, SaMagickCore.Image.ByReference[],
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DrawPatternPath(MagickCore.Image,
+   * MagickCore.DrawInfo, java.lang.String, MagickCore.Image.ByReference[],
+   * MagickCore.ExceptionInfo)} and {@link #DrawPatternPath(MagickCore.Image,
+   * MagickCore.DrawInfo, com.sun.jna.Pointer, MagickCore.Image.ByReference[],
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int DrawPatternPath(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
+  int DrawPatternPath(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
       Pointer charPtr1, PointerByReference ImagePtrPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawPatternPath(Image*, const DrawInfo*, const
    * char*, Image**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:199</i>
    */
-  int DrawPatternPath(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      String charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawPatternPath(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      String charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawPatternPath(Image*, const DrawInfo*, const
    * char*, Image**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:199</i>
    */
-  int DrawPatternPath(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      Pointer charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawPatternPath(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      Pointer charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DrawPrimitive(Image*, const DrawInfo*, const
    * PrimitiveInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/draw.h:201</i>
    */
-  int DrawPrimitive(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.PrimitiveInfo PrimitiveInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DrawPrimitive(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.PrimitiveInfo PrimitiveInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void GetAffineMatrix(AffineMatrix*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:203</i>
    */
-  void GetAffineMatrix(SaMagickCore.AffineMatrix AffineMatrixPtr1);
+  void GetAffineMatrix(MagickCore.AffineMatrix AffineMatrixPtr1);
 
   /**
    * Original signature : <code>void GetDrawInfo(const ImageInfo*, DrawInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/draw.h:205</i>
    */
-  void GetDrawInfo(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.DrawInfo DrawInfoPtr1);
+  void GetDrawInfo(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.DrawInfo DrawInfoPtr1);
 
   /**
    * Original signature : <code>Image* AdaptiveBlurImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:33</i>
    */
-  SaMagickCore.Image AdaptiveBlurImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AdaptiveBlurImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* AdaptiveSharpenImage(const Image*, const double, const
    * double, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:35</i>
    */
-  SaMagickCore.Image AdaptiveSharpenImage(SaMagickCore.Image ImagePtr1, double double1,
-      double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AdaptiveSharpenImage(MagickCore.Image ImagePtr1, double double1,
+      double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* BlurImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:37</i>
    */
-  SaMagickCore.Image BlurImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image BlurImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ConvolveImage(const Image*, const KernelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:39</i>
    */
-  SaMagickCore.Image ConvolveImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.KernelInfo KernelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConvolveImage(MagickCore.Image ImagePtr1,
+      MagickCore.KernelInfo KernelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DespeckleImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:41</i>
    */
-  SaMagickCore.Image DespeckleImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DespeckleImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* EdgeImage(const Image*, const double, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:43</i>
    */
-  SaMagickCore.Image EdgeImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image EdgeImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* EmbossImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:45</i>
    */
-  SaMagickCore.Image EmbossImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image EmbossImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* GaussianBlurImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:47</i>
    */
-  SaMagickCore.Image GaussianBlurImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image GaussianBlurImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* KuwaharaImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:49</i>
    */
-  SaMagickCore.Image KuwaharaImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image KuwaharaImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* LocalContrastImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:51</i>
    */
-  SaMagickCore.Image LocalContrastImage(SaMagickCore.Image ImagePtr1, double double1,
-      double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image LocalContrastImage(MagickCore.Image ImagePtr1, double double1,
+      double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* MotionBlurImage(const Image*, const double, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/effect.h:53</i>
    */
-  SaMagickCore.Image MotionBlurImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      double double3, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MotionBlurImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      double double3, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PreviewImage(const Image*, const PreviewType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:55</i>
    */
-  SaMagickCore.Image PreviewImage(SaMagickCore.Image ImagePtr1, int PreviewType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PreviewImage(MagickCore.Image ImagePtr1, int PreviewType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* RotationalBlurImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:57</i>
    */
-  SaMagickCore.Image RotationalBlurImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image RotationalBlurImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SelectiveBlurImage(const Image*, const double, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/effect.h:59</i>
    */
-  SaMagickCore.Image SelectiveBlurImage(SaMagickCore.Image ImagePtr1, double double1,
-      double double2, double double3, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SelectiveBlurImage(MagickCore.Image ImagePtr1, double double1,
+      double double2, double double3, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ShadeImage(const Image*, const, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:61</i>
    */
-  SaMagickCore.Image ShadeImage(SaMagickCore.Image ImagePtr1, int MagickBooleanType, double double1,
-      double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ShadeImage(MagickCore.Image ImagePtr1, int MagickBooleanType, double double1,
+      double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SharpenImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:63</i>
    */
-  SaMagickCore.Image SharpenImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SharpenImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SpreadImage(const Image*, const, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/effect.h:65</i>
    */
-  SaMagickCore.Image SpreadImage(SaMagickCore.Image ImagePtr1, int PixelInterpolateMethod,
-      double double1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SpreadImage(MagickCore.Image ImagePtr1, int PixelInterpolateMethod,
+      double double1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* UnsharpMaskImage(const Image*, const double, const double,
    * const double, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/effect.h:67</i>
    */
-  SaMagickCore.Image UnsharpMaskImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      double double3, double double4, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image UnsharpMaskImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      double double3, double double4, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType AutoGammaImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:1</i>
    */
-  int AutoGammaImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AutoGammaImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType AutoLevelImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:3</i>
    */
-  int AutoLevelImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AutoLevelImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType BrightnessContrastImage(Image*, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/enhance.h:5</i>
    */
-  int BrightnessContrastImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int BrightnessContrastImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ClutImage(Image*, const Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:7</i>
    */
-  int ClutImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int PixelInterpolateMethod, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ClutImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int PixelInterpolateMethod, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ColorDecisionListImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:9</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ColorDecisionListImage(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #ColorDecisionListImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ColorDecisionListImage(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #ColorDecisionListImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ColorDecisionListImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ColorDecisionListImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ColorDecisionListImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:9</i>
    */
-  int ColorDecisionListImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ColorDecisionListImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ContrastImage(Image*, const MagickBooleanType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:11</i>
    */
-  int ContrastImage(SaMagickCore.Image ImagePtr1, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ContrastImage(MagickCore.Image ImagePtr1, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ContrastStretchImage(Image*, const double, const
    * double, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:13</i>
    */
-  int ContrastStretchImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ContrastStretchImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType EqualizeImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:15</i>
    */
-  int EqualizeImage(SaMagickCore.Image image, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int EqualizeImage(MagickCore.Image image, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GammaImage(Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:17</i>
    */
-  int GammaImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GammaImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GrayscaleImage(Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:19</i>
    */
-  int GrayscaleImage(SaMagickCore.Image ImagePtr1, int PixelIntensityMethod,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GrayscaleImage(MagickCore.Image ImagePtr1, int PixelIntensityMethod,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType HaldClutImage(Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:21</i>
    */
-  int HaldClutImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int HaldClutImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LevelImage(Image*, const double, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/enhance.h:23</i>
    */
-  int LevelImage(SaMagickCore.Image ImagePtr1, double double1, double double2, double double3,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LevelImage(MagickCore.Image ImagePtr1, double double1, double double2, double double3,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LevelizeImage(Image*, const double, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/enhance.h:25</i>
    */
-  int LevelizeImage(SaMagickCore.Image ImagePtr1, double double1, double double2, double double3,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LevelizeImage(MagickCore.Image ImagePtr1, double double1, double double2, double double3,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LevelImageColors(Image*, const PixelInfo*, const
    * PixelInfo*, const MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/enhance.h:27</i>
    */
-  int LevelImageColors(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr2, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LevelImageColors(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.PixelInfo PixelInfoPtr2, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType LinearStretchImage(Image*, const double, const
    * double, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:29</i>
    */
-  int LinearStretchImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LinearStretchImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ModulateImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:31</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ModulateImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #ModulateImage(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ModulateImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #ModulateImage(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ModulateImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ModulateImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ModulateImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:31</i>
    */
-  int ModulateImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ModulateImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType NegateImage(Image*, const MagickBooleanType,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:33</i>
    */
-  int NegateImage(SaMagickCore.Image ImagePtr1, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int NegateImage(MagickCore.Image ImagePtr1, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType NormalizeImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:35</i>
    */
-  int NormalizeImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int NormalizeImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SigmoidalContrastImage(Image*, const
    * MagickBooleanType, const double, const double, ExceptionInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:37</i>
    */
-  int SigmoidalContrastImage(SaMagickCore.Image ImagePtr1, int MagickBooleanType1, double double1,
-      double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SigmoidalContrastImage(MagickCore.Image ImagePtr1, int MagickBooleanType1, double double1,
+      double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* EnhanceImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/enhance.h:39</i>
    */
-  SaMagickCore.Image EnhanceImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image EnhanceImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetExceptionMessage(const int)</code> <br> <i>native
@@ -12258,301 +12439,301 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>ErrorHandler SetErrorHandler(ErrorHandler)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/exception.h:90</i>
    */
-  SaMagickCore.ErrorHandler SetErrorHandler(SaMagickCore.ErrorHandler ErrorHandler1);
+  MagickCore.ErrorHandler SetErrorHandler(MagickCore.ErrorHandler ErrorHandler1);
 
   /**
    * Original signature : <code>ExceptionInfo* AcquireExceptionInfo()</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/exception.h:92</i>
    */
-  SaMagickCore.ExceptionInfo AcquireExceptionInfo();
+  MagickCore.ExceptionInfo AcquireExceptionInfo();
 
   /**
    * Original signature : <code>ExceptionInfo* CloneExceptionInfo(ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/exception.h:94</i>
    */
-  SaMagickCore.ExceptionInfo CloneExceptionInfo(SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ExceptionInfo CloneExceptionInfo(MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ExceptionInfo* DestroyExceptionInfo(ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/exception.h:96</i>
    */
-  SaMagickCore.ExceptionInfo DestroyExceptionInfo(SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ExceptionInfo DestroyExceptionInfo(MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>FatalErrorHandler SetFatalErrorHandler(FatalErrorHandler)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/exception.h:98</i>
    */
-  SaMagickCore.FatalErrorHandler SetFatalErrorHandler(
-      SaMagickCore.FatalErrorHandler FatalErrorHandler1);
+  MagickCore.FatalErrorHandler SetFatalErrorHandler(
+      MagickCore.FatalErrorHandler FatalErrorHandler1);
 
   /**
    * Original signature : <code>ChannelFeatures* GetImageFeatures(const Image*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/feature.h:18</i>
    */
-  SaMagickCore.ChannelFeatures GetImageFeatures(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ChannelFeatures GetImageFeatures(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CannyEdgeImage(const Image*, const double, const double,
    * const double, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/feature.h:20</i>
    */
-  SaMagickCore.Image CannyEdgeImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      double double3, double double4, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CannyEdgeImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      double double3, double double4, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* HoughLineImage(const Image*, const size_t, const size_t,
    * const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/feature.h:22</i>
    */
-  SaMagickCore.Image HoughLineImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, NativeSize size_t3, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image HoughLineImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, NativeSize size_t3, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* MeanShiftImage(const Image*, const size_t, const size_t,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/feature.h:24</i>
    */
-  SaMagickCore.Image MeanShiftImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, double double1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MeanShiftImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, double double1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ComplexImages(const Image*, const ComplexOperator,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fourier.h:11</i>
    */
-  SaMagickCore.Image ComplexImages(SaMagickCore.Image ImagePtr1, int ComplexOperator1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ComplexImages(MagickCore.Image ImagePtr1, int ComplexOperator1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ForwardFourierTransformImage(const Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fourier.h:13</i>
    */
-  SaMagickCore.Image ForwardFourierTransformImage(SaMagickCore.Image ImagePtr1,
-      int MagickBooleanType, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ForwardFourierTransformImage(MagickCore.Image ImagePtr1,
+      int MagickBooleanType, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* InverseFourierTransformImage(const Image*, const Image*,
    * const, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fourier.h:15</i>
    */
-  SaMagickCore.Image InverseFourierTransformImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, int MagickBooleanType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image InverseFourierTransformImage(MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, int MagickBooleanType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* AddNoiseImage(const Image*, const NoiseType, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:11</i>
    */
-  SaMagickCore.Image AddNoiseImage(SaMagickCore.Image ImagePtr1, int NoiseType1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AddNoiseImage(MagickCore.Image ImagePtr1, int NoiseType1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* BlueShiftImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:13</i>
    */
-  SaMagickCore.Image BlueShiftImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image BlueShiftImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CharcoalImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:15</i>
    */
-  SaMagickCore.Image CharcoalImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CharcoalImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ColorizeImage(const Image*, const char*, const PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:17</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ColorizeImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} and {@link #ColorizeImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ColorizeImage(MagickCore.Image, java.lang.String,
+   * MagickCore.PixelInfo, MagickCore.ExceptionInfo)} and {@link #ColorizeImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.PixelInfo, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image ColorizeImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ColorizeImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ColorizeImage(const Image*, const char*, const PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:17</i>
    */
-  SaMagickCore.Image ColorizeImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ColorizeImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ColorMatrixImage(const Image*, const KernelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:19</i>
    */
-  SaMagickCore.Image ColorMatrixImage(SaMagickCore.Image ImagePtr1, SaMagickCore.KernelInfo kernel,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ColorMatrixImage(MagickCore.Image ImagePtr1, MagickCore.KernelInfo kernel,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* FxImage(const Image*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:21</i> <br>
    *
-   * @deprecated use the safer methods {@link #FxImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #FxImage(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #FxImage(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #FxImage(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image FxImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image FxImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* FxImage(const Image*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:21</i>
    */
-  SaMagickCore.Image FxImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image FxImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ImplodeImage(const Image*, const double, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:23</i>
    */
-  SaMagickCore.Image ImplodeImage(SaMagickCore.Image ImagePtr1, double double1,
-      int PixelInterpolateMethod, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ImplodeImage(MagickCore.Image ImagePtr1, double double1,
+      int PixelInterpolateMethod, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* MorphImages(const Image*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:25</i>
    */
-  SaMagickCore.Image MorphImages(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MorphImages(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PolaroidImage(const Image*, const DrawInfo*, const char*,
    * const double, const, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/fx.h:27</i> <br>
    *
-   * @deprecated use the safer methods {@link #PolaroidImage(SaMagickCore.Image,
-   * SaMagickCore.DrawInfo, java.lang.String, double, int, SaMagickCore.ExceptionInfo)} and {@link
-   * #PolaroidImage(SaMagickCore.Image, SaMagickCore.DrawInfo, com.sun.jna.Pointer, double, int,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #PolaroidImage(MagickCore.Image,
+   * MagickCore.DrawInfo, java.lang.String, double, int, MagickCore.ExceptionInfo)} and {@link
+   * #PolaroidImage(MagickCore.Image, MagickCore.DrawInfo, com.sun.jna.Pointer, double, int,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image PolaroidImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
+  MagickCore.Image PolaroidImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
       Pointer charPtr1, double double1, int PixelInterpolateMethod,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* PolaroidImage(const Image*, const DrawInfo*, const char*,
    * const double, const, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/fx.h:27</i>
    */
-  SaMagickCore.Image PolaroidImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
+  MagickCore.Image PolaroidImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
       String charPtr1, double double1, int PixelInterpolateMethod,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SepiaToneImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:29</i>
    */
-  SaMagickCore.Image SepiaToneImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SepiaToneImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ShadowImage(const Image*, const double, const double, const,
    * const, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:31</i>
    */
-  SaMagickCore.Image ShadowImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      int ssize_t, int ssize_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ShadowImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      int ssize_t, int ssize_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SketchImage(const Image*, const double, const double, const
    * double, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:33</i>
    */
-  SaMagickCore.Image SketchImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      double double3, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SketchImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      double double3, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SteganoImage(const Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:35</i>
    */
-  SaMagickCore.Image SteganoImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SteganoImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* StereoImage(const Image*, const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:37</i>
    */
-  SaMagickCore.Image StereoImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image StereoImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* StereoAnaglyphImage(const Image*, const Image*, const, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:39</i>
    */
-  SaMagickCore.Image StereoAnaglyphImage(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      int ssize_t, int ssize_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image StereoAnaglyphImage(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      int ssize_t, int ssize_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* SwirlImage(const Image*, double, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:41</i>
    */
-  SaMagickCore.Image SwirlImage(SaMagickCore.Image ImagePtr1, double double1,
-      int PixelInterpolateMethod, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SwirlImage(MagickCore.Image ImagePtr1, double double1,
+      int PixelInterpolateMethod, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* TintImage(const Image*, const char*, const PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:43</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #TintImage(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} and {@link #TintImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #TintImage(MagickCore.Image, java.lang.String,
+   * MagickCore.PixelInfo, MagickCore.ExceptionInfo)} and {@link #TintImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.PixelInfo, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image TintImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image TintImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* TintImage(const Image*, const char*, const PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:43</i>
    */
-  SaMagickCore.Image TintImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image TintImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* VignetteImage(const Image*, const double, const double,
    * const, const, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/fx.h:45</i>
    */
-  SaMagickCore.Image VignetteImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      int ssize_t, int ssize_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image VignetteImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      int ssize_t, int ssize_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* WaveImage(const Image*, const double, const double, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:47</i>
    */
-  SaMagickCore.Image WaveImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      int PixelInterpolateMethod, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image WaveImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      int PixelInterpolateMethod, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* WaveletDenoiseImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:49</i>
    */
-  SaMagickCore.Image WaveletDenoiseImage(SaMagickCore.Image ImagePtr1, double double1,
-      double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image WaveletDenoiseImage(MagickCore.Image ImagePtr1, double double1,
+      double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType PlasmaImage(Image*, const SegmentInfo*, size_t,
    * size_t, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:51</i>
    */
-  int PlasmaImage(SaMagickCore.Image ImagePtr1, SaMagickCore.SegmentInfo SegmentInfoPtr1,
-      NativeSize size_t1, NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PlasmaImage(MagickCore.Image ImagePtr1, MagickCore.SegmentInfo SegmentInfoPtr1,
+      NativeSize size_t1, NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SolarizeImage(Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/fx.h:53</i>
    */
-  int SolarizeImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SolarizeImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>double ExpandAffine(const AffineMatrix*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/gem.h:1</i>
    */
-  double ExpandAffine(SaMagickCore.AffineMatrix AffineMatrixPtr1);
+  double ExpandAffine(MagickCore.AffineMatrix AffineMatrixPtr1);
 
   /**
    * Original signature : <code>void ConvertHSLToRGB(const double, const double, const double,
@@ -12650,24 +12831,24 @@ public interface SaMagickCore extends Library {
    * size_t*, size_t*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:78</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetGeometry(java.lang.String, SaMagickCore.ssize_t,
-   * SaMagickCore.ssize_t, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
+   * @deprecated use the safer methods {@link #GetGeometry(java.lang.String, MagickCore.ssize_t,
+   * MagickCore.ssize_t, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
    * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)} and {@link
-   * #GetGeometry(com.sun.jna.Pointer, SaMagickCore.ssize_t, SaMagickCore.ssize_t,
+   * #GetGeometry(com.sun.jna.Pointer, MagickCore.ssize_t, MagickCore.ssize_t,
    * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)}
    * instead
    */
   @Deprecated
-  int GetGeometry(Pointer charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
+  int GetGeometry(Pointer charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
       NativeSizeByReference size_tPtr2);
 
   /**
    * Original signature : <code>MagickStatusType GetGeometry(const char*, ssize_t*, ssize_t*,
    * size_t*, size_t*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:78</i>
    */
-  int GetGeometry(String charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
+  int GetGeometry(String charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
       NativeSizeByReference size_tPtr2);
 
   /**
@@ -12676,17 +12857,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #ParseAbsoluteGeometry(java.lang.String,
-   * SaMagickCore.RectangleInfo)} and {@link #ParseAbsoluteGeometry(com.sun.jna.Pointer,
-   * SaMagickCore.RectangleInfo)} instead
+   * MagickCore.RectangleInfo)} and {@link #ParseAbsoluteGeometry(com.sun.jna.Pointer,
+   * MagickCore.RectangleInfo)} instead
    */
   @Deprecated
-  int ParseAbsoluteGeometry(Pointer charPtr1, SaMagickCore.RectangleInfo RectangleInfoPtr1);
+  int ParseAbsoluteGeometry(Pointer charPtr1, MagickCore.RectangleInfo RectangleInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseAbsoluteGeometry(const char*,
    * RectangleInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:80</i>
    */
-  int ParseAbsoluteGeometry(String charPtr1, SaMagickCore.RectangleInfo RectangleInfoPtr1);
+  int ParseAbsoluteGeometry(String charPtr1, MagickCore.RectangleInfo RectangleInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseAffineGeometry(const char*, AffineMatrix*,
@@ -12694,20 +12875,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #ParseAffineGeometry(java.lang.String,
-   * SaMagickCore.AffineMatrix, SaMagickCore.ExceptionInfo)} and {@link
-   * #ParseAffineGeometry(com.sun.jna.Pointer, SaMagickCore.AffineMatrix,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.AffineMatrix, MagickCore.ExceptionInfo)} and {@link
+   * #ParseAffineGeometry(com.sun.jna.Pointer, MagickCore.AffineMatrix,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ParseAffineGeometry(Pointer charPtr1, SaMagickCore.AffineMatrix AffineMatrixPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseAffineGeometry(Pointer charPtr1, MagickCore.AffineMatrix AffineMatrixPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseAffineGeometry(const char*, AffineMatrix*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:82</i>
    */
-  int ParseAffineGeometry(String charPtr1, SaMagickCore.AffineMatrix AffineMatrixPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseAffineGeometry(String charPtr1, MagickCore.AffineMatrix AffineMatrixPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseGeometry(const char*, GeometryInfo*)</code>
@@ -12715,39 +12896,39 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #ParseGeometry(java.lang.String,
-   * SaMagickCore.GeometryInfo)} and {@link #ParseGeometry(com.sun.jna.Pointer,
-   * SaMagickCore.GeometryInfo)} instead
+   * MagickCore.GeometryInfo)} and {@link #ParseGeometry(com.sun.jna.Pointer,
+   * MagickCore.GeometryInfo)} instead
    */
   @Deprecated
-  int ParseGeometry(Pointer charPtr1, SaMagickCore.GeometryInfo GeometryInfoPtr1);
+  int ParseGeometry(Pointer charPtr1, MagickCore.GeometryInfo GeometryInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseGeometry(const char*, GeometryInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:84</i>
    */
-  int ParseGeometry(String charPtr1, SaMagickCore.GeometryInfo GeometryInfoPtr1);
+  int ParseGeometry(String charPtr1, MagickCore.GeometryInfo GeometryInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseGravityGeometry(const Image*, const char*,
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:86</i> <br>
    *
-   * @deprecated use the safer methods {@link #ParseGravityGeometry(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.RectangleInfo, SaMagickCore.ExceptionInfo)} and {@link
-   * #ParseGravityGeometry(SaMagickCore.Image, com.sun.jna.Pointer, SaMagickCore.RectangleInfo,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ParseGravityGeometry(MagickCore.Image,
+   * java.lang.String, MagickCore.RectangleInfo, MagickCore.ExceptionInfo)} and {@link
+   * #ParseGravityGeometry(MagickCore.Image, com.sun.jna.Pointer, MagickCore.RectangleInfo,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ParseGravityGeometry(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseGravityGeometry(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseGravityGeometry(const Image*, const char*,
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:86</i>
    */
-  int ParseGravityGeometry(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseGravityGeometry(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseMetaGeometry(const char*, ssize_t*, ssize_t*,
@@ -12755,23 +12936,23 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #ParseMetaGeometry(java.lang.String,
-   * SaMagickCore.ssize_t, SaMagickCore.ssize_t, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
+   * MagickCore.ssize_t, MagickCore.ssize_t, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
    * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)} and {@link
-   * #ParseMetaGeometry(com.sun.jna.Pointer, SaMagickCore.ssize_t, SaMagickCore.ssize_t,
+   * #ParseMetaGeometry(com.sun.jna.Pointer, MagickCore.ssize_t, MagickCore.ssize_t,
    * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)}
    * instead
    */
   @Deprecated
-  int ParseMetaGeometry(Pointer charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
+  int ParseMetaGeometry(Pointer charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
       NativeSizeByReference size_tPtr2);
 
   /**
    * Original signature : <code>MagickStatusType ParseMetaGeometry(const char*, ssize_t*, ssize_t*,
    * size_t*, size_t*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:88</i>
    */
-  int ParseMetaGeometry(String charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
+  int ParseMetaGeometry(String charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ssize_t ssize_tPtr2, NativeSizeByReference size_tPtr1,
       NativeSizeByReference size_tPtr2);
 
   /**
@@ -12779,44 +12960,44 @@ public interface SaMagickCore extends Library {
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:90</i> <br>
    *
-   * @deprecated use the safer methods {@link #ParsePageGeometry(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.RectangleInfo, SaMagickCore.ExceptionInfo)} and {@link
-   * #ParsePageGeometry(SaMagickCore.Image, com.sun.jna.Pointer, SaMagickCore.RectangleInfo,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ParsePageGeometry(MagickCore.Image,
+   * java.lang.String, MagickCore.RectangleInfo, MagickCore.ExceptionInfo)} and {@link
+   * #ParsePageGeometry(MagickCore.Image, com.sun.jna.Pointer, MagickCore.RectangleInfo,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ParsePageGeometry(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParsePageGeometry(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParsePageGeometry(const Image*, const char*,
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:90</i>
    */
-  int ParsePageGeometry(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParsePageGeometry(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseRegionGeometry(const Image*, const char*,
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:92</i> <br>
    *
-   * @deprecated use the safer methods {@link #ParseRegionGeometry(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.RectangleInfo, SaMagickCore.ExceptionInfo)} and {@link
-   * #ParseRegionGeometry(SaMagickCore.Image, com.sun.jna.Pointer, SaMagickCore.RectangleInfo,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ParseRegionGeometry(MagickCore.Image,
+   * java.lang.String, MagickCore.RectangleInfo, MagickCore.ExceptionInfo)} and {@link
+   * #ParseRegionGeometry(MagickCore.Image, com.sun.jna.Pointer, MagickCore.RectangleInfo,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ParseRegionGeometry(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseRegionGeometry(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickStatusType ParseRegionGeometry(const Image*, const char*,
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:92</i>
    */
-  int ParseRegionGeometry(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ParseRegionGeometry(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void GravityAdjustGeometry(const size_t, const size_t, const
@@ -12824,490 +13005,490 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/geometry.h:94</i>
    */
   void GravityAdjustGeometry(NativeSize size_t1, NativeSize size_t2, int GravityType1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1);
+      MagickCore.RectangleInfo RectangleInfoPtr1);
 
   /**
    * Original signature : <code>void SetGeometry(const Image*, RectangleInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:96</i>
    */
-  void SetGeometry(SaMagickCore.Image ImagePtr1, SaMagickCore.RectangleInfo RectangleInfoPtr1);
+  void SetGeometry(MagickCore.Image ImagePtr1, MagickCore.RectangleInfo RectangleInfoPtr1);
 
   /**
    * Original signature : <code>void SetGeometryInfo(GeometryInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/geometry.h:98</i>
    */
-  void SetGeometryInfo(SaMagickCore.GeometryInfo GeometryInfoPtr1);
+  void SetGeometryInfo(MagickCore.GeometryInfo GeometryInfoPtr1);
 
   /**
    * Original signature : <code>PixelInfo* GetImageHistogram(const Image*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:1</i>
    */
-  SaMagickCore.PixelInfo GetImageHistogram(SaMagickCore.Image ImagePtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.PixelInfo GetImageHistogram(MagickCore.Image ImagePtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* UniqueImageColors(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:3</i>
    */
-  SaMagickCore.Image UniqueImageColors(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image UniqueImageColors(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IdentifyPaletteImage(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:5</i>
    */
-  int IdentifyPaletteImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyPaletteImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsHistogramImage(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:7</i>
    */
-  int IsHistogramImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IsHistogramImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsPaletteImage(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:9</i>
    */
-  int IsPaletteImage(SaMagickCore.Image ImagePtr1);
+  int IsPaletteImage(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType MinMaxStretchImage(Image*, const double, const
    * double, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/histogram.h:11</i>
    */
-  int MinMaxStretchImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      double double3, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int MinMaxStretchImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      double double3, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t GetNumberColors(const Image*, FILE*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:13</i>
    * <br>
    *
-   * @deprecated use the safer method {@link #GetNumberColors(SaMagickCore.Image,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #GetNumberColors(MagickCore.Image,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  NativeSize GetNumberColors(SaMagickCore.Image ImagePtr1, Pointer FILEPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize GetNumberColors(MagickCore.Image ImagePtr1, Pointer FILEPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t GetNumberColors(const Image*, FILE*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/histogram.h:13</i>
    */
-  NativeSize GetNumberColors(SaMagickCore.Image ImagePtr1, PointerByReference FILEPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize GetNumberColors(MagickCore.Image ImagePtr1, PointerByReference FILEPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IdentifyImage(Image*, FILE*, const
    * MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/identify.h:1</i> <br>
    *
-   * @deprecated use the safer method {@link #IdentifyImage(SaMagickCore.Image,
-   * com.sun.jna.ptr.PointerByReference, int, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #IdentifyImage(MagickCore.Image,
+   * com.sun.jna.ptr.PointerByReference, int, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int IdentifyImage(SaMagickCore.Image ImagePtr1, Pointer FILEPtr1, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyImage(MagickCore.Image ImagePtr1, Pointer FILEPtr1, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IdentifyImage(Image*, FILE*, const
    * MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/identify.h:1</i>
    */
-  int IdentifyImage(SaMagickCore.Image ImagePtr1, PointerByReference FILEPtr1,
-      int MagickBooleanType1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IdentifyImage(MagickCore.Image ImagePtr1, PointerByReference FILEPtr1,
+      int MagickBooleanType1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ChannelType SetImageChannelMask(Image*, const ChannelType)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:149</i>
    */
-  int SetImageChannelMask(SaMagickCore.Image ImagePtr1, int ChannelType1);
+  int SetImageChannelMask(MagickCore.Image ImagePtr1, int ChannelType1);
 
   /**
    * Original signature : <code>ExceptionType CatchImageException(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:160</i>
    */
-  int CatchImageException(SaMagickCore.Image ImagePtr1);
+  int CatchImageException(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>FILE* GetImageInfoFile(const ImageInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:162</i>
    */
-  PointerByReference GetImageInfoFile(SaMagickCore.ImageInfo ImageInfoPtr1);
+  PointerByReference GetImageInfoFile(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>Image* AcquireImage(const ImageInfo*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:164</i>
    */
-  SaMagickCore.Image AcquireImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AcquireImage(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* AppendImages(const Image*, const, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:166</i>
    */
-  SaMagickCore.Image AppendImages(SaMagickCore.Image ImagePtr1, int MagickBooleanType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AppendImages(MagickCore.Image ImagePtr1, int MagickBooleanType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CloneImage(const Image*, const size_t, const size_t, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:168</i>
    */
-  SaMagickCore.Image CloneImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, int MagickBooleanType, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CloneImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, int MagickBooleanType, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DestroyImage(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:170</i>
    */
-  SaMagickCore.Image DestroyImage(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image DestroyImage(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* GetImageMask(const Image*, const, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:172</i>
    */
-  SaMagickCore.Image GetImageMask(SaMagickCore.Image ImagePtr1, int PixelMask,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image GetImageMask(MagickCore.Image ImagePtr1, int PixelMask,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* NewMagickImage(const ImageInfo*, const size_t, const size_t,
    * const PixelInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:174</i>
    */
-  SaMagickCore.Image NewMagickImage(SaMagickCore.ImageInfo ImageInfoPtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image NewMagickImage(MagickCore.ImageInfo ImageInfoPtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ReferenceImage(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:176</i>
    */
-  SaMagickCore.Image ReferenceImage(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image ReferenceImage(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* SmushImages(const Image*, const, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:178</i>
    */
-  SaMagickCore.Image SmushImages(SaMagickCore.Image ImagePtr1, int MagickBooleanType, int ssize_t,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SmushImages(MagickCore.Image ImagePtr1, int MagickBooleanType, int ssize_t,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ImageInfo* AcquireImageInfo()</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:180</i>
    */
-  SaMagickCore.ImageInfo AcquireImageInfo();
+  MagickCore.ImageInfo AcquireImageInfo();
 
   /**
    * Original signature : <code>ImageInfo* CloneImageInfo(const ImageInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:182</i>
    */
-  SaMagickCore.ImageInfo CloneImageInfo(SaMagickCore.ImageInfo ImageInfoPtr1);
+  MagickCore.ImageInfo CloneImageInfo(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>ImageInfo* DestroyImageInfo(ImageInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:184</i>
    */
-  SaMagickCore.ImageInfo DestroyImageInfo(SaMagickCore.ImageInfo ImageInfoPtr1);
+  MagickCore.ImageInfo DestroyImageInfo(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ClipImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:186</i>
    */
-  int ClipImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ClipImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ClipImagePath(Image*, const char*, const
    * MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:188</i> <br>
    *
-   * @deprecated use the safer methods {@link #ClipImagePath(SaMagickCore.Image, java.lang.String,
-   * int, SaMagickCore.ExceptionInfo)} and {@link #ClipImagePath(SaMagickCore.Image,
-   * com.sun.jna.Pointer, int, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #ClipImagePath(MagickCore.Image, java.lang.String,
+   * int, MagickCore.ExceptionInfo)} and {@link #ClipImagePath(MagickCore.Image,
+   * com.sun.jna.Pointer, int, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ClipImagePath(SaMagickCore.Image ImagePtr1, Pointer charPtr1, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ClipImagePath(MagickCore.Image ImagePtr1, Pointer charPtr1, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ClipImagePath(Image*, const char*, const
    * MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:188</i>
    */
-  int ClipImagePath(SaMagickCore.Image ImagePtr1, String charPtr1, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ClipImagePath(MagickCore.Image ImagePtr1, String charPtr1, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType CopyImagePixels(Image*, const Image*, const
    * RectangleInfo*, const OffsetInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:190</i>
    */
-  int CopyImagePixels(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.OffsetInfo OffsetInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int CopyImagePixels(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.OffsetInfo OffsetInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsTaintImage(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:192</i>
    */
-  int IsTaintImage(SaMagickCore.Image ImagePtr1);
+  int IsTaintImage(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsHighDynamicRangeImage(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:194</i>
    */
-  int IsHighDynamicRangeImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int IsHighDynamicRangeImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImageObject(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:196</i>
    */
-  int IsImageObject(SaMagickCore.Image ImagePtr1);
+  int IsImageObject(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListMagickInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:198</i> <br>
    *
    * @deprecated use the safer method {@link #ListMagickInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListMagickInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMagickInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListMagickInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:198</i>
    */
-  int ListMagickInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMagickInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ModifyImage(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:200</i> <br>
    *
-   * @deprecated use the safer method {@link #ModifyImage(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #ModifyImage(MagickCore.Image.ByReference[],
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ModifyImage(PointerByReference ImagePtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ModifyImage(PointerByReference ImagePtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ModifyImage(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:200</i>
    */
-  int ModifyImage(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ModifyImage(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ResetImagePage(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:202</i> <br>
    *
-   * @deprecated use the safer methods {@link #ResetImagePage(SaMagickCore.Image, java.lang.String)}
-   * and {@link #ResetImagePage(SaMagickCore.Image, com.sun.jna.Pointer)} instead
+   * @deprecated use the safer methods {@link #ResetImagePage(MagickCore.Image, java.lang.String)}
+   * and {@link #ResetImagePage(MagickCore.Image, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  int ResetImagePage(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  int ResetImagePage(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ResetImagePage(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:202</i>
    */
-  int ResetImagePage(SaMagickCore.Image ImagePtr1, String charPtr1);
+  int ResetImagePage(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ResetImagePixels(Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:204</i>
    */
-  int ResetImagePixels(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ResetImagePixels(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageAlpha(Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:206</i>
    */
-  int SetImageAlpha(SaMagickCore.Image ImagePtr1, int Quantum,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageAlpha(MagickCore.Image ImagePtr1, int Quantum,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageBackgroundColor(Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:208</i>
    */
-  int SetImageBackgroundColor(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageBackgroundColor(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageColor(Image*, const PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:210</i>
    */
-  int SetImageColor(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageColor(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageExtent(Image*, const size_t, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:212</i>
    */
-  int SetImageExtent(SaMagickCore.Image ImagePtr1, NativeSize size_t1, NativeSize size_t2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageExtent(MagickCore.Image ImagePtr1, NativeSize size_t1, NativeSize size_t2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageInfo(ImageInfo*, const unsigned int,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:214</i>
    */
-  int SetImageInfo(SaMagickCore.ImageInfo ImageInfoPtr1, int int1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageInfo(MagickCore.ImageInfo ImageInfoPtr1, int int1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageMask(Image*, const PixelMask, const
    * Image*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:216</i>
    */
-  int SetImageMask(SaMagickCore.Image ImagePtr1, int type, SaMagickCore.Image ImagePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageMask(MagickCore.Image ImagePtr1, int type, MagickCore.Image ImagePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageRegionMask(Image*, const PixelMask, const
    * RectangleInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:218</i>
    */
-  int SetImageRegionMask(SaMagickCore.Image ImagePtr1, int type,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageRegionMask(MagickCore.Image ImagePtr1, int type,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageStorageClass(Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:220</i>
    */
-  int SetImageStorageClass(SaMagickCore.Image ImagePtr1, int ClassType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageStorageClass(MagickCore.Image ImagePtr1, int ClassType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType StripImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:222</i>
    */
-  int StripImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int StripImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SyncImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:224</i>
    */
-  int SyncImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SyncImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SyncImageSettings(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:226</i>
    */
-  int SyncImageSettings(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SyncImageSettings(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SyncImagesSettings(ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:228</i>
    */
-  int SyncImagesSettings(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SyncImagesSettings(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t InterpretImageFilename(const ImageInfo*, Image*, const char*,
    * int, char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:230</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #InterpretImageFilename(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, int, java.nio.ByteBuffer, SaMagickCore.ExceptionInfo)}
-   * and {@link #InterpretImageFilename(SaMagickCore.ImageInfo, SaMagickCore.Image,
-   * com.sun.jna.Pointer, int, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #InterpretImageFilename(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, int, java.nio.ByteBuffer, MagickCore.ExceptionInfo)}
+   * and {@link #InterpretImageFilename(MagickCore.ImageInfo, MagickCore.Image,
+   * com.sun.jna.Pointer, int, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  NativeSize InterpretImageFilename(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.Image ImagePtr1, Pointer charPtr1, int int1, Pointer charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize InterpretImageFilename(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.Image ImagePtr1, Pointer charPtr1, int int1, Pointer charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t InterpretImageFilename(const ImageInfo*, Image*, const char*,
    * int, char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:230</i>
    */
-  NativeSize InterpretImageFilename(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.Image ImagePtr1, String charPtr1, int int1, ByteBuffer charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize InterpretImageFilename(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.Image ImagePtr1, String charPtr1, int int1, ByteBuffer charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ssize_t GetImageReferenceCount(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:232</i>
    */
-  SaMagickCore.ssize_t GetImageReferenceCount(SaMagickCore.Image ImagePtr1);
+  MagickCore.ssize_t GetImageReferenceCount(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>VirtualPixelMethod GetImageVirtualPixelMethod(const Image*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:234</i>
    */
-  int GetImageVirtualPixelMethod(SaMagickCore.Image ImagePtr1);
+  int GetImageVirtualPixelMethod(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>VirtualPixelMethod SetImageVirtualPixelMethod(Image*, const
    * VirtualPixelMethod, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:236</i>
    */
-  int SetImageVirtualPixelMethod(SaMagickCore.Image ImagePtr1, int VirtualPixelMethod1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageVirtualPixelMethod(MagickCore.Image ImagePtr1, int VirtualPixelMethod1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void AcquireNextImage(const ImageInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:238</i>
    */
-  void AcquireNextImage(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void AcquireNextImage(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void DestroyImagePixels(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:240</i>
    */
-  void DestroyImagePixels(SaMagickCore.Image ImagePtr1);
+  void DestroyImagePixels(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void DisassociateImageStream(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:242</i>
    */
-  void DisassociateImageStream(SaMagickCore.Image ImagePtr1);
+  void DisassociateImageStream(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void GetImageInfo(ImageInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image.h:244</i>
    */
-  void GetImageInfo(SaMagickCore.ImageInfo ImageInfoPtr1);
+  void GetImageInfo(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>void SetImageInfoBlob(ImageInfo*, const void*, const size_t)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:246</i>
    */
-  void SetImageInfoBlob(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1, NativeSize size_t1);
+  void SetImageInfoBlob(MagickCore.ImageInfo ImageInfoPtr1, Pointer voidPtr1, NativeSize size_t1);
 
   /**
    * Original signature : <code>void SetImageInfoFile(ImageInfo*, FILE*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:248</i> <br>
    *
-   * @deprecated use the safer method {@link #SetImageInfoFile(SaMagickCore.ImageInfo,
+   * @deprecated use the safer method {@link #SetImageInfoFile(MagickCore.ImageInfo,
    * com.sun.jna.ptr.PointerByReference)} instead
    */
   @Deprecated
-  void SetImageInfoFile(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer FILEPtr1);
+  void SetImageInfoFile(MagickCore.ImageInfo ImageInfoPtr1, Pointer FILEPtr1);
 
   /**
    * Original signature : <code>void SetImageInfoFile(ImageInfo*, FILE*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:248</i>
    */
-  void SetImageInfoFile(SaMagickCore.ImageInfo ImageInfoPtr1, PointerByReference FILEPtr1);
+  void SetImageInfoFile(MagickCore.ImageInfo ImageInfoPtr1, PointerByReference FILEPtr1);
 
   /**
    * Original signature : <code>void SetImageInfoCustomStream(ImageInfo*, CustomStreamInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:250</i> <br>
    *
-   * @deprecated use the safer method {@link #SetImageInfoCustomStream(SaMagickCore.ImageInfo,
+   * @deprecated use the safer method {@link #SetImageInfoCustomStream(MagickCore.ImageInfo,
    * com.sun.jna.ptr.PointerByReference)} instead
    */
   @Deprecated
-  void SetImageInfoCustomStream(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer CustomStreamInfoPtr1);
+  void SetImageInfoCustomStream(MagickCore.ImageInfo ImageInfoPtr1, Pointer CustomStreamInfoPtr1);
 
   /**
    * Original signature : <code>void SetImageInfoCustomStream(ImageInfo*, CustomStreamInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image.h:250</i>
    */
-  void SetImageInfoCustomStream(SaMagickCore.ImageInfo ImageInfoPtr1,
+  void SetImageInfoCustomStream(MagickCore.ImageInfo ImageInfoPtr1,
       PointerByReference CustomStreamInfoPtr1);
 
   /**
@@ -13374,13 +13555,13 @@ public interface SaMagickCore extends Library {
    * instead
    */
   @Deprecated
-  SaMagickCore.Image GetImageViewImage(Pointer ImageViewPtr1);
+  MagickCore.Image GetImageViewImage(Pointer ImageViewPtr1);
 
   /**
    * Original signature : <code>Image* GetImageViewImage(const ImageView*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/image-view.h:12</i>
    */
-  SaMagickCore.Image GetImageViewImage(PointerByReference ImageViewPtr1);
+  MagickCore.Image GetImageViewImage(PointerByReference ImageViewPtr1);
 
   /**
    * Original signature : <code>ImageView* CloneImageView(const ImageView*)</code> <br> <i>native
@@ -13418,16 +13599,16 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>ImageView* NewImageView(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image-view.h:18</i>
    */
-  PointerByReference NewImageView(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference NewImageView(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ImageView* NewImageViewRegion(Image*, const, const, const size_t,
    * const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/image-view.h:20</i>
    */
-  PointerByReference NewImageViewRegion(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2,
-      NativeSize size_t1, NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference NewImageViewRegion(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2,
+      NativeSize size_t1, NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType DuplexTransferImageViewIterator(ImageView*,
@@ -13456,18 +13637,18 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #GetImageViewIterator(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.GetImageViewMethod, com.sun.jna.Pointer)} instead
+   * MagickCore.GetImageViewMethod, com.sun.jna.Pointer)} instead
    */
   @Deprecated
   int GetImageViewIterator(Pointer ImageViewPtr1,
-      SaMagickCore.GetImageViewMethod GetImageViewMethod1, Pointer voidPtr1);
+      MagickCore.GetImageViewMethod GetImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetImageViewIterator(ImageView*,
    * GetImageViewMethod, void*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image-view.h:24</i>
    */
   int GetImageViewIterator(PointerByReference ImageViewPtr1,
-      SaMagickCore.GetImageViewMethod GetImageViewMethod1, Pointer voidPtr1);
+      MagickCore.GetImageViewMethod GetImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsImageView(const ImageView*)</code> <br>
@@ -13491,18 +13672,18 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #SetImageViewIterator(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.SetImageViewMethod, com.sun.jna.Pointer)} instead
+   * MagickCore.SetImageViewMethod, com.sun.jna.Pointer)} instead
    */
   @Deprecated
   int SetImageViewIterator(Pointer ImageViewPtr1,
-      SaMagickCore.SetImageViewMethod SetImageViewMethod1, Pointer voidPtr1);
+      MagickCore.SetImageViewMethod SetImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SetImageViewIterator(ImageView*,
    * SetImageViewMethod, void*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image-view.h:28</i>
    */
   int SetImageViewIterator(PointerByReference ImageViewPtr1,
-      SaMagickCore.SetImageViewMethod SetImageViewMethod1, Pointer voidPtr1);
+      MagickCore.SetImageViewMethod SetImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType TransferImageViewIterator(ImageView*, ImageView*,
@@ -13510,12 +13691,12 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/image-view.h:30</i> <br>
    *
    * @deprecated use the safer method {@link #TransferImageViewIterator(com.sun.jna.ptr.PointerByReference,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.TransferImageViewMethod, com.sun.jna.Pointer)}
+   * com.sun.jna.ptr.PointerByReference, MagickCore.TransferImageViewMethod, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
   int TransferImageViewIterator(Pointer ImageViewPtr1, Pointer ImageViewPtr2,
-      SaMagickCore.TransferImageViewMethod TransferImageViewMethod1, Pointer voidPtr1);
+      MagickCore.TransferImageViewMethod TransferImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType TransferImageViewIterator(ImageView*, ImageView*,
@@ -13523,7 +13704,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/image-view.h:30</i>
    */
   int TransferImageViewIterator(PointerByReference ImageViewPtr1, PointerByReference ImageViewPtr2,
-      SaMagickCore.TransferImageViewMethod TransferImageViewMethod1, Pointer voidPtr1);
+      MagickCore.TransferImageViewMethod TransferImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType UpdateImageViewIterator(ImageView*,
@@ -13531,11 +13712,11 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/image-view.h:32</i> <br>
    *
    * @deprecated use the safer method {@link #UpdateImageViewIterator(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.UpdateImageViewMethod, com.sun.jna.Pointer)} instead
+   * MagickCore.UpdateImageViewMethod, com.sun.jna.Pointer)} instead
    */
   @Deprecated
   int UpdateImageViewIterator(Pointer ImageViewPtr1,
-      SaMagickCore.UpdateImageViewMethod UpdateImageViewMethod1, Pointer voidPtr1);
+      MagickCore.UpdateImageViewMethod UpdateImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType UpdateImageViewIterator(ImageView*,
@@ -13543,7 +13724,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/image-view.h:32</i>
    */
   int UpdateImageViewIterator(PointerByReference ImageViewPtr1,
-      SaMagickCore.UpdateImageViewMethod UpdateImageViewMethod1, Pointer voidPtr1);
+      MagickCore.UpdateImageViewMethod UpdateImageViewMethod1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>Quantum* GetImageViewAuthenticPixels(const ImageView*)</code> <br>
@@ -13569,13 +13750,13 @@ public interface SaMagickCore extends Library {
    * instead
    */
   @Deprecated
-  SaMagickCore.RectangleInfo.ByValue GetImageViewExtent(Pointer ImageViewPtr1);
+  MagickCore.RectangleInfo.ByValue GetImageViewExtent(Pointer ImageViewPtr1);
 
   /**
    * Original signature : <code>RectangleInfo GetImageViewExtent(const ImageView*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/image-view.h:36</i>
    */
-  SaMagickCore.RectangleInfo.ByValue GetImageViewExtent(PointerByReference ImageViewPtr1);
+  MagickCore.RectangleInfo.ByValue GetImageViewExtent(PointerByReference ImageViewPtr1);
 
   /**
    * Original signature : <code>void SetImageViewDescription(ImageView*, const char*)</code> <br>
@@ -13636,94 +13817,94 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>Image* CoalesceImages(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:27</i>
    */
-  SaMagickCore.Image CoalesceImages(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CoalesceImages(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DisposeImages(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:29</i>
    */
-  SaMagickCore.Image DisposeImages(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DisposeImages(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CompareImagesLayers(const Image*, const LayerMethod,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:31</i>
    */
-  SaMagickCore.Image CompareImagesLayers(SaMagickCore.Image ImagePtr1, int LayerMethod1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CompareImagesLayers(MagickCore.Image ImagePtr1, int LayerMethod1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* MergeImageLayers(Image*, const LayerMethod,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:33</i>
    */
-  SaMagickCore.Image MergeImageLayers(SaMagickCore.Image ImagePtr1, int LayerMethod1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MergeImageLayers(MagickCore.Image ImagePtr1, int LayerMethod1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* OptimizeImageLayers(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:35</i>
    */
-  SaMagickCore.Image OptimizeImageLayers(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image OptimizeImageLayers(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* OptimizePlusImageLayers(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:37</i>
    */
-  SaMagickCore.Image OptimizePlusImageLayers(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image OptimizePlusImageLayers(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void CompositeLayers(Image*, const, Image*, const, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:39</i>
    */
-  void CompositeLayers(SaMagickCore.Image ImagePtr1, int CompositeOperator,
-      SaMagickCore.Image ImagePtr2, int ssize_t, int ssize_t2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void CompositeLayers(MagickCore.Image ImagePtr1, int CompositeOperator,
+      MagickCore.Image ImagePtr2, int ssize_t, int ssize_t2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void OptimizeImageTransparency(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:41</i>
    */
-  void OptimizeImageTransparency(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void OptimizeImageTransparency(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void RemoveDuplicateLayers(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:43</i> <br>
    *
-   * @deprecated use the safer method {@link #RemoveDuplicateLayers(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #RemoveDuplicateLayers(MagickCore.Image.ByReference[],
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   void RemoveDuplicateLayers(PointerByReference ImagePtrPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void RemoveDuplicateLayers(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:43</i>
    */
-  void RemoveDuplicateLayers(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void RemoveDuplicateLayers(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void RemoveZeroDelayLayers(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:45</i> <br>
    *
-   * @deprecated use the safer method {@link #RemoveZeroDelayLayers(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #RemoveZeroDelayLayers(MagickCore.Image.ByReference[],
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   void RemoveZeroDelayLayers(PointerByReference ImagePtrPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void RemoveZeroDelayLayers(Image**, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/layer.h:45</i>
    */
-  void RemoveZeroDelayLayers(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void RemoveZeroDelayLayers(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* DestroyLinkedList(LinkedListInfo*,
@@ -13731,11 +13912,11 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:2</i> <br>
    *
    * @deprecated use the safer method {@link #DestroyLinkedList(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.DestroyLinkedList_arg1_callback)} instead
+   * MagickCore.DestroyLinkedList_arg1_callback)} instead
    */
   @Deprecated
   PointerByReference DestroyLinkedList(Pointer LinkedListInfoPtr1,
-      SaMagickCore.DestroyLinkedList_arg1_callback arg1);
+      MagickCore.DestroyLinkedList_arg1_callback arg1);
 
   /**
    * Original signature : <code>LinkedListInfo* DestroyLinkedList(LinkedListInfo*,
@@ -13743,7 +13924,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:2</i>
    */
   PointerByReference DestroyLinkedList(PointerByReference LinkedListInfoPtr1,
-      SaMagickCore.DestroyLinkedList_arg1_callback arg1);
+      MagickCore.DestroyLinkedList_arg1_callback arg1);
 
   /**
    * Original signature : <code>LinkedListInfo* NewLinkedList(const size_t)</code> <br> <i>native
@@ -13792,12 +13973,12 @@ public interface SaMagickCore extends Library {
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:10</i> <br>
    *
    * @deprecated use the safer method {@link #InsertValueInSortedLinkedList(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.InsertValueInSortedLinkedList_arg1_callback, com.sun.jna.ptr.PointerByReference,
+   * MagickCore.InsertValueInSortedLinkedList_arg1_callback, com.sun.jna.ptr.PointerByReference,
    * com.sun.jna.Pointer)} instead
    */
   @Deprecated
   int InsertValueInSortedLinkedList(Pointer LinkedListInfoPtr1,
-      SaMagickCore.InsertValueInSortedLinkedList_arg1_callback arg1, PointerByReference voidPtrPtr1,
+      MagickCore.InsertValueInSortedLinkedList_arg1_callback arg1, PointerByReference voidPtrPtr1,
       Pointer voidPtr1);
 
   /**
@@ -13806,7 +13987,7 @@ public interface SaMagickCore extends Library {
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:10</i>
    */
   int InsertValueInSortedLinkedList(PointerByReference LinkedListInfoPtr1,
-      SaMagickCore.InsertValueInSortedLinkedList_arg1_callback arg1, PointerByReference voidPtrPtr1,
+      MagickCore.InsertValueInSortedLinkedList_arg1_callback arg1, PointerByReference voidPtrPtr1,
       Pointer voidPtr1);
 
   /**
@@ -13866,10 +14047,10 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:18</i> <br>
    *
    * @deprecated use the safer method {@link #ClearLinkedList(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ClearLinkedList_arg1_callback)} instead
+   * MagickCore.ClearLinkedList_arg1_callback)} instead
    */
   @Deprecated
-  void ClearLinkedList(Pointer LinkedListInfoPtr1, SaMagickCore.ClearLinkedList_arg1_callback arg1);
+  void ClearLinkedList(Pointer LinkedListInfoPtr1, MagickCore.ClearLinkedList_arg1_callback arg1);
 
   /**
    * Original signature : <code>void ClearLinkedList(LinkedListInfo*,
@@ -13877,7 +14058,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/linked-list.h:18</i>
    */
   void ClearLinkedList(PointerByReference LinkedListInfoPtr1,
-      SaMagickCore.ClearLinkedList_arg1_callback arg1);
+      MagickCore.ClearLinkedList_arg1_callback arg1);
 
   /**
    * Original signature : <code>void* GetLastValueInLinkedList(LinkedListInfo*)</code> <br>
@@ -13999,211 +14180,211 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>Image* CloneImageList(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:1</i>
    */
-  SaMagickCore.Image CloneImageList(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CloneImageList(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CloneImages(const Image*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:3</i> <br>
    *
-   * @deprecated use the safer methods {@link #CloneImages(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #CloneImages(SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #CloneImages(MagickCore.Image, java.lang.String,
+   * MagickCore.ExceptionInfo)} and {@link #CloneImages(MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image CloneImages(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CloneImages(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* CloneImages(const Image*, const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:3</i>
    */
-  SaMagickCore.Image CloneImages(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CloneImages(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DestroyImageList(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:5</i>
    */
-  SaMagickCore.Image DestroyImageList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image DestroyImageList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* DuplicateImages(Image*, const size_t, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:7</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DuplicateImages(SaMagickCore.Image,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, java.lang.String, SaMagickCore.ExceptionInfo)}
-   * and {@link #DuplicateImages(SaMagickCore.Image, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DuplicateImages(MagickCore.Image,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, java.lang.String, MagickCore.ExceptionInfo)}
+   * and {@link #DuplicateImages(MagickCore.Image, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image DuplicateImages(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DuplicateImages(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* DuplicateImages(Image*, const size_t, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:7</i>
    */
-  SaMagickCore.Image DuplicateImages(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DuplicateImages(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* GetFirstImageInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:9</i>
    */
-  SaMagickCore.Image GetFirstImageInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image GetFirstImageInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* GetImageFromList(const Image*, const)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:11</i>
    */
-  SaMagickCore.Image GetImageFromList(SaMagickCore.Image ImagePtr1, int ssize_t);
+  MagickCore.Image GetImageFromList(MagickCore.Image ImagePtr1, int ssize_t);
 
   /**
    * Original signature : <code>Image* GetLastImageInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:13</i>
    */
-  SaMagickCore.Image GetLastImageInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image GetLastImageInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* GetNextImageInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:15</i>
    */
-  SaMagickCore.Image GetNextImageInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image GetNextImageInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* GetPreviousImageInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:17</i>
    */
-  SaMagickCore.Image GetPreviousImageInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image GetPreviousImageInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image** ImageListToArray(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:19</i>
    */
-  SaMagickCore.Image.ByReference[] ImageListToArray(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image.ByReference[] ImageListToArray(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* NewImageList()</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:21</i>
    */
-  SaMagickCore.Image NewImageList();
+  MagickCore.Image NewImageList();
 
   /**
    * Original signature : <code>Image* RemoveImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:23</i> <br>
    *
-   * @deprecated use the safer method {@link #RemoveImageFromList(SaMagickCore.Image.ByReference[])}
+   * @deprecated use the safer method {@link #RemoveImageFromList(MagickCore.Image.ByReference[])}
    * instead
    */
   @Deprecated
-  SaMagickCore.Image RemoveImageFromList(PointerByReference ImagePtrPtr1);
+  MagickCore.Image RemoveImageFromList(PointerByReference ImagePtrPtr1);
 
   /**
    * Original signature : <code>Image* RemoveImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:23</i>
    */
-  SaMagickCore.Image RemoveImageFromList(SaMagickCore.Image.ByReference ImagePtrPtr1[]);
+  MagickCore.Image RemoveImageFromList(MagickCore.Image.ByReference ImagePtrPtr1[]);
 
   /**
    * Original signature : <code>Image* RemoveLastImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:25</i> <br>
    *
-   * @deprecated use the safer method {@link #RemoveLastImageFromList(SaMagickCore.Image.ByReference[])}
+   * @deprecated use the safer method {@link #RemoveLastImageFromList(MagickCore.Image.ByReference[])}
    * instead
    */
   @Deprecated
-  SaMagickCore.Image RemoveLastImageFromList(PointerByReference ImagePtrPtr1);
+  MagickCore.Image RemoveLastImageFromList(PointerByReference ImagePtrPtr1);
 
   /**
    * Original signature : <code>Image* RemoveLastImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:25</i>
    */
-  SaMagickCore.Image RemoveLastImageFromList(SaMagickCore.Image.ByReference ImagePtrPtr1[]);
+  MagickCore.Image RemoveLastImageFromList(MagickCore.Image.ByReference ImagePtrPtr1[]);
 
   /**
    * Original signature : <code>Image* RemoveFirstImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:27</i> <br>
    *
-   * @deprecated use the safer method {@link #RemoveFirstImageFromList(SaMagickCore.Image.ByReference[])}
+   * @deprecated use the safer method {@link #RemoveFirstImageFromList(MagickCore.Image.ByReference[])}
    * instead
    */
   @Deprecated
-  SaMagickCore.Image RemoveFirstImageFromList(PointerByReference ImagePtrPtr1);
+  MagickCore.Image RemoveFirstImageFromList(PointerByReference ImagePtrPtr1);
 
   /**
    * Original signature : <code>Image* RemoveFirstImageFromList(Image**)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:27</i>
    */
-  SaMagickCore.Image RemoveFirstImageFromList(SaMagickCore.Image.ByReference ImagePtrPtr1[]);
+  MagickCore.Image RemoveFirstImageFromList(MagickCore.Image.ByReference ImagePtrPtr1[]);
 
   /**
    * Original signature : <code>Image* SpliceImageIntoList(Image**, const size_t, const
    * Image*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:29</i>
    * <br>
    *
-   * @deprecated use the safer method {@link #SpliceImageIntoList(SaMagickCore.Image.ByReference[],
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #SpliceImageIntoList(MagickCore.Image.ByReference[],
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.Image)} instead
    */
   @Deprecated
-  SaMagickCore.Image SpliceImageIntoList(PointerByReference ImagePtrPtr1, NativeSize size_t1,
-      SaMagickCore.Image ImagePtr1);
+  MagickCore.Image SpliceImageIntoList(PointerByReference ImagePtrPtr1, NativeSize size_t1,
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* SpliceImageIntoList(Image**, const size_t, const
    * Image*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:29</i>
    */
-  SaMagickCore.Image SpliceImageIntoList(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      NativeSize size_t1, SaMagickCore.Image ImagePtr1);
+  MagickCore.Image SpliceImageIntoList(MagickCore.Image.ByReference ImagePtrPtr1[],
+      NativeSize size_t1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* SplitImageList(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:31</i>
    */
-  SaMagickCore.Image SplitImageList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image SplitImageList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>Image* SyncNextImageInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:33</i>
    */
-  SaMagickCore.Image SyncNextImageInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.Image SyncNextImageInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>size_t GetImageListLength(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:35</i>
    */
-  NativeSize GetImageListLength(SaMagickCore.Image ImagePtr1);
+  NativeSize GetImageListLength(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>ssize_t GetImageIndexInList(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:37</i>
    */
-  SaMagickCore.ssize_t GetImageIndexInList(SaMagickCore.Image ImagePtr1);
+  MagickCore.ssize_t GetImageIndexInList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void AppendImageToList(Image**, const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:39</i> <br>
    *
-   * @deprecated use the safer method {@link #AppendImageToList(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #AppendImageToList(MagickCore.Image.ByReference[],
+   * MagickCore.Image)} instead
    */
   @Deprecated
-  void AppendImageToList(PointerByReference ImagePtrPtr1, SaMagickCore.Image ImagePtr1);
+  void AppendImageToList(PointerByReference ImagePtrPtr1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void AppendImageToList(Image**, const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:39</i>
    */
-  void AppendImageToList(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.Image ImagePtr1);
+  void AppendImageToList(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void DeleteImageFromList(Image**)</code> <br> <i>native declaration
    * : /usr/local/include/ImageMagick-7/MagickCore/list.h:41</i> <br>
    *
-   * @deprecated use the safer method {@link #DeleteImageFromList(SaMagickCore.Image.ByReference[])}
+   * @deprecated use the safer method {@link #DeleteImageFromList(MagickCore.Image.ByReference[])}
    * instead
    */
   @Deprecated
@@ -14213,107 +14394,107 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>void DeleteImageFromList(Image**)</code> <br> <i>native declaration
    * : /usr/local/include/ImageMagick-7/MagickCore/list.h:41</i>
    */
-  void DeleteImageFromList(SaMagickCore.Image.ByReference ImagePtrPtr1[]);
+  void DeleteImageFromList(MagickCore.Image.ByReference ImagePtrPtr1[]);
 
   /**
    * Original signature : <code>void DeleteImages(Image**, const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:43</i> <br>
    *
-   * @deprecated use the safer methods {@link #DeleteImages(SaMagickCore.Image.ByReference[],
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #DeleteImages(SaMagickCore.Image.ByReference[],
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DeleteImages(MagickCore.Image.ByReference[],
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #DeleteImages(MagickCore.Image.ByReference[],
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   void DeleteImages(PointerByReference ImagePtrPtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void DeleteImages(Image**, const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:43</i>
    */
-  void DeleteImages(SaMagickCore.Image.ByReference ImagePtrPtr1[], String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void DeleteImages(MagickCore.Image.ByReference ImagePtrPtr1[], String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void DeleteImages(Image**, const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:43</i>
    */
-  void DeleteImages(SaMagickCore.Image.ByReference ImagePtrPtr1[], Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void DeleteImages(MagickCore.Image.ByReference ImagePtrPtr1[], Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void InsertImageInList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:45</i> <br>
    *
-   * @deprecated use the safer method {@link #InsertImageInList(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #InsertImageInList(MagickCore.Image.ByReference[],
+   * MagickCore.Image)} instead
    */
   @Deprecated
-  void InsertImageInList(PointerByReference ImagePtrPtr1, SaMagickCore.Image ImagePtr1);
+  void InsertImageInList(PointerByReference ImagePtrPtr1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void InsertImageInList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:45</i>
    */
-  void InsertImageInList(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.Image ImagePtr1);
+  void InsertImageInList(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void PrependImageToList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:47</i> <br>
    *
-   * @deprecated use the safer method {@link #PrependImageToList(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #PrependImageToList(MagickCore.Image.ByReference[],
+   * MagickCore.Image)} instead
    */
   @Deprecated
-  void PrependImageToList(PointerByReference ImagePtrPtr1, SaMagickCore.Image ImagePtr1);
+  void PrependImageToList(PointerByReference ImagePtrPtr1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void PrependImageToList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:47</i>
    */
-  void PrependImageToList(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.Image ImagePtr1);
+  void PrependImageToList(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ReplaceImageInList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:49</i> <br>
    *
-   * @deprecated use the safer method {@link #ReplaceImageInList(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #ReplaceImageInList(MagickCore.Image.ByReference[],
+   * MagickCore.Image)} instead
    */
   @Deprecated
-  void ReplaceImageInList(PointerByReference ImagePtrPtr1, SaMagickCore.Image ImagePtr1);
+  void ReplaceImageInList(PointerByReference ImagePtrPtr1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ReplaceImageInList(Image**, Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:49</i>
    */
-  void ReplaceImageInList(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.Image ImagePtr1);
+  void ReplaceImageInList(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ReplaceImageInListReturnLast(Image**, Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:51</i> <br>
    *
-   * @deprecated use the safer method {@link #ReplaceImageInListReturnLast(SaMagickCore.Image.ByReference[],
-   * SaMagickCore.Image)} instead
+   * @deprecated use the safer method {@link #ReplaceImageInListReturnLast(MagickCore.Image.ByReference[],
+   * MagickCore.Image)} instead
    */
   @Deprecated
-  void ReplaceImageInListReturnLast(PointerByReference ImagePtrPtr1, SaMagickCore.Image ImagePtr1);
+  void ReplaceImageInListReturnLast(PointerByReference ImagePtrPtr1, MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ReplaceImageInListReturnLast(Image**, Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/list.h:51</i>
    */
-  void ReplaceImageInListReturnLast(SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      SaMagickCore.Image ImagePtr1);
+  void ReplaceImageInListReturnLast(MagickCore.Image.ByReference ImagePtrPtr1[],
+      MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>void ReverseImageList(Image**)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:53</i> <br>
    *
-   * @deprecated use the safer method {@link #ReverseImageList(SaMagickCore.Image.ByReference[])}
+   * @deprecated use the safer method {@link #ReverseImageList(MagickCore.Image.ByReference[])}
    * instead
    */
   @Deprecated
@@ -14323,33 +14504,33 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>void ReverseImageList(Image**)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:53</i>
    */
-  void ReverseImageList(SaMagickCore.Image.ByReference ImagePtrPtr1[]);
+  void ReverseImageList(MagickCore.Image.ByReference ImagePtrPtr1[]);
 
   /**
    * Original signature : <code>void SyncImageList(Image*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/list.h:55</i>
    */
-  void SyncImageList(SaMagickCore.Image ImagePtr1);
+  void SyncImageList(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>char** GetLocaleList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:8</i> <br>
    *
    * @deprecated use the safer methods {@link #GetLocaleList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetLocaleList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetLocaleList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetLocaleList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:8</i>
    */
   PointerByReference GetLocaleList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetLocaleMessage(const char*)</code> <br> <i>native
@@ -14372,19 +14553,19 @@ public interface SaMagickCore extends Library {
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:12</i> <br>
    *
    * @deprecated use the safer methods {@link #GetLocaleInfo_(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetLocaleInfo_(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetLocaleInfo_(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.LocaleInfo GetLocaleInfo_(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.LocaleInfo GetLocaleInfo_(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const LocaleInfo* GetLocaleInfo_(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:12</i>
    */
-  SaMagickCore.LocaleInfo GetLocaleInfo_(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.LocaleInfo GetLocaleInfo_(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const LocaleInfo** GetLocaleInfoList(const char*, size_t*,
@@ -14392,20 +14573,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetLocaleInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetLocaleInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.LocaleInfo.ByReference[] GetLocaleInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.LocaleInfo.ByReference[] GetLocaleInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const LocaleInfo** GetLocaleInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:14</i>
    */
-  SaMagickCore.LocaleInfo.ByReference[] GetLocaleInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.LocaleInfo.ByReference[] GetLocaleInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>double InterpretLocaleValue(const char*, char**)</code> <br>
@@ -14478,35 +14659,35 @@ public interface SaMagickCore extends Library {
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:24</i> <br>
    *
    * @deprecated use the safer methods {@link #GetLocaleOptions(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetLocaleOptions(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetLocaleOptions(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetLocaleOptions(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LinkedListInfo* GetLocaleOptions(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:24</i>
    */
   PointerByReference GetLocaleOptions(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListLocaleInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:26</i> <br>
    *
    * @deprecated use the safer method {@link #ListLocaleInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListLocaleInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListLocaleInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListLocaleInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/locale_.h:26</i>
    */
-  int ListLocaleInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListLocaleInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>FormatLocaleString(char*, const size_t, const char*, null)</code>
@@ -14565,20 +14746,20 @@ public interface SaMagickCore extends Library {
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/log.h:29</i> <br>
    *
    * @deprecated use the safer methods {@link #GetLogList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetLogList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetLogList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetLogList(const char*, size_t*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/log.h:29</i>
    */
   PointerByReference GetLogList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const char* GetLogName()</code> <br> <i>native declaration :
@@ -14608,20 +14789,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetLogInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetLogInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetLogInfoList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LogInfo** GetLogInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/log.h:35</i>
    */
   PointerByReference GetLogInfoList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>LogEventType SetLogEventMask(const char*)</code> <br> <i>native
@@ -14644,42 +14825,42 @@ public interface SaMagickCore extends Library {
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:12</i> <br>
    *
    * @deprecated use the safer methods {@link #GetMagicList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMagicList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetMagicList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetMagicList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:12</i>
    */
   PointerByReference GetMagicList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetMagicName(const MagicInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:14</i>
    */
-  String GetMagicName(SaMagickCore.MagicInfo MagicInfoPtr1);
+  String GetMagicName(MagickCore.MagicInfo MagicInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListMagicInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:16</i> <br>
    *
    * @deprecated use the safer method {@link #ListMagicInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListMagicInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMagicInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListMagicInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:16</i>
    */
-  int ListMagicInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMagicInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const MagicInfo* GetMagicInfo(const unsigned char*, const size_t,
@@ -14687,19 +14868,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetMagicInfo(byte[], com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetMagicInfo(com.sun.jna.Pointer,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetMagicInfo(com.sun.jna.Pointer,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.MagicInfo GetMagicInfo(Pointer charPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagicInfo GetMagicInfo(Pointer charPtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const MagicInfo* GetMagicInfo(const unsigned char*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:18</i>
    */
-  SaMagickCore.MagicInfo GetMagicInfo(byte name[], NativeSize size_t1,
-      SaMagickCore.ExceptionInfo exceptionInfo);
+  MagickCore.MagicInfo GetMagicInfo(byte name[], NativeSize size_t1,
+      MagickCore.ExceptionInfo exceptionInfo);
 
   /**
    * Original signature : <code>const MagicInfo** GetMagicInfoList(const char*, size_t*,
@@ -14707,70 +14888,70 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetMagicInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMagicInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.MagicInfo.ByReference[] GetMagicInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagicInfo.ByReference[] GetMagicInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const MagicInfo** GetMagicInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:20</i>
    */
-  SaMagickCore.MagicInfo.ByReference[] GetMagicInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagicInfo.ByReference[] GetMagicInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>size_t GetMagicPatternExtent(ExceptionInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/magic.h:22</i>
    */
-  NativeSize GetMagicPatternExtent(SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  NativeSize GetMagicPatternExtent(MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetMagickList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:40</i> <br>
    *
    * @deprecated use the safer methods {@link #GetMagickList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMagickList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetMagickList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetMagickList(const char*, size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:40</i>
    */
   PointerByReference GetMagickList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>const char* GetMagickDescription(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:42</i>
    */
-  String GetMagickDescription(SaMagickCore.MagickInfo MagickInfoPtr1);
+  String GetMagickDescription(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>const char* GetMagickMimeType(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:44</i>
    */
-  String GetMagickMimeType(SaMagickCore.MagickInfo MagickInfoPtr1);
+  String GetMagickMimeType(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>DecodeImageHandler* GetImageDecoder(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:46</i>
    */
-  SaMagickCore.DecodeImageHandler GetImageDecoder(SaMagickCore.MagickInfo MagickInfoPtr1);
+  MagickCore.DecodeImageHandler GetImageDecoder(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>EncodeImageHandler* GetImageEncoder(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:48</i>
    */
-  SaMagickCore.EncodeImageHandler GetImageEncoder(SaMagickCore.MagickInfo MagickInfoPtr1);
+  MagickCore.EncodeImageHandler GetImageEncoder(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>int GetMagickPrecision()</code> <br> <i>native declaration :
@@ -14806,61 +14987,61 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>MagickBooleanType GetMagickAdjoin(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:56</i>
    */
-  int GetMagickAdjoin(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickAdjoin(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickBlobSupport(const MagickInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:58</i>
    */
-  int GetMagickBlobSupport(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickBlobSupport(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickDecoderSeekableStream(const
    * MagickInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:60</i>
    */
-  int GetMagickDecoderSeekableStream(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickDecoderSeekableStream(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickDecoderThreadSupport(const
    * MagickInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:62</i>
    */
-  int GetMagickDecoderThreadSupport(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickDecoderThreadSupport(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickEncoderSeekableStream(const
    * MagickInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:64</i>
    */
-  int GetMagickEncoderSeekableStream(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickEncoderSeekableStream(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickEncoderThreadSupport(const
    * MagickInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:66</i>
    */
-  int GetMagickEncoderThreadSupport(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickEncoderThreadSupport(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickEndianSupport(const MagickInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:68</i>
    */
-  int GetMagickEndianSupport(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickEndianSupport(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickRawSupport(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:70</i>
    */
-  int GetMagickRawSupport(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickRawSupport(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickStealth(const MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:72</i>
    */
-  int GetMagickStealth(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickStealth(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMagickUseExtension(const MagickInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:74</i>
    */
-  int GetMagickUseExtension(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int GetMagickUseExtension(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType IsMagickCoreInstantiated()</code> <br> <i>native
@@ -14872,7 +15053,7 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>MagickBooleanType RegisterMagickInfo(MagickInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:78</i>
    */
-  int RegisterMagickInfo(SaMagickCore.MagickInfo MagickInfoPtr1);
+  int RegisterMagickInfo(MagickCore.MagickInfo MagickInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType UnregisterMagickInfo(const char*)</code> <br>
@@ -14895,19 +15076,19 @@ public interface SaMagickCore extends Library {
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:82</i> <br>
    *
    * @deprecated use the safer methods {@link #GetMagickInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetMagickInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetMagickInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.MagickInfo GetMagickInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagickInfo GetMagickInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickInfo* GetMagickInfo(const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:82</i>
    */
-  SaMagickCore.MagickInfo GetMagickInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagickInfo GetMagickInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickInfo** GetMagickInfoList(const char*, size_t*,
@@ -14915,20 +15096,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetMagickInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMagickInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.MagickInfo.ByReference[] GetMagickInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagickInfo.ByReference[] GetMagickInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickInfo** GetMagickInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:84</i>
    */
-  SaMagickCore.MagickInfo.ByReference[] GetMagickInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.MagickInfo.ByReference[] GetMagickInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickInfo* AcquireMagickInfo(const char*, const char*, const
@@ -14940,13 +15121,13 @@ public interface SaMagickCore extends Library {
    * com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.MagickInfo AcquireMagickInfo(Pointer charPtr1, Pointer charPtr2, Pointer charPtr3);
+  MagickCore.MagickInfo AcquireMagickInfo(Pointer charPtr1, Pointer charPtr2, Pointer charPtr3);
 
   /**
    * Original signature : <code>MagickInfo* AcquireMagickInfo(const char*, const char*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/magick.h:86</i>
    */
-  SaMagickCore.MagickInfo AcquireMagickInfo(String charPtr1, String charPtr2, String charPtr3);
+  MagickCore.MagickInfo AcquireMagickInfo(String charPtr1, String charPtr2, String charPtr3);
 
   /**
    * Original signature : <code>void MagickCoreGenesis(const char*, const MagickBooleanType)</code>
@@ -14987,18 +15168,18 @@ public interface SaMagickCore extends Library {
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/matrix.h:6</i> <br>
    *
    * @deprecated use the safer method {@link #MatrixToImage(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image MatrixToImage(Pointer MatrixInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MatrixToImage(Pointer MatrixInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* MatrixToImage(const MatrixInfo*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/matrix.h:6</i>
    */
-  SaMagickCore.Image MatrixToImage(PointerByReference MatrixInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MatrixToImage(PointerByReference MatrixInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType GetMatrixElement(const MatrixInfo*, const, const,
@@ -15057,7 +15238,7 @@ public interface SaMagickCore extends Library {
    * size_t, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/matrix.h:14</i>
    */
   PointerByReference AcquireMatrixInfo(NativeSize size_t1, NativeSize size_t2, NativeSize size_t3,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MatrixInfo* DestroyMatrixInfo(MatrixInfo*)</code> <br> <i>native
@@ -15113,20 +15294,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetMimeList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMimeList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetMimeList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char** GetMimeList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/mime.h:3</i>
    */
   PointerByReference GetMimeList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char* MagickToMime(const char*)</code> <br> <i>native
@@ -15181,16 +15362,16 @@ public interface SaMagickCore extends Library {
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/mime.h:11</i> <br>
    *
    * @deprecated use the safer method {@link #ListMimeInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListMimeInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMimeInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListMimeInfo(FILE*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/mime.h:11</i>
    */
-  int ListMimeInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMimeInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType LoadMimeLists(const char*,
@@ -15198,17 +15379,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #LoadMimeLists(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #LoadMimeLists(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #LoadMimeLists(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int LoadMimeLists(Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LoadMimeLists(Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType LoadMimeLists(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/mime.h:13</i>
    */
-  int LoadMimeLists(String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int LoadMimeLists(String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const MimeInfo* GetMimeInfo(const char*, const unsigned
@@ -15216,13 +15397,13 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/mime.h:15</i> <br>
    *
    * @deprecated use the safer methods {@link #GetMimeInfo(java.lang.String, byte[],
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} and {@link
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} and {@link
    * #GetMimeInfo(com.sun.jna.Pointer, com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetMimeInfo(Pointer charPtr1, Pointer charPtr2, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const MimeInfo* GetMimeInfo(const char*, const unsigned
@@ -15230,7 +15411,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/mime.h:15</i>
    */
   PointerByReference GetMimeInfo(String charPtr1, byte charPtr2[], NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const MimeInfo** GetMimeInfoList(const char*, size_t*,
@@ -15238,20 +15419,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetMimeInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetMimeInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetMimeInfoList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const MimeInfo** GetMimeInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/mime.h:17</i>
    */
   PointerByReference GetMimeInfoList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetModuleList(const char*, const MagickModuleType, size_t*,
@@ -15259,20 +15440,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetModuleList(java.lang.String, int,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetModuleList(com.sun.jna.Pointer, int, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetModuleList(Pointer charPtr1, int MagickModuleType1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetModuleList(const char*, const MagickModuleType, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/module.h:19</i>
    */
   PointerByReference GetModuleList(String charPtr1, int MagickModuleType1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ModuleInfo** GetModuleInfoList(const char*, size_t*,
@@ -15280,20 +15461,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetModuleInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetModuleInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ModuleInfo.ByReference[] GetModuleInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ModuleInfo.ByReference[] GetModuleInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ModuleInfo** GetModuleInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/module.h:21</i>
    */
-  SaMagickCore.ModuleInfo.ByReference[] GetModuleInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ModuleInfo.ByReference[] GetModuleInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InvokeDynamicImageFilter(const char*,
@@ -15301,29 +15482,29 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/module.h:23</i> <br>
    *
    * @deprecated use the safer methods {@link #InvokeDynamicImageFilter(java.lang.String,
-   * SaMagickCore.Image.ByReference[], int, java.lang.String[], SaMagickCore.ExceptionInfo)} and
-   * {@link #InvokeDynamicImageFilter(com.sun.jna.Pointer, SaMagickCore.Image.ByReference[], int,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.Image.ByReference[], int, java.lang.String[], MagickCore.ExceptionInfo)} and
+   * {@link #InvokeDynamicImageFilter(com.sun.jna.Pointer, MagickCore.Image.ByReference[], int,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int InvokeDynamicImageFilter(Pointer charPtr1, PointerByReference ImagePtrPtr1, int int1,
-      PointerByReference charPtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      PointerByReference charPtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InvokeDynamicImageFilter(const char*,
    * Image**, const int, const char**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/module.h:23</i>
    */
-  int InvokeDynamicImageFilter(String charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      int int1, String charPtrPtr1[], SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeDynamicImageFilter(String charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      int int1, String charPtrPtr1[], MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InvokeDynamicImageFilter(const char*,
    * Image**, const int, const char**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/module.h:23</i>
    */
-  int InvokeDynamicImageFilter(Pointer charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      int int1, PointerByReference charPtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeDynamicImageFilter(Pointer charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      int int1, PointerByReference charPtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListModuleInfo(FILE*,
@@ -15331,35 +15512,35 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListModuleInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListModuleInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListModuleInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListModuleInfo(FILE*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/module.h:25</i>
    */
-  int ListModuleInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListModuleInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ModuleInfo* GetModuleInfo(const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/module.h:27</i> <br>
    *
    * @deprecated use the safer methods {@link #GetModuleInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetModuleInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetModuleInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.ModuleInfo GetModuleInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ModuleInfo GetModuleInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ModuleInfo* GetModuleInfo(const char*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/module.h:27</i>
    */
-  SaMagickCore.ModuleInfo GetModuleInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ModuleInfo GetModuleInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void DestroyModuleList()</code> <br> <i>native declaration :
@@ -15372,53 +15553,53 @@ public interface SaMagickCore extends Library {
    * MagickProgressMonitor, void*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/monitor.h:3</i>
    */
-  SaMagickCore.MagickProgressMonitor SetImageProgressMonitor(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.MagickProgressMonitor MagickProgressMonitor1, Pointer voidPtr1);
+  MagickCore.MagickProgressMonitor SetImageProgressMonitor(MagickCore.Image ImagePtr1,
+      MagickCore.MagickProgressMonitor MagickProgressMonitor1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>MagickProgressMonitor SetImageInfoProgressMonitor(ImageInfo*, const
    * MagickProgressMonitor, void*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/monitor.h:5</i>
    */
-  SaMagickCore.MagickProgressMonitor SetImageInfoProgressMonitor(
-      SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.MagickProgressMonitor MagickProgressMonitor1, Pointer voidPtr1);
+  MagickCore.MagickProgressMonitor SetImageInfoProgressMonitor(
+      MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.MagickProgressMonitor MagickProgressMonitor1, Pointer voidPtr1);
 
   /**
    * Original signature : <code>extern Image* MontageImages(const Image*, const MontageInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/montage.h:29</i>
    */
-  SaMagickCore.Image MontageImages(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.MontageInfo MontageInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MontageImages(MagickCore.Image ImagePtr1,
+      MagickCore.MontageInfo MontageInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* MontageImageList(const ImageInfo*, const MontageInfo*,
    * const Image*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/montage.h:31</i>
    */
-  SaMagickCore.Image MontageImageList(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.MontageInfo MontageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MontageImageList(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.MontageInfo MontageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MontageInfo* CloneMontageInfo(const ImageInfo*, const
    * MontageInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/montage.h:33</i>
    */
-  SaMagickCore.MontageInfo CloneMontageInfo(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.MontageInfo MontageInfoPtr1);
+  MagickCore.MontageInfo CloneMontageInfo(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.MontageInfo MontageInfoPtr1);
 
   /**
    * Original signature : <code>extern MontageInfo* DestroyMontageInfo(MontageInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/montage.h:35</i>
    */
-  SaMagickCore.MontageInfo DestroyMontageInfo(SaMagickCore.MontageInfo MontageInfoPtr1);
+  MagickCore.MontageInfo DestroyMontageInfo(MagickCore.MontageInfo MontageInfoPtr1);
 
   /**
    * Original signature : <code>void GetMontageInfo(const ImageInfo*, MontageInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/montage.h:37</i>
    */
-  void GetMontageInfo(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.MontageInfo MontageInfoPtr1);
+  void GetMontageInfo(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.MontageInfo MontageInfoPtr1);
 
   /**
    * Original signature : <code>extern KernelInfo* AcquireKernelInfo(const char*,
@@ -15426,84 +15607,84 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #AcquireKernelInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #AcquireKernelInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #AcquireKernelInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.KernelInfo AcquireKernelInfo(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.KernelInfo AcquireKernelInfo(Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern KernelInfo* AcquireKernelInfo(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:88</i>
    */
-  SaMagickCore.KernelInfo AcquireKernelInfo(String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.KernelInfo AcquireKernelInfo(String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern KernelInfo* AcquireKernelBuiltIn(const KernelInfoType, const
    * GeometryInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/morphology.h:90</i>
    */
-  SaMagickCore.KernelInfo AcquireKernelBuiltIn(int KernelInfoType1,
-      SaMagickCore.GeometryInfo GeometryInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.KernelInfo AcquireKernelBuiltIn(int KernelInfoType1,
+      MagickCore.GeometryInfo GeometryInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern KernelInfo* CloneKernelInfo(const KernelInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:92</i>
    */
-  SaMagickCore.KernelInfo CloneKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1);
+  MagickCore.KernelInfo CloneKernelInfo(MagickCore.KernelInfo KernelInfoPtr1);
 
   /**
    * Original signature : <code>extern KernelInfo* DestroyKernelInfo(KernelInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:94</i>
    */
-  SaMagickCore.KernelInfo DestroyKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1);
+  MagickCore.KernelInfo DestroyKernelInfo(MagickCore.KernelInfo KernelInfoPtr1);
 
   /**
    * Original signature : <code>Image* MorphologyImage(const Image*, const MorphologyMethod, const,
    * const KernelInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/morphology.h:96</i>
    */
-  SaMagickCore.Image MorphologyImage(SaMagickCore.Image ImagePtr1, int MorphologyMethod1,
-      int ssize_t, SaMagickCore.KernelInfo KernelInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MorphologyImage(MagickCore.Image ImagePtr1, int MorphologyMethod1,
+      int ssize_t, MagickCore.KernelInfo KernelInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void ScaleGeometryKernelInfo(KernelInfo*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:98</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ScaleGeometryKernelInfo(SaMagickCore.KernelInfo,
-   * java.lang.String)} and {@link #ScaleGeometryKernelInfo(SaMagickCore.KernelInfo,
+   * @deprecated use the safer methods {@link #ScaleGeometryKernelInfo(MagickCore.KernelInfo,
+   * java.lang.String)} and {@link #ScaleGeometryKernelInfo(MagickCore.KernelInfo,
    * com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  void ScaleGeometryKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1, Pointer charPtr1);
+  void ScaleGeometryKernelInfo(MagickCore.KernelInfo KernelInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern void ScaleGeometryKernelInfo(KernelInfo*, const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:98</i>
    */
-  void ScaleGeometryKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1, String charPtr1);
+  void ScaleGeometryKernelInfo(MagickCore.KernelInfo KernelInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern void ScaleKernelInfo(KernelInfo*, const double, const)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:100</i>
    */
-  void ScaleKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1, double double1, int GeometryFlags);
+  void ScaleKernelInfo(MagickCore.KernelInfo KernelInfoPtr1, double double1, int GeometryFlags);
 
   /**
    * Original signature : <code>extern void UnityAddKernelInfo(KernelInfo*, const double)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/morphology.h:102</i>
    */
-  void UnityAddKernelInfo(SaMagickCore.KernelInfo KernelInfoPtr1, double double1);
+  void UnityAddKernelInfo(MagickCore.KernelInfo KernelInfoPtr1, double double1);
 
   /**
    * Original signature : <code>extern const char* GetOpenCLDeviceName(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:9</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceName(SaMagickCore.MagickCLDevice)} and
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceName(MagickCore.MagickCLDevice)} and
    * {@link #GetOpenCLDeviceName(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15513,14 +15694,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern const char* GetOpenCLDeviceName(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:9</i>
    */
-  Pointer GetOpenCLDeviceName(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  Pointer GetOpenCLDeviceName(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>extern const char* GetOpenCLDeviceVendorName(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:11</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceVendorName(SaMagickCore.MagickCLDevice)}
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceVendorName(MagickCore.MagickCLDevice)}
    * and {@link #GetOpenCLDeviceVendorName(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15530,14 +15711,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern const char* GetOpenCLDeviceVendorName(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:11</i>
    */
-  Pointer GetOpenCLDeviceVendorName(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  Pointer GetOpenCLDeviceVendorName(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>extern const char* GetOpenCLDeviceVersion(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:13</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceVersion(SaMagickCore.MagickCLDevice)}
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceVersion(MagickCore.MagickCLDevice)}
    * and {@link #GetOpenCLDeviceVersion(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15547,14 +15728,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern const char* GetOpenCLDeviceVersion(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:13</i>
    */
-  Pointer GetOpenCLDeviceVersion(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  Pointer GetOpenCLDeviceVersion(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>KernelProfileRecord* GetOpenCLKernelProfileRecords(const
    * MagickCLDevice, size_t*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:15</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLKernelProfileRecords(SaMagickCore.MagickCLDevice,
+   * @deprecated use the safer methods {@link #GetOpenCLKernelProfileRecords(MagickCore.MagickCLDevice,
    * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)} and {@link
    * #GetOpenCLKernelProfileRecords(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference)}
    * instead
@@ -15567,14 +15748,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>KernelProfileRecord* GetOpenCLKernelProfileRecords(const
    * MagickCLDevice, size_t*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:15</i>
    */
-  PointerByReference GetOpenCLKernelProfileRecords(SaMagickCore.MagickCLDevice MagickCLDevice1,
+  PointerByReference GetOpenCLKernelProfileRecords(MagickCore.MagickCLDevice MagickCLDevice1,
       NativeSizeByReference size_tPtr1);
 
   /**
    * Original signature : <code>double GetOpenCLDeviceBenchmarkScore(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:17</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceBenchmarkScore(SaMagickCore.MagickCLDevice)}
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceBenchmarkScore(MagickCore.MagickCLDevice)}
    * and {@link #GetOpenCLDeviceBenchmarkScore(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15584,20 +15765,20 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>double GetOpenCLDeviceBenchmarkScore(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:17</i>
    */
-  double GetOpenCLDeviceBenchmarkScore(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  double GetOpenCLDeviceBenchmarkScore(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>MagickCLDevice* GetOpenCLDevices(size_t*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:19</i>
    */
   PointerByReference GetOpenCLDevices(NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickCLDeviceType GetOpenCLDeviceType(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:21</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceType(SaMagickCore.MagickCLDevice)} and
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceType(MagickCore.MagickCLDevice)} and
    * {@link #GetOpenCLDeviceType(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15607,14 +15788,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>MagickCLDeviceType GetOpenCLDeviceType(const MagickCLDevice)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:21</i>
    */
-  int GetOpenCLDeviceType(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  int GetOpenCLDeviceType(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetOpenCLDeviceEnabled(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:23</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetOpenCLDeviceEnabled(SaMagickCore.MagickCLDevice)}
+   * @deprecated use the safer methods {@link #GetOpenCLDeviceEnabled(MagickCore.MagickCLDevice)}
    * and {@link #GetOpenCLDeviceEnabled(com.sun.jna.Pointer)} instead
    */
   @Deprecated
@@ -15624,7 +15805,7 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern MagickBooleanType GetOpenCLDeviceEnabled(const
    * MagickCLDevice)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:23</i>
    */
-  int GetOpenCLDeviceEnabled(SaMagickCore.MagickCLDevice MagickCLDevice1);
+  int GetOpenCLDeviceEnabled(MagickCore.MagickCLDevice MagickCLDevice1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetOpenCLEnabled()</code> <br> <i>native
@@ -15643,7 +15824,7 @@ public interface SaMagickCore extends Library {
    * MagickBooleanType)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:29</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetOpenCLDeviceEnabled(SaMagickCore.MagickCLDevice,
+   * @deprecated use the safer methods {@link #SetOpenCLDeviceEnabled(MagickCore.MagickCLDevice,
    * int)} and {@link #SetOpenCLDeviceEnabled(com.sun.jna.Pointer, int)} instead
    */
   @Deprecated
@@ -15653,14 +15834,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern void SetOpenCLDeviceEnabled(MagickCLDevice, const
    * MagickBooleanType)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:29</i>
    */
-  void SetOpenCLDeviceEnabled(SaMagickCore.MagickCLDevice MagickCLDevice1, int MagickBooleanType1);
+  void SetOpenCLDeviceEnabled(MagickCore.MagickCLDevice MagickCLDevice1, int MagickBooleanType1);
 
   /**
    * Original signature : <code>extern void SetOpenCLKernelProfileEnabled(MagickCLDevice, const
    * MagickBooleanType)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:31</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetOpenCLKernelProfileEnabled(SaMagickCore.MagickCLDevice,
+   * @deprecated use the safer methods {@link #SetOpenCLKernelProfileEnabled(MagickCore.MagickCLDevice,
    * int)} and {@link #SetOpenCLKernelProfileEnabled(com.sun.jna.Pointer, int)} instead
    */
   @Deprecated
@@ -15670,7 +15851,7 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern void SetOpenCLKernelProfileEnabled(MagickCLDevice, const
    * MagickBooleanType)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/opencl.h:31</i>
    */
-  void SetOpenCLKernelProfileEnabled(SaMagickCore.MagickCLDevice MagickCLDevice1,
+  void SetOpenCLKernelProfileEnabled(MagickCore.MagickCLDevice MagickCLDevice1,
       int MagickBooleanType1);
 
   /**
@@ -15683,24 +15864,24 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern char* GetNextImageOption(const ImageInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:133</i>
    */
-  Pointer GetNextImageOption(SaMagickCore.ImageInfo ImageInfoPtr1);
+  Pointer GetNextImageOption(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>extern char* RemoveImageOption(ImageInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:135</i> <br>
    *
-   * @deprecated use the safer methods {@link #RemoveImageOption(SaMagickCore.ImageInfo,
-   * java.lang.String)} and {@link #RemoveImageOption(SaMagickCore.ImageInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #RemoveImageOption(MagickCore.ImageInfo,
+   * java.lang.String)} and {@link #RemoveImageOption(MagickCore.ImageInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  Pointer RemoveImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
+  Pointer RemoveImageOption(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern char* RemoveImageOption(ImageInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:135</i>
    */
-  Pointer RemoveImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
+  Pointer RemoveImageOption(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern const char* CommandOptionToMnemonic(const CommandOption,
@@ -15713,60 +15894,60 @@ public interface SaMagickCore extends Library {
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:139</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageOption(SaMagickCore.ImageInfo,
-   * java.lang.String)} and {@link #GetImageOption(SaMagickCore.ImageInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #GetImageOption(MagickCore.ImageInfo,
+   * java.lang.String)} and {@link #GetImageOption(MagickCore.ImageInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  Pointer GetImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
+  Pointer GetImageOption(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern const char* GetImageOption(const ImageInfo*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:139</i>
    */
-  Pointer GetImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
+  Pointer GetImageOption(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType CloneImageOptions(ImageInfo*, const
    * ImageInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:141</i>
    */
-  int CloneImageOptions(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.ImageInfo ImageInfoPtr2);
+  int CloneImageOptions(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.ImageInfo ImageInfoPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType DefineImageOption(ImageInfo*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:143</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DefineImageOption(SaMagickCore.ImageInfo,
-   * java.lang.String)} and {@link #DefineImageOption(SaMagickCore.ImageInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DefineImageOption(MagickCore.ImageInfo,
+   * java.lang.String)} and {@link #DefineImageOption(MagickCore.ImageInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DefineImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
+  int DefineImageOption(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DefineImageOption(ImageInfo*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:143</i>
    */
-  int DefineImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
+  int DefineImageOption(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageOption(ImageInfo*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:145</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DeleteImageOption(SaMagickCore.ImageInfo,
-   * java.lang.String)} and {@link #DeleteImageOption(SaMagickCore.ImageInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DeleteImageOption(MagickCore.ImageInfo,
+   * java.lang.String)} and {@link #DeleteImageOption(MagickCore.ImageInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DeleteImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
+  int DeleteImageOption(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageOption(ImageInfo*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:145</i>
    */
-  int DeleteImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
+  int DeleteImageOption(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType IsCommandOption(const char*)</code> <br>
@@ -15807,11 +15988,11 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/option.h:151</i> <br>
    *
    * @deprecated use the safer method {@link #ListCommandOptions(com.sun.jna.ptr.PointerByReference,
-   * int, SaMagickCore.ExceptionInfo)} instead
+   * int, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int ListCommandOptions(Pointer FILEPtr1, int CommandOption1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListCommandOptions(FILE*, const
@@ -15819,25 +16000,25 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/option.h:151</i>
    */
   int ListCommandOptions(PointerByReference FILEPtr1, int CommandOption1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageOption(ImageInfo*, const char*,
    * const char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:153</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetImageOption(SaMagickCore.ImageInfo,
-   * java.lang.String, java.lang.String)} and {@link #SetImageOption(SaMagickCore.ImageInfo,
+   * @deprecated use the safer methods {@link #SetImageOption(MagickCore.ImageInfo,
+   * java.lang.String, java.lang.String)} and {@link #SetImageOption(MagickCore.ImageInfo,
    * com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  int SetImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1, Pointer charPtr2);
+  int SetImageOption(MagickCore.ImageInfo ImageInfoPtr1, Pointer charPtr1, Pointer charPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageOption(ImageInfo*, const char*,
    * const char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:153</i>
    */
-  int SetImageOption(SaMagickCore.ImageInfo ImageInfoPtr1, String charPtr1, String charPtr2);
+  int SetImageOption(MagickCore.ImageInfo ImageInfoPtr1, String charPtr1, String charPtr2);
 
   /**
    * Original signature : <code>extern ssize_t GetCommandOptionFlags(const CommandOption, const
@@ -15848,7 +16029,7 @@ public interface SaMagickCore extends Library {
    * and {@link #GetCommandOptionFlags(int, int, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.ssize_t GetCommandOptionFlags(int CommandOption1, int MagickBooleanType1,
+  MagickCore.ssize_t GetCommandOptionFlags(int CommandOption1, int MagickBooleanType1,
       Pointer charPtr1);
 
   /**
@@ -15856,7 +16037,7 @@ public interface SaMagickCore extends Library {
    * MagickBooleanType, const char*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/option.h:155</i>
    */
-  SaMagickCore.ssize_t GetCommandOptionFlags(int CommandOption1, int MagickBooleanType1,
+  MagickCore.ssize_t GetCommandOptionFlags(int CommandOption1, int MagickBooleanType1,
       String charPtr1);
 
   /**
@@ -15867,13 +16048,13 @@ public interface SaMagickCore extends Library {
    * #ParseChannelOption(com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.ssize_t ParseChannelOption(Pointer charPtr1);
+  MagickCore.ssize_t ParseChannelOption(Pointer charPtr1);
 
   /**
    * Original signature : <code>extern ssize_t ParseChannelOption(const char*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:157</i>
    */
-  SaMagickCore.ssize_t ParseChannelOption(String charPtr1);
+  MagickCore.ssize_t ParseChannelOption(String charPtr1);
 
   /**
    * Original signature : <code>extern ssize_t ParsePixelChannelOption(const char*)</code> <br>
@@ -15883,13 +16064,13 @@ public interface SaMagickCore extends Library {
    * #ParsePixelChannelOption(com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.ssize_t ParsePixelChannelOption(Pointer charPtr1);
+  MagickCore.ssize_t ParsePixelChannelOption(Pointer charPtr1);
 
   /**
    * Original signature : <code>extern ssize_t ParsePixelChannelOption(const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:159</i>
    */
-  SaMagickCore.ssize_t ParsePixelChannelOption(String charPtr1);
+  MagickCore.ssize_t ParsePixelChannelOption(String charPtr1);
 
   /**
    * Original signature : <code>extern ssize_t ParseCommandOption(const CommandOption, const
@@ -15900,7 +16081,7 @@ public interface SaMagickCore extends Library {
    * {@link #ParseCommandOption(int, int, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.ssize_t ParseCommandOption(int CommandOption1, int MagickBooleanType1,
+  MagickCore.ssize_t ParseCommandOption(int CommandOption1, int MagickBooleanType1,
       Pointer charPtr1);
 
   /**
@@ -15908,26 +16089,26 @@ public interface SaMagickCore extends Library {
    * MagickBooleanType, const char*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/option.h:161</i>
    */
-  SaMagickCore.ssize_t ParseCommandOption(int CommandOption1, int MagickBooleanType1,
+  MagickCore.ssize_t ParseCommandOption(int CommandOption1, int MagickBooleanType1,
       String charPtr1);
 
   /**
    * Original signature : <code>extern void DestroyImageOptions(ImageInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:163</i>
    */
-  void DestroyImageOptions(SaMagickCore.ImageInfo ImageInfoPtr1);
+  void DestroyImageOptions(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>extern void ResetImageOptions(const ImageInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:165</i>
    */
-  void ResetImageOptions(SaMagickCore.ImageInfo ImageInfoPtr1);
+  void ResetImageOptions(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>extern void ResetImageOptionIterator(const ImageInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:167</i>
    */
-  void ResetImageOptionIterator(SaMagickCore.ImageInfo ImageInfoPtr1);
+  void ResetImageOptionIterator(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>OptionInfo* GetCommandOptionInfo(const char*)</code> <br> <i>native
@@ -15937,71 +16118,71 @@ public interface SaMagickCore extends Library {
    * #GetCommandOptionInfo(com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.OptionInfo GetCommandOptionInfo(Pointer value);
+  MagickCore.OptionInfo GetCommandOptionInfo(Pointer value);
 
   /**
    * Original signature : <code>OptionInfo* GetCommandOptionInfo(const char*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/option.h:169</i>
    */
-  SaMagickCore.OptionInfo GetCommandOptionInfo(String value);
+  MagickCore.OptionInfo GetCommandOptionInfo(String value);
 
   /**
    * Original signature : <code>Image* OilPaintImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/paint.h:2</i>
    */
-  SaMagickCore.Image OilPaintImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image OilPaintImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType FloodfillPaintImage(Image*, const
    * DrawInfo*, const PixelInfo*, const, const, const MagickBooleanType, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/paint.h:4</i>
    */
-  int FloodfillPaintImage(SaMagickCore.Image ImagePtr1, SaMagickCore.DrawInfo DrawInfoPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, int ssize_t, int ssize_t2, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int FloodfillPaintImage(MagickCore.Image ImagePtr1, MagickCore.DrawInfo DrawInfoPtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, int ssize_t, int ssize_t2, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GradientImage(Image*, const, const, const
    * StopInfo*, const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/paint.h:6</i>
    */
-  int GradientImage(SaMagickCore.Image ImagePtr1, int GradientType, int SpreadMethod,
-      SaMagickCore.StopInfo StopInfoPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GradientImage(MagickCore.Image ImagePtr1, int GradientType, int SpreadMethod,
+      MagickCore.StopInfo StopInfoPtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OpaquePaintImage(Image*, const PixelInfo*,
    * const PixelInfo*, const MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/paint.h:8</i>
    */
-  int OpaquePaintImage(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr2, int MagickBooleanType1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OpaquePaintImage(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.PixelInfo PixelInfoPtr2, int MagickBooleanType1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType TransparentPaintImage(Image*, const
    * PixelInfo*, const, const MagickBooleanType, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/paint.h:10</i>
    */
-  int TransparentPaintImage(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      int Quantum, int MagickBooleanType1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int TransparentPaintImage(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      int Quantum, int MagickBooleanType1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType TransparentPaintImageChroma(Image*, const
    * PixelInfo*, const PixelInfo*, const, const MagickBooleanType, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/paint.h:12</i>
    */
-  int TransparentPaintImageChroma(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.PixelInfo PixelInfoPtr2, int Quantum,
-      int MagickBooleanType1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int TransparentPaintImageChroma(MagickCore.Image ImagePtr1,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.PixelInfo PixelInfoPtr2, int Quantum,
+      int MagickBooleanType1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Pixel method declarations. <br> Original signature : <code>ChannelType
    * SetPixelChannelMask(Image*, const ChannelType)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/pixel.h:134</i>
    */
-  int SetPixelChannelMask(SaMagickCore.Image ImagePtr1, int ChannelType1);
+  int SetPixelChannelMask(MagickCore.Image ImagePtr1, int ChannelType1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ExportImagePixels(const Image*, const,
@@ -16009,52 +16190,52 @@ public interface SaMagickCore extends Library {
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:136</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #ExportImagePixels(SaMagickCore.Image, int, int,
+   * @deprecated use the safer methods {@link #ExportImagePixels(MagickCore.Image, int, int,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * java.lang.String, int, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} and {@link
-   * #ExportImagePixels(SaMagickCore.Image, int, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * java.lang.String, int, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} and {@link
+   * #ExportImagePixels(MagickCore.Image, int, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer, int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ExportImagePixels(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
+  int ExportImagePixels(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
       NativeSize size_t2, Pointer charPtr1, int StorageType1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ExportImagePixels(const Image*, const,
    * const, const size_t, const size_t, const char*, const StorageType, void*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:136</i>
    */
-  int ExportImagePixels(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
+  int ExportImagePixels(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
       NativeSize size_t2, String charPtr1, int StorageType1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ImportImagePixels(Image*, const, const,
    * const size_t, const size_t, const char*, const StorageType, const void*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:138</i> <br>
    *
-   * @deprecated use the safer methods {@link #ImportImagePixels(SaMagickCore.Image, int, int,
+   * @deprecated use the safer methods {@link #ImportImagePixels(MagickCore.Image, int, int,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * java.lang.String, int, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} and {@link
-   * #ImportImagePixels(SaMagickCore.Image, int, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * java.lang.String, int, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} and {@link
+   * #ImportImagePixels(MagickCore.Image, int, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
    * com.ochafik.lang.jnaerator.runtime.NativeSize, com.sun.jna.Pointer, int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ImportImagePixels(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
+  int ImportImagePixels(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
       NativeSize size_t2, Pointer charPtr1, int StorageType1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ImportImagePixels(Image*, const, const,
    * const size_t, const size_t, const char*, const StorageType, const void*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:138</i>
    */
-  int ImportImagePixels(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
+  int ImportImagePixels(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2, NativeSize size_t1,
       NativeSize size_t2, String charPtr1, int StorageType1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannel(const Image*, const
@@ -16062,34 +16243,34 @@ public interface SaMagickCore extends Library {
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:140</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #InterpolatePixelChannel(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #InterpolatePixelChannel(MagickCore.Image,
    * com.sun.jna.ptr.PointerByReference, int, int, double, double, java.nio.DoubleBuffer,
-   * SaMagickCore.ExceptionInfo)} and {@link #InterpolatePixelChannel(SaMagickCore.Image,
+   * MagickCore.ExceptionInfo)} and {@link #InterpolatePixelChannel(MagickCore.Image,
    * com.sun.jna.ptr.PointerByReference, int, int, double, double, com.sun.jna.ptr.DoubleByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int InterpolatePixelChannel(SaMagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
+  int InterpolatePixelChannel(MagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
       int PixelChannel1, int PixelInterpolateMethod1, double double1, double double2,
-      DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannel(const Image*, const
    * CacheView_*, const PixelChannel, const PixelInterpolateMethod, const double, const double,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:140</i>
    */
-  int InterpolatePixelChannel(SaMagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
+  int InterpolatePixelChannel(MagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
       int PixelChannel1, int PixelInterpolateMethod1, double double1, double double2,
-      DoubleBuffer doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      DoubleBuffer doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannel(const Image*, const
    * CacheView_*, const PixelChannel, const PixelInterpolateMethod, const double, const double,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:140</i>
    */
-  int InterpolatePixelChannel(SaMagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
+  int InterpolatePixelChannel(MagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
       int PixelChannel1, int PixelInterpolateMethod1, double double1, double double2,
-      DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannels(const Image*,
@@ -16097,34 +16278,34 @@ public interface SaMagickCore extends Library {
    * Quantum*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:142</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #InterpolatePixelChannels(SaMagickCore.Image,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.Image, int, double, double,
-   * java.nio.FloatBuffer, SaMagickCore.ExceptionInfo)} and {@link #InterpolatePixelChannels(SaMagickCore.Image,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.Image, int, double, double,
-   * com.sun.jna.ptr.FloatByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #InterpolatePixelChannels(MagickCore.Image,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.Image, int, double, double,
+   * java.nio.FloatBuffer, MagickCore.ExceptionInfo)} and {@link #InterpolatePixelChannels(MagickCore.Image,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.Image, int, double, double,
+   * com.sun.jna.ptr.FloatByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int InterpolatePixelChannels(SaMagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
-      SaMagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
-      FloatByReference QuantumPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InterpolatePixelChannels(MagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
+      MagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
+      FloatByReference QuantumPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannels(const Image*,
    * const CacheView_*, const Image*, const PixelInterpolateMethod, const double, const double,
    * Quantum*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:142</i>
    */
-  int InterpolatePixelChannels(SaMagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
-      SaMagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
-      FloatBuffer QuantumPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InterpolatePixelChannels(MagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
+      MagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
+      FloatBuffer QuantumPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelChannels(const Image*,
    * const CacheView_*, const Image*, const PixelInterpolateMethod, const double, const double,
    * Quantum*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:142</i>
    */
-  int InterpolatePixelChannels(SaMagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
-      SaMagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
-      FloatByReference QuantumPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InterpolatePixelChannels(MagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
+      MagickCore.Image ImagePtr2, int PixelInterpolateMethod1, double double1, double double2,
+      FloatByReference QuantumPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelInfo(const Image*, const
@@ -16132,110 +16313,110 @@ public interface SaMagickCore extends Library {
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:144</i>
    * <br>
    *
-   * @deprecated use the safer method {@link #InterpolatePixelInfo(SaMagickCore.Image,
-   * com.sun.jna.ptr.PointerByReference, int, double, double, SaMagickCore.PixelInfo,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #InterpolatePixelInfo(MagickCore.Image,
+   * com.sun.jna.ptr.PointerByReference, int, double, double, MagickCore.PixelInfo,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int InterpolatePixelInfo(SaMagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
+  int InterpolatePixelInfo(MagickCore.Image ImagePtr1, Pointer CacheView_Ptr1,
       int PixelInterpolateMethod1, double double1, double double2,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InterpolatePixelInfo(const Image*, const
    * CacheView_*, const PixelInterpolateMethod, const double, const double, PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:144</i>
    */
-  int InterpolatePixelInfo(SaMagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
+  int InterpolatePixelInfo(MagickCore.Image ImagePtr1, PointerByReference CacheView_Ptr1,
       int PixelInterpolateMethod1, double double1, double double2,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType IsFuzzyEquivalencePixel(const Image*, const
    * Quantum*, const Image*, const Quantum*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/pixel.h:146</i> <br>
    *
-   * @deprecated use the safer methods {@link #IsFuzzyEquivalencePixel(SaMagickCore.Image,
-   * java.nio.FloatBuffer, SaMagickCore.Image, java.nio.FloatBuffer)} and {@link
-   * #IsFuzzyEquivalencePixel(SaMagickCore.Image, com.sun.jna.ptr.FloatByReference,
-   * SaMagickCore.Image, com.sun.jna.ptr.FloatByReference)} instead
+   * @deprecated use the safer methods {@link #IsFuzzyEquivalencePixel(MagickCore.Image,
+   * java.nio.FloatBuffer, MagickCore.Image, java.nio.FloatBuffer)} and {@link
+   * #IsFuzzyEquivalencePixel(MagickCore.Image, com.sun.jna.ptr.FloatByReference,
+   * MagickCore.Image, com.sun.jna.ptr.FloatByReference)} instead
    */
   @Deprecated
-  int IsFuzzyEquivalencePixel(SaMagickCore.Image ImagePtr1, FloatByReference QuantumPtr1,
-      SaMagickCore.Image ImagePtr2, FloatByReference QuantumPtr2);
+  int IsFuzzyEquivalencePixel(MagickCore.Image ImagePtr1, FloatByReference QuantumPtr1,
+      MagickCore.Image ImagePtr2, FloatByReference QuantumPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType IsFuzzyEquivalencePixel(const Image*, const
    * Quantum*, const Image*, const Quantum*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/pixel.h:146</i>
    */
-  int IsFuzzyEquivalencePixel(SaMagickCore.Image ImagePtr1, FloatBuffer QuantumPtr1,
-      SaMagickCore.Image ImagePtr2, FloatBuffer QuantumPtr2);
+  int IsFuzzyEquivalencePixel(MagickCore.Image ImagePtr1, FloatBuffer QuantumPtr1,
+      MagickCore.Image ImagePtr2, FloatBuffer QuantumPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType IsFuzzyEquivalencePixelInfo(const
    * PixelInfo*, const PixelInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/pixel.h:148</i>
    */
-  int IsFuzzyEquivalencePixelInfo(SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr2);
+  int IsFuzzyEquivalencePixelInfo(MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.PixelInfo PixelInfoPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetPixelMetaChannels(Image*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:150</i>
    */
-  int SetPixelMetaChannels(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetPixelMetaChannels(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickRealType GetPixelInfoIntensity(const Image*, const
    * PixelInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:152</i>
    */
-  double GetPixelInfoIntensity(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1);
+  double GetPixelInfoIntensity(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickRealType GetPixelIntensity(const Image*, const
    * Quantum*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:154</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetPixelIntensity(SaMagickCore.Image,
-   * java.nio.FloatBuffer)} and {@link #GetPixelIntensity(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #GetPixelIntensity(MagickCore.Image,
+   * java.nio.FloatBuffer)} and {@link #GetPixelIntensity(MagickCore.Image,
    * com.sun.jna.ptr.FloatByReference)} instead
    */
   @Deprecated
-  double GetPixelIntensity(SaMagickCore.Image ImagePtr1, FloatByReference QuantumPtr1);
+  double GetPixelIntensity(MagickCore.Image ImagePtr1, FloatByReference QuantumPtr1);
 
   /**
    * Original signature : <code>extern MagickRealType GetPixelIntensity(const Image*, const
    * Quantum*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:154</i>
    */
-  double GetPixelIntensity(SaMagickCore.Image ImagePtr1, FloatBuffer QuantumPtr1);
+  double GetPixelIntensity(MagickCore.Image ImagePtr1, FloatBuffer QuantumPtr1);
 
   /**
    * Original signature : <code>extern PixelChannelMap* AcquirePixelChannelMap()</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:156</i>
    */
-  SaMagickCore.PixelChannelMap AcquirePixelChannelMap();
+  MagickCore.PixelChannelMap AcquirePixelChannelMap();
 
   /**
    * Original signature : <code>extern PixelChannelMap* ClonePixelChannelMap(PixelChannelMap*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:158</i>
    */
-  SaMagickCore.PixelChannelMap ClonePixelChannelMap(
-      SaMagickCore.PixelChannelMap PixelChannelMapPtr1);
+  MagickCore.PixelChannelMap ClonePixelChannelMap(
+      MagickCore.PixelChannelMap PixelChannelMapPtr1);
 
   /**
    * Original signature : <code>extern PixelChannelMap* DestroyPixelChannelMap(PixelChannelMap*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:160</i>
    */
-  SaMagickCore.PixelChannelMap DestroyPixelChannelMap(
-      SaMagickCore.PixelChannelMap PixelChannelMapPtr1);
+  MagickCore.PixelChannelMap DestroyPixelChannelMap(
+      MagickCore.PixelChannelMap PixelChannelMapPtr1);
 
   /**
    * Original signature : <code>PixelInfo* ClonePixelInfo(const PixelInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:162</i>
    */
-  SaMagickCore.PixelInfo ClonePixelInfo(SaMagickCore.PixelInfo PixelInfoPtr1);
+  MagickCore.PixelInfo ClonePixelInfo(MagickCore.PixelInfo PixelInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickRealType DecodePixelGamma(const MagickRealType)</code>
@@ -16253,20 +16434,20 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern void ConformPixelInfo(Image*, const PixelInfo*, PixelInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:168</i>
    */
-  void ConformPixelInfo(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1,
-      SaMagickCore.PixelInfo PixelInfoPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  void ConformPixelInfo(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1,
+      MagickCore.PixelInfo PixelInfoPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void GetPixelInfo(const Image*, PixelInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:170</i>
    */
-  void GetPixelInfo(SaMagickCore.Image ImagePtr1, SaMagickCore.PixelInfo PixelInfoPtr1);
+  void GetPixelInfo(MagickCore.Image ImagePtr1, MagickCore.PixelInfo PixelInfoPtr1);
 
   /**
    * Original signature : <code>extern void InitializePixelChannelMap(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/pixel.h:172</i>
    */
-  void InitializePixelChannelMap(SaMagickCore.Image ImagePtr1);
+  void InitializePixelChannelMap(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern char* GetPolicyValue(const char*)</code> <br> <i>native
@@ -16290,20 +16471,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetPolicyList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetPolicyList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetPolicyList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char** GetPolicyList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/policy.h:23</i>
    */
   PointerByReference GetPolicyList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>PolicyInfo** GetPolicyInfoList(const char*, size_t*,
@@ -16311,20 +16492,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetPolicyInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetPolicyInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetPolicyInfoList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>PolicyInfo** GetPolicyInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/policy.h:25</i>
    */
   PointerByReference GetPolicyInfoList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType IsRightsAuthorized(const PolicyDomain,
@@ -16350,16 +16531,16 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListPolicyInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListPolicyInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListPolicyInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListPolicyInfo(FILE*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/policy.h:29</i>
    */
-  int ListPolicyInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListPolicyInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetMagickSecurityPolicy(const char*,
@@ -16367,17 +16548,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #SetMagickSecurityPolicy(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #SetMagickSecurityPolicy(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #SetMagickSecurityPolicy(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int SetMagickSecurityPolicy(Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetMagickSecurityPolicy(Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetMagickSecurityPolicy(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/policy.h:31</i>
    */
-  int SetMagickSecurityPolicy(String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetMagickSecurityPolicy(String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetMagickSecurityPolicyValue(const
@@ -16385,12 +16566,12 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/policy.h:33</i> <br>
    *
    * @deprecated use the safer methods {@link #SetMagickSecurityPolicyValue(int, java.lang.String,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #SetMagickSecurityPolicyValue(int,
-   * com.sun.jna.Pointer, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #SetMagickSecurityPolicyValue(int,
+   * com.sun.jna.Pointer, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int SetMagickSecurityPolicyValue(int PolicyDomain1, Pointer charPtr1, Pointer charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetMagickSecurityPolicyValue(const
@@ -16398,284 +16579,284 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/policy.h:33</i>
    */
   int SetMagickSecurityPolicyValue(int PolicyDomain1, String charPtr1, String charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>double GetImageTotalInkDensity(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/prepress.h:2</i>
    */
-  double GetImageTotalInkDensity(SaMagickCore.Image image,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  double GetImageTotalInkDensity(MagickCore.Image image,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* GetNextImageProfile(const Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:10</i>
    */
-  Pointer GetNextImageProfile(SaMagickCore.Image ImagePtr1);
+  Pointer GetNextImageProfile(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>StringInfo* GetImageProfile(const Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:12</i> <br>
    *
-   * @deprecated use the safer methods {@link #GetImageProfile(SaMagickCore.Image,
-   * java.lang.String)} and {@link #GetImageProfile(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #GetImageProfile(MagickCore.Image,
+   * java.lang.String)} and {@link #GetImageProfile(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  SaMagickCore.StringInfo GetImageProfile(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  MagickCore.StringInfo GetImageProfile(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>StringInfo* GetImageProfile(const Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:12</i>
    */
-  SaMagickCore.StringInfo GetImageProfile(SaMagickCore.Image ImagePtr1, String charPtr1);
+  MagickCore.StringInfo GetImageProfile(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType CloneImageProfiles(Image*, const
    * Image*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:14</i>
    */
-  int CloneImageProfiles(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2);
+  int CloneImageProfiles(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageProfile(Image*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:16</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DeleteImageProfile(SaMagickCore.Image,
-   * java.lang.String)} and {@link #DeleteImageProfile(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DeleteImageProfile(MagickCore.Image,
+   * java.lang.String)} and {@link #DeleteImageProfile(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DeleteImageProfile(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  int DeleteImageProfile(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageProfile(Image*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:16</i>
    */
-  int DeleteImageProfile(SaMagickCore.Image ImagePtr1, String charPtr1);
+  int DeleteImageProfile(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ProfileImage(Image*, const char*, const
    * void*, const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/profile.h:18</i> <br>
    *
-   * @deprecated use the safer methods {@link #ProfileImage(SaMagickCore.Image, java.lang.String,
+   * @deprecated use the safer methods {@link #ProfileImage(MagickCore.Image, java.lang.String,
    * com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} and {@link #ProfileImage(SaMagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} and {@link #ProfileImage(MagickCore.Image, com.sun.jna.Pointer,
    * com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ProfileImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1, Pointer voidPtr1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ProfileImage(MagickCore.Image ImagePtr1, Pointer charPtr1, Pointer voidPtr1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ProfileImage(Image*, const char*, const
    * void*, const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/profile.h:18</i>
    */
-  int ProfileImage(SaMagickCore.Image ImagePtr1, String charPtr1, Pointer voidPtr1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ProfileImage(MagickCore.Image ImagePtr1, String charPtr1, Pointer voidPtr1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageProfile(Image*, const char*, const
    * StringInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/profile.h:20</i> <br>
    *
-   * @deprecated use the safer methods {@link #SetImageProfile(SaMagickCore.Image, java.lang.String,
-   * SaMagickCore.StringInfo, SaMagickCore.ExceptionInfo)} and {@link
-   * #SetImageProfile(SaMagickCore.Image, com.sun.jna.Pointer, SaMagickCore.StringInfo,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #SetImageProfile(MagickCore.Image, java.lang.String,
+   * MagickCore.StringInfo, MagickCore.ExceptionInfo)} and {@link
+   * #SetImageProfile(MagickCore.Image, com.sun.jna.Pointer, MagickCore.StringInfo,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int SetImageProfile(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.StringInfo StringInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageProfile(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.StringInfo StringInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageProfile(Image*, const char*, const
    * StringInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/profile.h:20</i>
    */
-  int SetImageProfile(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.StringInfo StringInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageProfile(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.StringInfo StringInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>StringInfo* RemoveImageProfile(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:22</i> <br>
    *
-   * @deprecated use the safer methods {@link #RemoveImageProfile(SaMagickCore.Image,
-   * java.lang.String)} and {@link #RemoveImageProfile(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #RemoveImageProfile(MagickCore.Image,
+   * java.lang.String)} and {@link #RemoveImageProfile(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  SaMagickCore.StringInfo RemoveImageProfile(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  MagickCore.StringInfo RemoveImageProfile(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>StringInfo* RemoveImageProfile(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:22</i>
    */
-  SaMagickCore.StringInfo RemoveImageProfile(SaMagickCore.Image ImagePtr1, String charPtr1);
+  MagickCore.StringInfo RemoveImageProfile(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern void DestroyImageProfiles(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:24</i>
    */
-  void DestroyImageProfiles(SaMagickCore.Image ImagePtr1);
+  void DestroyImageProfiles(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern void ResetImageProfileIterator(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/profile.h:26</i>
    */
-  void ResetImageProfileIterator(SaMagickCore.Image ImagePtr1);
+  void ResetImageProfileIterator(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern char* InterpretImageProperties(ImageInfo*, Image*, const
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:2</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #InterpretImageProperties(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #InterpretImageProperties(SaMagickCore.ImageInfo, SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #InterpretImageProperties(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #InterpretImageProperties(MagickCore.ImageInfo, MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  Pointer InterpretImageProperties(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.Image ImagePtr1, Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer InterpretImageProperties(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.Image ImagePtr1, Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char* InterpretImageProperties(ImageInfo*, Image*, const
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:2</i>
    */
-  Pointer InterpretImageProperties(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.Image ImagePtr1, String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer InterpretImageProperties(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.Image ImagePtr1, String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char* RemoveImageProperty(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:4</i> <br>
    *
-   * @deprecated use the safer methods {@link #RemoveImageProperty(SaMagickCore.Image,
-   * java.lang.String)} and {@link #RemoveImageProperty(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #RemoveImageProperty(MagickCore.Image,
+   * java.lang.String)} and {@link #RemoveImageProperty(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  Pointer RemoveImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  Pointer RemoveImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern char* RemoveImageProperty(Image*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:4</i>
    */
-  Pointer RemoveImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1);
+  Pointer RemoveImageProperty(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern const char* GetNextImageProperty(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:6</i>
    */
-  Pointer GetNextImageProperty(SaMagickCore.Image ImagePtr1);
+  Pointer GetNextImageProperty(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern const char* GetImageProperty(const Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:8</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageProperty(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #GetImageProperty(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageProperty(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #GetImageProperty(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  Pointer GetImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const char* GetImageProperty(const Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:8</i>
    */
-  Pointer GetImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetImageProperty(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const char* GetMagickProperty(ImageInfo*, Image*, const
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:10</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetMagickProperty(SaMagickCore.ImageInfo,
-   * SaMagickCore.Image, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetMagickProperty(SaMagickCore.ImageInfo, SaMagickCore.Image, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetMagickProperty(MagickCore.ImageInfo,
+   * MagickCore.Image, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #GetMagickProperty(MagickCore.ImageInfo, MagickCore.Image, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  Pointer GetMagickProperty(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetMagickProperty(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const char* GetMagickProperty(ImageInfo*, Image*, const
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:10</i>
    */
-  Pointer GetMagickProperty(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  Pointer GetMagickProperty(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType CloneImageProperties(Image*, const
    * Image*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:12</i>
    */
-  int CloneImageProperties(SaMagickCore.Image ImagePtr1, SaMagickCore.Image ImagePtr2);
+  int CloneImageProperties(MagickCore.Image ImagePtr1, MagickCore.Image ImagePtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType DefineImageProperty(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:14</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DefineImageProperty(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #DefineImageProperty(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #DefineImageProperty(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #DefineImageProperty(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int DefineImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DefineImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DefineImageProperty(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:14</i>
    */
-  int DefineImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int DefineImageProperty(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageProperty(Image*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:16</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #DeleteImageProperty(SaMagickCore.Image,
-   * java.lang.String)} and {@link #DeleteImageProperty(SaMagickCore.Image, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #DeleteImageProperty(MagickCore.Image,
+   * java.lang.String)} and {@link #DeleteImageProperty(MagickCore.Image, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  int DeleteImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1);
+  int DeleteImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageProperty(Image*, const
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:16</i>
    */
-  int DeleteImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1);
+  int DeleteImageProperty(MagickCore.Image ImagePtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType FormatImageProperty(Image*, const char*,
    * const char*, null)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:18</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #FormatImageProperty(SaMagickCore.Image,
+   * @deprecated use the safer methods {@link #FormatImageProperty(MagickCore.Image,
    * java.lang.String, java.lang.String, java.lang.Object...)} and {@link
-   * #FormatImageProperty(SaMagickCore.Image, com.sun.jna.Pointer, com.sun.jna.Pointer,
+   * #FormatImageProperty(MagickCore.Image, com.sun.jna.Pointer, com.sun.jna.Pointer,
    * java.lang.Object...)} instead
    */
   @Deprecated
-  int FormatImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2,
+  int FormatImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2,
       Object... varArgs1);
 
   /**
    * Original signature : <code>extern MagickBooleanType FormatImageProperty(Image*, const char*,
    * const char*, null)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:18</i>
    */
-  int FormatImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1, String charPtr2,
+  int FormatImageProperty(MagickCore.Image ImagePtr1, String charPtr1, String charPtr2,
       Object... varArgs1);
 
   /**
@@ -16683,109 +16864,109 @@ public interface SaMagickCore extends Library {
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:20</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetImageProperty(SaMagickCore.Image,
-   * java.lang.String, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #SetImageProperty(SaMagickCore.Image, com.sun.jna.Pointer, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #SetImageProperty(MagickCore.Image,
+   * java.lang.String, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #SetImageProperty(MagickCore.Image, com.sun.jna.Pointer, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int SetImageProperty(SaMagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageProperty(MagickCore.Image ImagePtr1, Pointer charPtr1, Pointer charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageProperty(Image*, const char*, const
    * char*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:20</i>
    */
-  int SetImageProperty(SaMagickCore.Image ImagePtr1, String charPtr1, String charPtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SetImageProperty(MagickCore.Image ImagePtr1, String charPtr1, String charPtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void DestroyImageProperties(Image*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:22</i>
    */
-  void DestroyImageProperties(SaMagickCore.Image ImagePtr1);
+  void DestroyImageProperties(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern void ResetImagePropertyIterator(const Image*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/property.h:24</i>
    */
-  void ResetImagePropertyIterator(SaMagickCore.Image ImagePtr1);
+  void ResetImagePropertyIterator(MagickCore.Image ImagePtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType CompressImageColormap(Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:16</i>
    */
-  int CompressImageColormap(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int CompressImageColormap(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageQuantizeError(Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:18</i>
    */
-  int GetImageQuantizeError(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageQuantizeError(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType PosterizeImage(Image*, const size_t, const
    * DitherMethod, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/quantize.h:20</i>
    */
-  int PosterizeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1, int DitherMethod1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PosterizeImage(MagickCore.Image ImagePtr1, NativeSize size_t1, int DitherMethod1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType QuantizeImage(const QuantizeInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:22</i>
    */
-  int QuantizeImage(SaMagickCore.QuantizeInfo QuantizeInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int QuantizeImage(MagickCore.QuantizeInfo QuantizeInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType QuantizeImages(const QuantizeInfo*, Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:24</i>
    */
-  int QuantizeImages(SaMagickCore.QuantizeInfo QuantizeInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int QuantizeImages(MagickCore.QuantizeInfo QuantizeInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType RemapImage(const QuantizeInfo*, Image*,
    * const Image*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/quantize.h:26</i>
    */
-  int RemapImage(SaMagickCore.QuantizeInfo QuantizeInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RemapImage(MagickCore.QuantizeInfo QuantizeInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType RemapImages(const QuantizeInfo*, Image*,
    * const Image*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/quantize.h:28</i>
    */
-  int RemapImages(SaMagickCore.QuantizeInfo QuantizeInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.Image ImagePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RemapImages(MagickCore.QuantizeInfo QuantizeInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.Image ImagePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern QuantizeInfo* AcquireQuantizeInfo(const ImageInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:30</i>
    */
-  SaMagickCore.QuantizeInfo AcquireQuantizeInfo(SaMagickCore.ImageInfo ImageInfoPtr1);
+  MagickCore.QuantizeInfo AcquireQuantizeInfo(MagickCore.ImageInfo ImageInfoPtr1);
 
   /**
    * Original signature : <code>extern QuantizeInfo* CloneQuantizeInfo(const QuantizeInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:32</i>
    */
-  SaMagickCore.QuantizeInfo CloneQuantizeInfo(SaMagickCore.QuantizeInfo QuantizeInfoPtr1);
+  MagickCore.QuantizeInfo CloneQuantizeInfo(MagickCore.QuantizeInfo QuantizeInfoPtr1);
 
   /**
    * Original signature : <code>extern QuantizeInfo* DestroyQuantizeInfo(QuantizeInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:34</i>
    */
-  SaMagickCore.QuantizeInfo DestroyQuantizeInfo(SaMagickCore.QuantizeInfo QuantizeInfoPtr1);
+  MagickCore.QuantizeInfo DestroyQuantizeInfo(MagickCore.QuantizeInfo QuantizeInfoPtr1);
 
   /**
    * Original signature : <code>void GetQuantizeInfo(QuantizeInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/quantize.h:36</i>
    */
-  void GetQuantizeInfo(SaMagickCore.QuantizeInfo QuantizeInfoPtr1);
+  void GetQuantizeInfo(MagickCore.QuantizeInfo QuantizeInfoPtr1);
 
   /**
    * Method declarations. <br> Original signature : <code>extern double
@@ -16852,13 +17033,13 @@ public interface SaMagickCore extends Library {
    * com.ochafik.lang.jnaerator.runtime.NativeSize)} instead
    */
   @Deprecated
-  SaMagickCore.StringInfo GetRandomKey(Pointer RandomInfoPtr1, NativeSize size_t1);
+  MagickCore.StringInfo GetRandomKey(Pointer RandomInfoPtr1, NativeSize size_t1);
 
   /**
    * Original signature : <code>StringInfo* GetRandomKey(RandomInfo*, const size_t)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/random_.h:18</i>
    */
-  SaMagickCore.StringInfo GetRandomKey(PointerByReference RandomInfoPtr1, NativeSize size_t1);
+  MagickCore.StringInfo GetRandomKey(PointerByReference RandomInfoPtr1, NativeSize size_t1);
 
   /**
    * Original signature : <code>long GetRandomSecretKey(const RandomInfo*)</code> <br> <i>native
@@ -16925,12 +17106,12 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/registry.h:10</i> <br>
    *
    * @deprecated use the safer methods {@link #DefineImageRegistry(int, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #DefineImageRegistry(int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #DefineImageRegistry(int, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int DefineImageRegistry(int RegistryType1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DefineImageRegistry(const RegistryType,
@@ -16938,7 +17119,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/registry.h:10</i>
    */
   int DefineImageRegistry(int RegistryType1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType DeleteImageRegistry(const char*)</code>
@@ -16963,12 +17144,12 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/registry.h:14</i> <br>
    *
    * @deprecated use the safer methods {@link #SetImageRegistry(int, java.lang.String,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} and {@link #SetImageRegistry(int,
-   * com.sun.jna.Pointer, com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} and {@link #SetImageRegistry(int,
+   * com.sun.jna.Pointer, com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int SetImageRegistry(int RegistryType1, Pointer charPtr1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetImageRegistry(const RegistryType, const
@@ -16976,7 +17157,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/registry.h:14</i>
    */
   int SetImageRegistry(int RegistryType1, String charPtr1, Pointer voidPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void* GetImageRegistry(const RegistryType, const char*,
@@ -16984,19 +17165,19 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetImageRegistry(int, java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetImageRegistry(int, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetImageRegistry(int, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   Pointer GetImageRegistry(int RegistryType1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void* GetImageRegistry(const RegistryType, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/registry.h:16</i>
    */
   Pointer GetImageRegistry(int RegistryType1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern void* RemoveImageRegistry(const char*)</code> <br> <i>native
@@ -17026,11 +17207,11 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/resample.h:49</i> <br>
    *
    * @deprecated use the safer method {@link #ResamplePixelColor(com.sun.jna.ptr.PointerByReference,
-   * double, double, SaMagickCore.PixelInfo, SaMagickCore.ExceptionInfo)} instead
+   * double, double, MagickCore.PixelInfo, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int ResamplePixelColor(Pointer ResampleFilterPtr1, double double1, double double2,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ResamplePixelColor(ResampleFilter*, const
@@ -17038,7 +17219,7 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/resample.h:49</i>
    */
   int ResamplePixelColor(PointerByReference ResampleFilterPtr1, double double1, double double2,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SetResampleFilterInterpolateMethod(ResampleFilter*,
@@ -17080,8 +17261,8 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern ResampleFilter* AcquireResampleFilter(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resample.h:55</i>
    */
-  PointerByReference AcquireResampleFilter(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference AcquireResampleFilter(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern ResampleFilter* DestroyResampleFilter(ResampleFilter*)</code>
@@ -17141,75 +17322,75 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern Image* AdaptiveResizeImage(const Image*, const size_t, const
    * size_t, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:3</i>
    */
-  SaMagickCore.Image AdaptiveResizeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AdaptiveResizeImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* InterpolativeResizeImage(const Image*, const size_t,
    * const size_t, const, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/resize.h:5</i>
    */
-  SaMagickCore.Image InterpolativeResizeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, int PixelInterpolateMethod, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image InterpolativeResizeImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, int PixelInterpolateMethod, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* LiquidRescaleImage(const Image*, const size_t, const
    * size_t, const double, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/resize.h:7</i>
    */
-  SaMagickCore.Image LiquidRescaleImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
+  MagickCore.Image LiquidRescaleImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
       NativeSize size_t2, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* MagnifyImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:9</i>
    */
-  SaMagickCore.Image MagnifyImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MagnifyImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* MinifyImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:11</i>
    */
-  SaMagickCore.Image MinifyImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image MinifyImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ResampleImage(const Image*, const double, const
    * double, const, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/resize.h:13</i>
    */
-  SaMagickCore.Image ResampleImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      int FilterType, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ResampleImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      int FilterType, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ResizeImage(const Image*, const size_t, const size_t,
    * const, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:15</i>
    */
-  SaMagickCore.Image ResizeImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, int FilterType, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ResizeImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, int FilterType, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* SampleImage(const Image*, const size_t, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:17</i>
    */
-  SaMagickCore.Image SampleImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SampleImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ScaleImage(const Image*, const size_t, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:19</i>
    */
-  SaMagickCore.Image ScaleImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ScaleImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ThumbnailImage(const Image*, const size_t, const
    * size_t, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resize.h:21</i>
    */
-  SaMagickCore.Image ThumbnailImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ThumbnailImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>int AcquireUniqueFileResource(char*)</code> <br> <i>native
@@ -17255,17 +17436,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListMagickResourceInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListMagickResourceInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListMagickResourceInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListMagickResourceInfo(FILE*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/resource_.h:22</i>
    */
   int ListMagickResourceInfo(PointerByReference FILEPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType RelinquishUniqueFileResource(const
@@ -17313,16 +17494,16 @@ public interface SaMagickCore extends Library {
    * const double, const double, PixelInfo*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/segment.h:2</i>
    */
-  int GetImageDynamicThreshold(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.PixelInfo PixelInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageDynamicThreshold(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.PixelInfo PixelInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType SegmentImage(Image*, const, const
    * MagickBooleanType, const double, const double, ExceptionInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/segment.h:4</i>
    */
-  int SegmentImage(SaMagickCore.Image ImagePtr1, int ColorspaceType, int MagickBooleanType1,
-      double double1, double double2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SegmentImage(MagickCore.Image ImagePtr1, int ColorspaceType, int MagickBooleanType1,
+      double double1, double double2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>SemaphoreInfo* AcquireSemaphoreInfo()</code> <br> <i>native
@@ -17378,35 +17559,35 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern Image* DeskewImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/shear.h:2</i>
    */
-  SaMagickCore.Image DeskewImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image DeskewImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* IntegralRotateImage(const Image*, size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/shear.h:4</i>
    */
-  SaMagickCore.Image IntegralRotateImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image IntegralRotateImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ShearImage(const Image*, const double, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/shear.h:6</i>
    */
-  SaMagickCore.Image ShearImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ShearImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ShearRotateImage(const Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/shear.h:8</i>
    */
-  SaMagickCore.Image ShearRotateImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ShearRotateImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType SignatureImage(Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/signature.h:2</i>
    */
-  int SignatureImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int SignatureImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType AddValueToSplayTree(SplayTreeInfo*, const
@@ -17544,12 +17725,12 @@ public interface SaMagickCore extends Library {
    * : /usr/local/include/ImageMagick-7/MagickCore/splay-tree.h:21</i> <br>
    *
    * @deprecated use the safer method {@link #CloneSplayTree(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.CloneSplayTree_arg1_callback, SaMagickCore.CloneSplayTree_arg2_callback)} instead
+   * MagickCore.CloneSplayTree_arg1_callback, MagickCore.CloneSplayTree_arg2_callback)} instead
    */
   @Deprecated
   PointerByReference CloneSplayTree(Pointer SplayTreeInfoPtr1,
-      SaMagickCore.CloneSplayTree_arg1_callback arg1,
-      SaMagickCore.CloneSplayTree_arg2_callback arg2);
+      MagickCore.CloneSplayTree_arg1_callback arg1,
+      MagickCore.CloneSplayTree_arg2_callback arg2);
 
   /**
    * Original signature : <code>extern SplayTreeInfo* CloneSplayTree(SplayTreeInfo*,
@@ -17557,8 +17738,8 @@ public interface SaMagickCore extends Library {
    * : /usr/local/include/ImageMagick-7/MagickCore/splay-tree.h:21</i>
    */
   PointerByReference CloneSplayTree(PointerByReference SplayTreeInfoPtr1,
-      SaMagickCore.CloneSplayTree_arg1_callback arg1,
-      SaMagickCore.CloneSplayTree_arg2_callback arg2);
+      MagickCore.CloneSplayTree_arg1_callback arg1,
+      MagickCore.CloneSplayTree_arg2_callback arg2);
 
   /**
    * Original signature : <code>extern SplayTreeInfo* DestroySplayTree(SplayTreeInfo*)</code> <br>
@@ -17581,8 +17762,8 @@ public interface SaMagickCore extends Library {
    * NewSplayTree_arg2_callback*, NewSplayTree_arg3_callback*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/splay-tree.h:25</i>
    */
-  PointerByReference NewSplayTree(SaMagickCore.NewSplayTree_arg1_callback arg1,
-      SaMagickCore.NewSplayTree_arg2_callback arg2, SaMagickCore.NewSplayTree_arg3_callback arg3);
+  PointerByReference NewSplayTree(MagickCore.NewSplayTree_arg1_callback arg1,
+      MagickCore.NewSplayTree_arg2_callback arg2, MagickCore.NewSplayTree_arg3_callback arg3);
 
   /**
    * Original signature : <code>size_t GetNumberOfNodesInSplayTree(const SplayTreeInfo*)</code> <br>
@@ -17672,29 +17853,29 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/static.h:2</i> <br>
    *
    * @deprecated use the safer methods {@link #InvokeStaticImageFilter(java.lang.String,
-   * SaMagickCore.Image.ByReference[], int, java.lang.String[], SaMagickCore.ExceptionInfo)} and
-   * {@link #InvokeStaticImageFilter(com.sun.jna.Pointer, SaMagickCore.Image.ByReference[], int,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.Image.ByReference[], int, java.lang.String[], MagickCore.ExceptionInfo)} and
+   * {@link #InvokeStaticImageFilter(com.sun.jna.Pointer, MagickCore.Image.ByReference[], int,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   int InvokeStaticImageFilter(Pointer charPtr1, PointerByReference ImagePtrPtr1, int int1,
-      PointerByReference charPtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      PointerByReference charPtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InvokeStaticImageFilter(const char*,
    * Image**, const int, const char**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/static.h:2</i>
    */
-  int InvokeStaticImageFilter(String charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      int int1, String charPtrPtr1[], SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeStaticImageFilter(String charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      int int1, String charPtrPtr1[], MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType InvokeStaticImageFilter(const char*,
    * Image**, const int, const char**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/static.h:2</i>
    */
-  int InvokeStaticImageFilter(Pointer charPtr1, SaMagickCore.Image.ByReference ImagePtrPtr1[],
-      int int1, PointerByReference charPtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int InvokeStaticImageFilter(Pointer charPtr1, MagickCore.Image.ByReference ImagePtrPtr1[],
+      int int1, PointerByReference charPtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType RegisterStaticModule(const char*,
@@ -17702,17 +17883,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #RegisterStaticModule(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #RegisterStaticModule(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #RegisterStaticModule(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int RegisterStaticModule(Pointer charPtr1, SaMagickCore.ExceptionInfo exception);
+  int RegisterStaticModule(Pointer charPtr1, MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>extern MagickBooleanType RegisterStaticModule(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/static.h:4</i>
    */
-  int RegisterStaticModule(String charPtr1, SaMagickCore.ExceptionInfo exception);
+  int RegisterStaticModule(String charPtr1, MagickCore.ExceptionInfo exception);
 
   /**
    * Original signature : <code>extern MagickBooleanType UnregisterStaticModule(const char*)</code>
@@ -19684,250 +19865,250 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>ChannelStatistics* GetImageStatistics(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:88</i>
    */
-  SaMagickCore.ChannelStatistics GetImageStatistics(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ChannelStatistics GetImageStatistics(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ChannelMoments* GetImageMoments(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:90</i>
    */
-  SaMagickCore.ChannelMoments GetImageMoments(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ChannelMoments GetImageMoments(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>ChannelPerceptualHash* GetImagePerceptualHash(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:92</i>
    */
-  SaMagickCore.ChannelPerceptualHash GetImagePerceptualHash(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.ChannelPerceptualHash GetImagePerceptualHash(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* EvaluateImages(const Image*, const
    * MagickEvaluateOperator, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/statistic.h:94</i>
    */
-  SaMagickCore.Image EvaluateImages(SaMagickCore.Image ImagePtr1, int MagickEvaluateOperator1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image EvaluateImages(MagickCore.Image ImagePtr1, int MagickEvaluateOperator1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* PolynomialImage(const Image*, const size_t, const
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:96</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #PolynomialImage(SaMagickCore.Image,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], SaMagickCore.ExceptionInfo)} and
-   * {@link #PolynomialImage(SaMagickCore.Image, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #PolynomialImage(MagickCore.Image,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], MagickCore.ExceptionInfo)} and
+   * {@link #PolynomialImage(MagickCore.Image, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image PolynomialImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PolynomialImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* PolynomialImage(const Image*, const size_t, const
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:96</i>
    */
-  SaMagickCore.Image PolynomialImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      double doublePtr1[], SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image PolynomialImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      double doublePtr1[], MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* StatisticImage(const Image*, const StatisticType,
    * const size_t, const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/statistic.h:98</i>
    */
-  SaMagickCore.Image StatisticImage(SaMagickCore.Image ImagePtr1, int StatisticType1,
-      NativeSize size_t1, NativeSize size_t2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image StatisticImage(MagickCore.Image ImagePtr1, int StatisticType1,
+      NativeSize size_t1, NativeSize size_t2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType EvaluateImage(Image*, const
    * MagickEvaluateOperator, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/statistic.h:100</i>
    */
-  int EvaluateImage(SaMagickCore.Image ImagePtr1, int MagickEvaluateOperator1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int EvaluateImage(MagickCore.Image ImagePtr1, int MagickEvaluateOperator1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType FunctionImage(Image*, const MagickFunction,
    * const size_t, const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/statistic.h:102</i> <br>
    *
-   * @deprecated use the safer methods {@link #FunctionImage(SaMagickCore.Image, int,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], SaMagickCore.ExceptionInfo)} and
-   * {@link #FunctionImage(SaMagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #FunctionImage(MagickCore.Image, int,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, double[], MagickCore.ExceptionInfo)} and
+   * {@link #FunctionImage(MagickCore.Image, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int FunctionImage(SaMagickCore.Image ImagePtr1, int MagickFunction1, NativeSize size_t1,
-      DoubleByReference doublePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int FunctionImage(MagickCore.Image ImagePtr1, int MagickFunction1, NativeSize size_t1,
+      DoubleByReference doublePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType FunctionImage(Image*, const MagickFunction,
    * const size_t, const double*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/statistic.h:102</i>
    */
-  int FunctionImage(SaMagickCore.Image ImagePtr1, int MagickFunction1, NativeSize size_t1,
-      double doublePtr1[], SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int FunctionImage(MagickCore.Image ImagePtr1, int MagickFunction1, NativeSize size_t1,
+      double doublePtr1[], MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageEntropy(const Image*, double*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:104</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageEntropy(SaMagickCore.Image,
-   * java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link #GetImageEntropy(SaMagickCore.Image,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageEntropy(MagickCore.Image,
+   * java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link #GetImageEntropy(MagickCore.Image,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int GetImageEntropy(SaMagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageEntropy(MagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageEntropy(const Image*, double*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:104</i>
    */
-  int GetImageEntropy(SaMagickCore.Image ImagePtr1, DoubleBuffer doublePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageEntropy(MagickCore.Image ImagePtr1, DoubleBuffer doublePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageExtrema(const Image*, size_t*,
    * size_t*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:106</i>
    */
-  int GetImageExtrema(SaMagickCore.Image ImagePtr1, NativeSizeByReference size_tPtr1,
-      NativeSizeByReference size_tPtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageExtrema(MagickCore.Image ImagePtr1, NativeSizeByReference size_tPtr1,
+      NativeSizeByReference size_tPtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageMean(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:108</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageMean(SaMagickCore.Image,
-   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetImageMean(SaMagickCore.Image, com.sun.jna.ptr.DoubleByReference,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageMean(MagickCore.Image,
+   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #GetImageMean(MagickCore.Image, com.sun.jna.ptr.DoubleByReference,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int GetImageMean(SaMagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
-      DoubleByReference doublePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageMean(MagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
+      DoubleByReference doublePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageMean(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:108</i>
    */
-  int GetImageMean(SaMagickCore.Image ImagePtr1, DoubleBuffer doublePtr1, DoubleBuffer doublePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageMean(MagickCore.Image ImagePtr1, DoubleBuffer doublePtr1, DoubleBuffer doublePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageKurtosis(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:110</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageKurtosis(SaMagickCore.Image,
-   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetImageKurtosis(SaMagickCore.Image, com.sun.jna.ptr.DoubleByReference,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageKurtosis(MagickCore.Image,
+   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #GetImageKurtosis(MagickCore.Image, com.sun.jna.ptr.DoubleByReference,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int GetImageKurtosis(SaMagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
-      DoubleByReference doublePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageKurtosis(MagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
+      DoubleByReference doublePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageKurtosis(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:110</i>
    */
-  int GetImageKurtosis(SaMagickCore.Image ImagePtr1, DoubleBuffer doublePtr1,
-      DoubleBuffer doublePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageKurtosis(MagickCore.Image ImagePtr1, DoubleBuffer doublePtr1,
+      DoubleBuffer doublePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageRange(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:112</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #GetImageRange(SaMagickCore.Image,
-   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, SaMagickCore.ExceptionInfo)} and {@link
-   * #GetImageRange(SaMagickCore.Image, com.sun.jna.ptr.DoubleByReference,
-   * com.sun.jna.ptr.DoubleByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #GetImageRange(MagickCore.Image,
+   * java.nio.DoubleBuffer, java.nio.DoubleBuffer, MagickCore.ExceptionInfo)} and {@link
+   * #GetImageRange(MagickCore.Image, com.sun.jna.ptr.DoubleByReference,
+   * com.sun.jna.ptr.DoubleByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int GetImageRange(SaMagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
-      DoubleByReference doublePtr2, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageRange(MagickCore.Image ImagePtr1, DoubleByReference doublePtr1,
+      DoubleByReference doublePtr2, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType GetImageRange(const Image*, double*,
    * double*, ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/statistic.h:112</i>
    */
-  int GetImageRange(SaMagickCore.Image ImagePtr1, DoubleBuffer doublePtr1, DoubleBuffer doublePtr2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int GetImageRange(MagickCore.Image ImagePtr1, DoubleBuffer doublePtr1, DoubleBuffer doublePtr2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ReadStream(const ImageInfo*, StreamHandler,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/stream.h:3</i>
    */
-  SaMagickCore.Image ReadStream(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.StreamHandler StreamHandler1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ReadStream(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.StreamHandler StreamHandler1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* StreamImage(const ImageInfo*, StreamInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/stream.h:5</i>
    * <br>
    *
-   * @deprecated use the safer method {@link #StreamImage(SaMagickCore.ImageInfo,
-   * com.sun.jna.ptr.PointerByReference, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #StreamImage(MagickCore.ImageInfo,
+   * com.sun.jna.ptr.PointerByReference, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image StreamImage(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer StreamInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image StreamImage(MagickCore.ImageInfo ImageInfoPtr1, Pointer StreamInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* StreamImage(const ImageInfo*, StreamInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/stream.h:5</i>
    */
-  SaMagickCore.Image StreamImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      PointerByReference StreamInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image StreamImage(MagickCore.ImageInfo ImageInfoPtr1,
+      PointerByReference StreamInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OpenStream(const ImageInfo*, StreamInfo*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/stream.h:7</i> <br>
    *
-   * @deprecated use the safer methods {@link #OpenStream(SaMagickCore.ImageInfo,
-   * com.sun.jna.ptr.PointerByReference, java.lang.String, SaMagickCore.ExceptionInfo)} and {@link
-   * #OpenStream(SaMagickCore.ImageInfo, com.sun.jna.ptr.PointerByReference, com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #OpenStream(MagickCore.ImageInfo,
+   * com.sun.jna.ptr.PointerByReference, java.lang.String, MagickCore.ExceptionInfo)} and {@link
+   * #OpenStream(MagickCore.ImageInfo, com.sun.jna.ptr.PointerByReference, com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int OpenStream(SaMagickCore.ImageInfo ImageInfoPtr1, Pointer StreamInfoPtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OpenStream(MagickCore.ImageInfo ImageInfoPtr1, Pointer StreamInfoPtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OpenStream(const ImageInfo*, StreamInfo*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/stream.h:7</i>
    */
-  int OpenStream(SaMagickCore.ImageInfo ImageInfoPtr1, PointerByReference StreamInfoPtr1,
-      String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OpenStream(MagickCore.ImageInfo ImageInfoPtr1, PointerByReference StreamInfoPtr1,
+      String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OpenStream(const ImageInfo*, StreamInfo*,
    * const char*, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/stream.h:7</i>
    */
-  int OpenStream(SaMagickCore.ImageInfo ImageInfoPtr1, PointerByReference StreamInfoPtr1,
-      Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OpenStream(MagickCore.ImageInfo ImageInfoPtr1, PointerByReference StreamInfoPtr1,
+      Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType WriteStream(const ImageInfo*, Image*,
    * StreamHandler, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/stream.h:9</i>
    */
-  int WriteStream(SaMagickCore.ImageInfo ImageInfoPtr1, SaMagickCore.Image ImagePtr1,
-      SaMagickCore.StreamHandler StreamHandler1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WriteStream(MagickCore.ImageInfo ImageInfoPtr1, MagickCore.Image ImagePtr1,
+      MagickCore.StreamHandler StreamHandler1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern StreamInfo* AcquireStreamInfo(const ImageInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/stream.h:11</i>
    */
-  PointerByReference AcquireStreamInfo(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference AcquireStreamInfo(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern StreamInfo* DestroyStreamInfo(StreamInfo*)</code> <br>
@@ -20077,20 +20258,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #FileToString(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} and {@link
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} and {@link
    * #FileToString(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   Pointer FileToString(Pointer charPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char* FileToString(const char*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:21</i>
    */
   Pointer FileToString(String charPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern char* GetEnvironmentValue(const char*)</code> <br> <i>native
@@ -20128,13 +20309,13 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern char* StringInfoToHexString(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:27</i>
    */
-  Pointer StringInfoToHexString(SaMagickCore.StringInfo StringInfoPtr1);
+  Pointer StringInfoToHexString(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern char* StringInfoToString(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:29</i>
    */
-  Pointer StringInfoToString(SaMagickCore.StringInfo StringInfoPtr1);
+  Pointer StringInfoToString(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern char** StringToArgv(const char*, int*)</code> <br> <i>native
@@ -20207,13 +20388,13 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern const char* GetStringInfoName(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:39</i>
    */
-  Pointer GetStringInfoName(SaMagickCore.StringInfo StringInfoPtr1);
+  Pointer GetStringInfoName(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern const char* GetStringInfoPath(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:41</i>
    */
-  Pointer GetStringInfoPath(SaMagickCore.StringInfo StringInfoPtr1);
+  Pointer GetStringInfoPath(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern double InterpretSiPrefixValue(const char*, char**)</code>
@@ -20238,26 +20419,26 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #StringToArrayOfDoubles(java.lang.String,
-   * SaMagickCore.ssize_t, SaMagickCore.ExceptionInfo)} and {@link #StringToArrayOfDoubles(com.sun.jna.Pointer,
-   * SaMagickCore.ssize_t, SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ssize_t, MagickCore.ExceptionInfo)} and {@link #StringToArrayOfDoubles(com.sun.jna.Pointer,
+   * MagickCore.ssize_t, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  DoubleByReference StringToArrayOfDoubles(Pointer charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  DoubleByReference StringToArrayOfDoubles(Pointer charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern double* StringToArrayOfDoubles(const char*, ssize_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:45</i>
    */
-  DoubleByReference StringToArrayOfDoubles(String charPtr1, SaMagickCore.ssize_t ssize_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  DoubleByReference StringToArrayOfDoubles(String charPtr1, MagickCore.ssize_t ssize_tPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>int CompareStringInfo(const StringInfo*, const StringInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:47</i>
    */
-  int CompareStringInfo(SaMagickCore.StringInfo StringInfoPtr1,
-      SaMagickCore.StringInfo StringInfoPtr2);
+  int CompareStringInfo(MagickCore.StringInfo StringInfoPtr1,
+      MagickCore.StringInfo StringInfoPtr2);
 
   /**
    * Original signature : <code>extern MagickBooleanType ConcatenateString(char**, const
@@ -20369,7 +20550,7 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern size_t GetStringInfoLength(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:61</i>
    */
-  NativeSize GetStringInfoLength(SaMagickCore.StringInfo StringInfoPtr1);
+  NativeSize GetStringInfoLength(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern ssize_t FormatMagickSize(const, const MagickBooleanType,
@@ -20382,7 +20563,7 @@ public interface SaMagickCore extends Library {
    * com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.ssize_t FormatMagickSize(int MagickSizeType, int MagickBooleanType1,
+  MagickCore.ssize_t FormatMagickSize(int MagickSizeType, int MagickBooleanType1,
       Pointer charPtr1, NativeSize size_t1, Pointer charPtr2);
 
   /**
@@ -20390,7 +20571,7 @@ public interface SaMagickCore extends Library {
    * const char*, const size_t, char*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/string_.h:63</i>
    */
-  SaMagickCore.ssize_t FormatMagickSize(int MagickSizeType, int MagickBooleanType1, String charPtr1,
+  MagickCore.ssize_t FormatMagickSize(int MagickSizeType, int MagickBooleanType1, String charPtr1,
       NativeSize size_t1, ByteBuffer charPtr2);
   /**
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:65</i> <br>
@@ -20400,19 +20581,19 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern StringInfo* AcquireStringInfo(const size_t)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:67</i>
    */
-  SaMagickCore.StringInfo AcquireStringInfo(NativeSize size_t1);
+  MagickCore.StringInfo AcquireStringInfo(NativeSize size_t1);
 
   /**
    * Original signature : <code>extern StringInfo* BlobToStringInfo(const void*, const
    * size_t)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:69</i>
    */
-  SaMagickCore.StringInfo BlobToStringInfo(Pointer voidPtr1, NativeSize size_t1);
+  MagickCore.StringInfo BlobToStringInfo(Pointer voidPtr1, NativeSize size_t1);
 
   /**
    * Original signature : <code>extern StringInfo* CloneStringInfo(const StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:71</i>
    */
-  SaMagickCore.StringInfo CloneStringInfo(SaMagickCore.StringInfo StringInfoPtr1);
+  MagickCore.StringInfo CloneStringInfo(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* ConfigureFileToStringInfo(const char*)</code>
@@ -20422,19 +20603,19 @@ public interface SaMagickCore extends Library {
    * {@link #ConfigureFileToStringInfo(com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.StringInfo ConfigureFileToStringInfo(Pointer charPtr1);
+  MagickCore.StringInfo ConfigureFileToStringInfo(Pointer charPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* ConfigureFileToStringInfo(const char*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:73</i>
    */
-  SaMagickCore.StringInfo ConfigureFileToStringInfo(String charPtr1);
+  MagickCore.StringInfo ConfigureFileToStringInfo(String charPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* DestroyStringInfo(StringInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:75</i>
    */
-  SaMagickCore.StringInfo DestroyStringInfo(SaMagickCore.StringInfo StringInfoPtr1);
+  MagickCore.StringInfo DestroyStringInfo(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* FileToStringInfo(const char*, const size_t,
@@ -20442,26 +20623,26 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #FileToStringInfo(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} and {@link
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} and {@link
    * #FileToStringInfo(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.StringInfo FileToStringInfo(Pointer charPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.StringInfo FileToStringInfo(Pointer charPtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* FileToStringInfo(const char*, const size_t,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:77</i>
    */
-  SaMagickCore.StringInfo FileToStringInfo(String charPtr1, NativeSize size_t1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.StringInfo FileToStringInfo(String charPtr1, NativeSize size_t1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* SplitStringInfo(StringInfo*, const size_t)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:79</i>
    */
-  SaMagickCore.StringInfo SplitStringInfo(SaMagickCore.StringInfo StringInfoPtr1,
+  MagickCore.StringInfo SplitStringInfo(MagickCore.StringInfo StringInfoPtr1,
       NativeSize size_t1);
 
   /**
@@ -20472,26 +20653,26 @@ public interface SaMagickCore extends Library {
    * #StringToStringInfo(com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  SaMagickCore.StringInfo StringToStringInfo(Pointer charPtr1);
+  MagickCore.StringInfo StringToStringInfo(Pointer charPtr1);
 
   /**
    * Original signature : <code>extern StringInfo* StringToStringInfo(const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:81</i>
    */
-  SaMagickCore.StringInfo StringToStringInfo(String charPtr1);
+  MagickCore.StringInfo StringToStringInfo(String charPtr1);
 
   /**
    * Original signature : <code>char* GetStringInfoDatum(const StringInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:83</i>
    */
-  Pointer GetStringInfoDatum(SaMagickCore.StringInfo StringInfoPtr1);
+  Pointer GetStringInfoDatum(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern void ConcatenateStringInfo(StringInfo*, const
    * StringInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:85</i>
    */
-  void ConcatenateStringInfo(SaMagickCore.StringInfo StringInfoPtr1,
-      SaMagickCore.StringInfo StringInfoPtr2);
+  void ConcatenateStringInfo(MagickCore.StringInfo StringInfoPtr1,
+      MagickCore.StringInfo StringInfoPtr2);
 
   /**
    * Original signature : <code>extern void PrintStringInfo(FILE*, const char*, const
@@ -20499,95 +20680,95 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #PrintStringInfo(com.sun.jna.ptr.PointerByReference,
-   * java.lang.String, SaMagickCore.StringInfo)} and {@link #PrintStringInfo(com.sun.jna.ptr.PointerByReference,
-   * com.sun.jna.Pointer, SaMagickCore.StringInfo)} instead
+   * java.lang.String, MagickCore.StringInfo)} and {@link #PrintStringInfo(com.sun.jna.ptr.PointerByReference,
+   * com.sun.jna.Pointer, MagickCore.StringInfo)} instead
    */
   @Deprecated
-  void PrintStringInfo(Pointer file, Pointer charPtr1, SaMagickCore.StringInfo StringInfoPtr1);
+  void PrintStringInfo(Pointer file, Pointer charPtr1, MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern void PrintStringInfo(FILE*, const char*, const
    * StringInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:87</i>
    */
   void PrintStringInfo(PointerByReference file, String charPtr1,
-      SaMagickCore.StringInfo StringInfoPtr1);
+      MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern void PrintStringInfo(FILE*, const char*, const
    * StringInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:87</i>
    */
   void PrintStringInfo(PointerByReference file, Pointer charPtr1,
-      SaMagickCore.StringInfo StringInfoPtr1);
+      MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern void ResetStringInfo(StringInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:89</i>
    */
-  void ResetStringInfo(SaMagickCore.StringInfo StringInfoPtr1);
+  void ResetStringInfo(MagickCore.StringInfo StringInfoPtr1);
 
   /**
    * Original signature : <code>extern void SetStringInfo(StringInfo*, const StringInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:91</i>
    */
-  void SetStringInfo(SaMagickCore.StringInfo StringInfoPtr1,
-      SaMagickCore.StringInfo StringInfoPtr2);
+  void SetStringInfo(MagickCore.StringInfo StringInfoPtr1,
+      MagickCore.StringInfo StringInfoPtr2);
 
   /**
    * Original signature : <code>extern void SetStringInfoDatum(StringInfo*, const unsigned
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:93</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #SetStringInfoDatum(SaMagickCore.StringInfo, byte[])}
-   * and {@link #SetStringInfoDatum(SaMagickCore.StringInfo, com.sun.jna.Pointer)} instead
+   * @deprecated use the safer methods {@link #SetStringInfoDatum(MagickCore.StringInfo, byte[])}
+   * and {@link #SetStringInfoDatum(MagickCore.StringInfo, com.sun.jna.Pointer)} instead
    */
   @Deprecated
-  void SetStringInfoDatum(SaMagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
+  void SetStringInfoDatum(MagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern void SetStringInfoDatum(StringInfo*, const unsigned
    * char*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:93</i>
    */
-  void SetStringInfoDatum(SaMagickCore.StringInfo StringInfoPtr1, byte charPtr1[]);
+  void SetStringInfoDatum(MagickCore.StringInfo StringInfoPtr1, byte charPtr1[]);
 
   /**
    * Original signature : <code>extern void SetStringInfoLength(StringInfo*, const size_t)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:95</i>
    */
-  void SetStringInfoLength(SaMagickCore.StringInfo StringInfoPtr1, NativeSize size_t1);
+  void SetStringInfoLength(MagickCore.StringInfo StringInfoPtr1, NativeSize size_t1);
 
   /**
    * Original signature : <code>extern void SetStringInfoName(StringInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:97</i> <br>
    *
-   * @deprecated use the safer methods {@link #SetStringInfoName(SaMagickCore.StringInfo,
-   * java.lang.String)} and {@link #SetStringInfoName(SaMagickCore.StringInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #SetStringInfoName(MagickCore.StringInfo,
+   * java.lang.String)} and {@link #SetStringInfoName(MagickCore.StringInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  void SetStringInfoName(SaMagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
+  void SetStringInfoName(MagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern void SetStringInfoName(StringInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:97</i>
    */
-  void SetStringInfoName(SaMagickCore.StringInfo StringInfoPtr1, String charPtr1);
+  void SetStringInfoName(MagickCore.StringInfo StringInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern void SetStringInfoPath(StringInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:99</i> <br>
    *
-   * @deprecated use the safer methods {@link #SetStringInfoPath(SaMagickCore.StringInfo,
-   * java.lang.String)} and {@link #SetStringInfoPath(SaMagickCore.StringInfo, com.sun.jna.Pointer)}
+   * @deprecated use the safer methods {@link #SetStringInfoPath(MagickCore.StringInfo,
+   * java.lang.String)} and {@link #SetStringInfoPath(MagickCore.StringInfo, com.sun.jna.Pointer)}
    * instead
    */
   @Deprecated
-  void SetStringInfoPath(SaMagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
+  void SetStringInfoPath(MagickCore.StringInfo StringInfoPtr1, Pointer charPtr1);
 
   /**
    * Original signature : <code>extern void SetStringInfoPath(StringInfo*, const char*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/string_.h:99</i>
    */
-  void SetStringInfoPath(SaMagickCore.StringInfo StringInfoPtr1, String charPtr1);
+  void SetStringInfoPath(MagickCore.StringInfo StringInfoPtr1, String charPtr1);
 
   /**
    * Original signature : <code>extern void StripString(char*)</code> <br> <i>native declaration :
@@ -20610,8 +20791,8 @@ public interface SaMagickCore extends Library {
    * size_t, const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/threshold.h:9</i>
    */
-  SaMagickCore.Image AdaptiveThresholdImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      NativeSize size_t2, double double1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AdaptiveThresholdImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      NativeSize size_t2, double double1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern ThresholdMap* DestroyThresholdMap(ThresholdMap*)</code> <br>
@@ -20635,59 +20816,59 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetThresholdMap(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetThresholdMap(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetThresholdMap(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetThresholdMap(Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern ThresholdMap* GetThresholdMap(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:13</i>
    */
-  PointerByReference GetThresholdMap(String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference GetThresholdMap(String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType AutoThresholdImage(Image*, const
    * AutoThresholdMethod, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/threshold.h:15</i>
    */
-  int AutoThresholdImage(SaMagickCore.Image ImagePtr1, int AutoThresholdMethod1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int AutoThresholdImage(MagickCore.Image ImagePtr1, int AutoThresholdMethod1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType BilevelImage(Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:17</i>
    */
-  int BilevelImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int BilevelImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType BlackThresholdImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:19</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #BlackThresholdImage(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #BlackThresholdImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #BlackThresholdImage(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #BlackThresholdImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int BlackThresholdImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int BlackThresholdImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType BlackThresholdImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:19</i>
    */
-  int BlackThresholdImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int BlackThresholdImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ClampImage(Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:21</i>
    */
-  int ClampImage(SaMagickCore.Image ImagePtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ClampImage(MagickCore.Image ImagePtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListThresholdMaps(FILE*,
@@ -20695,119 +20876,119 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer method {@link #ListThresholdMaps(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListThresholdMaps(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListThresholdMaps(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType ListThresholdMaps(FILE*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:23</i>
    */
-  int ListThresholdMaps(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListThresholdMaps(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OrderedDitherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:25</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #OrderedDitherImage(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #OrderedDitherImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #OrderedDitherImage(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #OrderedDitherImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int OrderedDitherImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OrderedDitherImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType OrderedDitherImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:25</i>
    */
-  int OrderedDitherImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int OrderedDitherImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType PerceptibleImage(Image*, const double,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:27</i>
    */
-  int PerceptibleImage(SaMagickCore.Image ImagePtr1, double double1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int PerceptibleImage(MagickCore.Image ImagePtr1, double double1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType RandomThresholdImage(Image*, const double,
    * const double, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/threshold.h:29</i>
    */
-  int RandomThresholdImage(SaMagickCore.Image ImagePtr1, double double1, double double2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int RandomThresholdImage(MagickCore.Image ImagePtr1, double double1, double double2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType WhiteThresholdImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:31</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #WhiteThresholdImage(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #WhiteThresholdImage(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #WhiteThresholdImage(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #WhiteThresholdImage(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int WhiteThresholdImage(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WhiteThresholdImage(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern MagickBooleanType WhiteThresholdImage(Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/threshold.h:31</i>
    */
-  int WhiteThresholdImage(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int WhiteThresholdImage(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern double GetElapsedTime(TimerInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:18</i>
    */
-  double GetElapsedTime(SaMagickCore.TimerInfo TimerInfoPtr1);
+  double GetElapsedTime(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>extern double GetUserTime(TimerInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:20</i>
    */
-  double GetUserTime(SaMagickCore.TimerInfo TimerInfoPtr1);
+  double GetUserTime(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ContinueTimer(TimerInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:22</i>
    */
-  int ContinueTimer(SaMagickCore.TimerInfo TimerInfoPtr1);
+  int ContinueTimer(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>extern TimerInfo* AcquireTimerInfo()</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:24</i>
    */
-  SaMagickCore.TimerInfo AcquireTimerInfo();
+  MagickCore.TimerInfo AcquireTimerInfo();
 
   /**
    * Original signature : <code>extern TimerInfo* DestroyTimerInfo(TimerInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:26</i>
    */
-  SaMagickCore.TimerInfo DestroyTimerInfo(SaMagickCore.TimerInfo TimerInfoPtr1);
+  MagickCore.TimerInfo DestroyTimerInfo(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>extern void GetTimerInfo(TimerInfo*)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:28</i>
    */
-  void GetTimerInfo(SaMagickCore.TimerInfo TimerInfoPtr1);
+  void GetTimerInfo(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>extern void ResetTimer(TimerInfo*)</code> <br> <i>native declaration
    * : /usr/local/include/ImageMagick-7/MagickCore/timer.h:30</i>
    */
-  void ResetTimer(SaMagickCore.TimerInfo TimerInfoPtr1);
+  void ResetTimer(MagickCore.TimerInfo TimerInfoPtr1);
 
   /**
    * Original signature : <code>extern void StartTimer(TimerInfo*, const)</code> <br> <i>native
    * declaration : /usr/local/include/ImageMagick-7/MagickCore/timer.h:32</i>
    */
-  void StartTimer(SaMagickCore.TimerInfo TimerInfoPtr1, int MagickBooleanType);
+  void StartTimer(MagickCore.TimerInfo TimerInfoPtr1, int MagickBooleanType);
 
   /**
    * Original signature : <code>int Tokenizer(TokenInfo*, const unsigned int, char*, const size_t,
@@ -20908,155 +21089,155 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>extern Image* AutoOrientImage(const Image*, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:2</i>
    */
-  SaMagickCore.Image AutoOrientImage(SaMagickCore.Image ImagePtr1, int OrientationType,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image AutoOrientImage(MagickCore.Image ImagePtr1, int OrientationType,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ChopImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:4</i>
    */
-  SaMagickCore.Image ChopImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ChopImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ConsolidateCMYKImages(const Image*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:6</i>
    */
-  SaMagickCore.Image ConsolidateCMYKImages(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConsolidateCMYKImages(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* CropImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:8</i>
    */
-  SaMagickCore.Image CropImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CropImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* CropImageToTiles(const Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:10</i>
    * <br>
    *
-   * @deprecated use the safer methods {@link #CropImageToTiles(SaMagickCore.Image,
-   * java.lang.String, SaMagickCore.ExceptionInfo)} and {@link #CropImageToTiles(SaMagickCore.Image,
-   * com.sun.jna.Pointer, SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer methods {@link #CropImageToTiles(MagickCore.Image,
+   * java.lang.String, MagickCore.ExceptionInfo)} and {@link #CropImageToTiles(MagickCore.Image,
+   * com.sun.jna.Pointer, MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image CropImageToTiles(SaMagickCore.Image ImagePtr1, Pointer charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CropImageToTiles(MagickCore.Image ImagePtr1, Pointer charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* CropImageToTiles(const Image*, const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:10</i>
    */
-  SaMagickCore.Image CropImageToTiles(SaMagickCore.Image ImagePtr1, String charPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image CropImageToTiles(MagickCore.Image ImagePtr1, String charPtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ExcerptImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:12</i>
    */
-  SaMagickCore.Image ExcerptImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ExcerptImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ExtentImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:14</i>
    */
-  SaMagickCore.Image ExtentImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ExtentImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* FlipImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:16</i>
    */
-  SaMagickCore.Image FlipImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image FlipImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* FlopImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:18</i>
    */
-  SaMagickCore.Image FlopImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image FlopImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* RollImage(const Image*, const, const,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:20</i>
    */
-  SaMagickCore.Image RollImage(SaMagickCore.Image ImagePtr1, int ssize_t, int ssize_t2,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image RollImage(MagickCore.Image ImagePtr1, int ssize_t, int ssize_t2,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* ShaveImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:22</i>
    */
-  SaMagickCore.Image ShaveImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ShaveImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* SpliceImage(const Image*, const RectangleInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:24</i>
    */
-  SaMagickCore.Image SpliceImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.RectangleInfo RectangleInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image SpliceImage(MagickCore.Image ImagePtr1,
+      MagickCore.RectangleInfo RectangleInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* TransposeImage(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:26</i>
    */
-  SaMagickCore.Image TransposeImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image TransposeImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* TransverseImage(const Image*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:28</i>
    */
-  SaMagickCore.Image TransverseImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image TransverseImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern Image* TrimImage(const Image*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/transform.h:30</i>
    */
-  SaMagickCore.Image TrimImage(SaMagickCore.Image ImagePtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image TrimImage(MagickCore.Image ImagePtr1,
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetTypeList(const char*, size_t*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:39</i> <br>
    *
    * @deprecated use the safer methods {@link #GetTypeList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetTypeList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
   PointerByReference GetTypeList(Pointer charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char** GetTypeList(const char*, size_t*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:39</i>
    */
   PointerByReference GetTypeList(String charPtr1, NativeSizeByReference size_tPtr1,
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListTypeInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:41</i> <br>
    *
    * @deprecated use the safer method {@link #ListTypeInfo(com.sun.jna.ptr.PointerByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  int ListTypeInfo(Pointer FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListTypeInfo(Pointer FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>MagickBooleanType ListTypeInfo(FILE*, ExceptionInfo*)</code> <br>
    * <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:41</i>
    */
-  int ListTypeInfo(PointerByReference FILEPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  int ListTypeInfo(PointerByReference FILEPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo* GetTypeInfo(const char*,
@@ -21064,17 +21245,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetTypeInfo(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #GetTypeInfo(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #GetTypeInfo(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.TypeInfo GetTypeInfo(Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo GetTypeInfo(Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo* GetTypeInfo(const char*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:43</i>
    */
-  SaMagickCore.TypeInfo GetTypeInfo(String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo GetTypeInfo(String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo* GetTypeInfoByFamily(const char*, const
@@ -21082,21 +21263,21 @@ public interface SaMagickCore extends Library {
    * /usr/local/include/ImageMagick-7/MagickCore/type.h:45</i> <br>
    *
    * @deprecated use the safer methods {@link #GetTypeInfoByFamily(java.lang.String, int, int,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.ExceptionInfo)} and {@link
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.ExceptionInfo)} and {@link
    * #GetTypeInfoByFamily(com.sun.jna.Pointer, int, int, com.ochafik.lang.jnaerator.runtime.NativeSize,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.TypeInfo GetTypeInfoByFamily(Pointer charPtr1, int StyleType1, int StretchType1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo GetTypeInfoByFamily(Pointer charPtr1, int StyleType1, int StretchType1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo* GetTypeInfoByFamily(const char*, const
    * StyleType, const StretchType, const size_t, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/type.h:45</i>
    */
-  SaMagickCore.TypeInfo GetTypeInfoByFamily(String charPtr1, int StyleType1, int StretchType1,
-      NativeSize size_t1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo GetTypeInfoByFamily(String charPtr1, int StyleType1, int StretchType1,
+      NativeSize size_t1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo** GetTypeInfoList(const char*, size_t*,
@@ -21104,20 +21285,20 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #GetTypeInfoList(java.lang.String,
-   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, SaMagickCore.ExceptionInfo)} and
+   * com.ochafik.lang.jnaerator.runtime.NativeSizeByReference, MagickCore.ExceptionInfo)} and
    * {@link #GetTypeInfoList(com.sun.jna.Pointer, com.ochafik.lang.jnaerator.runtime.NativeSizeByReference,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.TypeInfo.ByReference[] GetTypeInfoList(Pointer charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo.ByReference[] GetTypeInfoList(Pointer charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern const TypeInfo** GetTypeInfoList(const char*, size_t*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/type.h:47</i>
    */
-  SaMagickCore.TypeInfo.ByReference[] GetTypeInfoList(String charPtr1,
-      NativeSizeByReference size_tPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.TypeInfo.ByReference[] GetTypeInfoList(String charPtr1,
+      NativeSizeByReference size_tPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* Base64Encode(const unsigned char*, const size_t,
@@ -21378,22 +21559,22 @@ public interface SaMagickCore extends Library {
    * CCObjectInfo**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/vision.h:10</i> <br>
    *
-   * @deprecated use the safer method {@link #ConnectedComponentsImage(SaMagickCore.Image,
-   * com.ochafik.lang.jnaerator.runtime.NativeSize, SaMagickCore.CCObjectInfo.ByReference[],
-   * SaMagickCore.ExceptionInfo)} instead
+   * @deprecated use the safer method {@link #ConnectedComponentsImage(MagickCore.Image,
+   * com.ochafik.lang.jnaerator.runtime.NativeSize, MagickCore.CCObjectInfo.ByReference[],
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  SaMagickCore.Image ConnectedComponentsImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      PointerByReference CCObjectInfoPtrPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConnectedComponentsImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      PointerByReference CCObjectInfoPtrPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>Image* ConnectedComponentsImage(const Image*, const size_t,
    * CCObjectInfo**, ExceptionInfo*)</code> <br> <i>native declaration :
    * /usr/local/include/ImageMagick-7/MagickCore/vision.h:10</i>
    */
-  SaMagickCore.Image ConnectedComponentsImage(SaMagickCore.Image ImagePtr1, NativeSize size_t1,
-      SaMagickCore.CCObjectInfo.ByReference CCObjectInfoPtrPtr1[],
-      SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image ConnectedComponentsImage(MagickCore.Image ImagePtr1, NativeSize size_t1,
+      MagickCore.CCObjectInfo.ByReference CCObjectInfoPtrPtr1[],
+      MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>char* XMLTreeInfoToXML(XMLTreeInfo*)</code> <br> <i>native
@@ -21573,17 +21754,17 @@ public interface SaMagickCore extends Library {
    * <br>
    *
    * @deprecated use the safer methods {@link #NewXMLTree(java.lang.String,
-   * SaMagickCore.ExceptionInfo)} and {@link #NewXMLTree(com.sun.jna.Pointer,
-   * SaMagickCore.ExceptionInfo)} instead
+   * MagickCore.ExceptionInfo)} and {@link #NewXMLTree(com.sun.jna.Pointer,
+   * MagickCore.ExceptionInfo)} instead
    */
   @Deprecated
-  PointerByReference NewXMLTree(Pointer charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference NewXMLTree(Pointer charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern XMLTreeInfo* NewXMLTree(const char*, ExceptionInfo*)</code>
    * <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/xml-tree.h:21</i>
    */
-  PointerByReference NewXMLTree(String charPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  PointerByReference NewXMLTree(String charPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>extern XMLTreeInfo* NewXMLTreeTag(const char*)</code> <br> <i>native
@@ -21629,14 +21810,14 @@ public interface SaMagickCore extends Library {
    * Original signature : <code>Image* XImportImage(const ImageInfo*, XImportInfo*,
    * ExceptionInfo*)</code> <br> <i>native declaration : /usr/local/include/ImageMagick-7/MagickCore/xwindow.h:9</i>
    */
-  SaMagickCore.Image XImportImage(SaMagickCore.ImageInfo ImageInfoPtr1,
-      SaMagickCore.XImportInfo XImportInfoPtr1, SaMagickCore.ExceptionInfo ExceptionInfoPtr1);
+  MagickCore.Image XImportImage(MagickCore.ImageInfo ImageInfoPtr1,
+      MagickCore.XImportInfo XImportInfoPtr1, MagickCore.ExceptionInfo ExceptionInfoPtr1);
 
   /**
    * Original signature : <code>void XGetImportInfo(XImportInfo*)</code> <br> <i>native declaration
    * : /usr/local/include/ImageMagick-7/MagickCore/xwindow.h:11</i>
    */
-  void XGetImportInfo(SaMagickCore.XImportInfo XImportInfoPtr1);
+  void XGetImportInfo(MagickCore.XImportInfo XImportInfoPtr1);
 
   public static class RandomInfo extends PointerType {
 
@@ -21649,7 +21830,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class LogInfo extends PointerType {
 
@@ -21662,7 +21842,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class LinkedListInfo extends PointerType {
 
@@ -21675,8 +21854,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
-
   public static class MagickCLDevice extends PointerType {
 
     public MagickCLDevice(Pointer address) {
@@ -21688,7 +21865,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class PolicyInfo extends PointerType {
 
@@ -21701,7 +21877,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class ProfileInfo extends PointerType {
 
@@ -21714,7 +21889,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class BlobInfo extends PointerType {
 
@@ -21727,7 +21901,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class SemaphoreInfo extends PointerType {
 
@@ -21740,7 +21913,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class CustomStreamInfo extends PointerType {
 
@@ -21753,7 +21925,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class Ascii85Info extends PointerType {
 
@@ -21766,7 +21937,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class MatrixInfo extends PointerType {
 
@@ -21779,7 +21949,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class CacheView_ extends PointerType {
 
@@ -21792,7 +21961,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class ThresholdMap extends PointerType {
 
@@ -21805,7 +21973,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class MagickProgressMonitor extends PointerType {
 
@@ -21818,8 +21985,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
-
   public static class CacheView extends PointerType {
 
     public CacheView(Pointer address) {
@@ -21831,7 +21996,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class StreamInfo extends PointerType {
 
@@ -21844,7 +22008,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class DecodeImageHandler extends PointerType {
 
@@ -21857,7 +22020,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class MimeInfo extends PointerType {
 
@@ -21870,7 +22032,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class XMLTreeInfo extends PointerType {
 
@@ -21883,7 +22044,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class ImageView extends PointerType {
 
@@ -21896,7 +22056,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class TokenInfo extends PointerType {
 
@@ -21909,7 +22068,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class FILE extends PointerType {
 
@@ -21922,7 +22080,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class SplayTreeInfo extends PointerType {
 
@@ -21935,7 +22092,6 @@ public interface SaMagickCore extends Library {
     }
   }
 
-  ;
 
   public static class ResampleFilter extends PointerType {
 
@@ -21947,6 +22103,4 @@ public interface SaMagickCore extends Library {
       super();
     }
   }
-
-  ;
 }
